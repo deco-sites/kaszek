@@ -34,7 +34,7 @@ import * as i1$$$$$1 from "$live/flags/everyone.ts";
 
 const manifest: DecoManifest = {
   "functions": {
-    "deco-sites/start/functions/LoadGitHubRaw.ts": $0,
+    "deco-sites/kaszek/functions/LoadGitHubRaw.ts": $0,
   },
   "routes": {
     "./routes/_app.tsx": $$$$0,
@@ -47,8 +47,8 @@ const manifest: DecoManifest = {
     "./routes/[...catchall].tsx": $live_catchall,
   },
   "sections": {
-    "deco-sites/start/sections/Head.tsx": $$$$$$$$0,
-    "deco-sites/start/sections/GetStarted.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$0,
+    "deco-sites/kaszek/sections/GetStarted.tsx": $$$$$$$$1,
     "$live/sections/PageInclude.tsx": i1$$$0,
   },
   "handlers": {
