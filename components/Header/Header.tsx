@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <header class={`l-header w-full flex items-center z-10 relative fixed top-0 ${headerClass}`}>
-      <div class={`mx-auto w-full ${showMenu ? "" : "pr-[12px]"} xl:(l-container)`}>
+      <div class={`mx-auto w-full xl:pr-[0px] pr-[12px] xl:(l-container)`}>
         <nav class="flex-center-between w-full h-[80px]">
         <ScrollClassRemover
             as="a"
