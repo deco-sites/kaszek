@@ -7,6 +7,7 @@ type ButtonHamburgerProps = {
 
 export default function ButtonHamburger(props: ButtonHamburgerProps) {
   const { showMenu, toggleMenu } = props;
+
   return (
     <button
       onClick={toggleMenu}
@@ -25,15 +26,15 @@ export default function ButtonHamburger(props: ButtonHamburgerProps) {
       />
       <span
         className={`${
-          showMenu ? "" : " block absolute bg-white rounded-md"
-        } top-[1px] w-full h-[3px] ${
+          showMenu ? "" : " block absolute"
+        } top-[1px] w-full h-[3px] rounded-md ${window.scrollY > 0 ? 'bg-[#005046]' : 'bg-white'} ${
           showMenu ? "opacity-0" : ""
         }`}
       />
       <span
         className={`${
-          showMenu ? "" : " block absolute bg-white rounded-md"
-        } top-[80%] w-full h-[3px] ${
+          showMenu ? "" : " block absolute"
+        } top-[80%] w-full h-[3px] rounded-md ${window.scrollY > 0 ? 'bg-[#005046]' : 'bg-white'} ${
           showMenu ? "-rotate-45" : ""
         }`}
       />
