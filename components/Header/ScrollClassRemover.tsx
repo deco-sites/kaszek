@@ -33,7 +33,7 @@ const ScrollClassRemover = forwardRef<HTMLElement, Props>(
     return (
       <Element {...props} className={`${className} ${elementClass} `}>
         {content && <>{content}</>}
-        {src &&  <object data={asset(src)} type="image/svg+xml" width={width} height={height} aria-label={altText} />}
+        {src &&  <object data={asset(src)} type="image/svg+xml" width={width} height={height} aria-label={altText} class="pointer-events-none"/>}
         {children}
       </Element>
     );
