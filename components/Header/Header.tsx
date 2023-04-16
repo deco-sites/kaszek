@@ -25,6 +25,15 @@ export default function Header() {
     return () => globalThis.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [showMenu]);
+  
+
   const headerClass = hasScrolled
     ? "bg-white transition duration-300 ease-in"
     : "bg-transparent transition duration-300 ease-in";
@@ -42,7 +51,17 @@ export default function Header() {
             height={17.95}
           />
           <div class="flex-center-end w-full absolute md:(relative)">                    
-          <ButtonHamburger showMenu={showMenu} toggleMenu={() => setShowMenu((prev) => !prev)} />
+          <ButtonHamburger
+            showMenu={showMenu}
+            toggleMenu={() => {
+              setShowMenu((prev) => {
+                if (!prev) {
+                  window.scrollTo(0, 0);
+                }
+                return !prev;
+              });
+            }}
+          />
             <ul
               class={`flex flex-col md:(flex-row)  ${
                 showMenu ? "bg-[#005046] w-full fixed h-screen bottom-0 flex-center-center" : "hidden uppercase"
