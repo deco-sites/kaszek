@@ -9,9 +9,10 @@ import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/ButtonHamburger.tsx";
 import * as $$$$$1 from "./islands/CityPlate.tsx";
-import * as $$$$$2 from "./islands/Header.tsx";
-import * as $$$$$3 from "./islands/Navlink.tsx";
-import * as $$$$$4 from "./islands/ScrollClassRemover.tsx";
+import * as $$$$$2 from "./islands/Entrepreneurs.tsx";
+import * as $$$$$3 from "./islands/Header.tsx";
+import * as $$$$$4 from "./islands/Navlink.tsx";
+import * as $$$$$5 from "./islands/ScrollClassRemover.tsx";
 import * as $$$$$$$$0 from "./sections/GetStarted.tsx";
 import * as $$$$$$$$1 from "./sections/Head.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
@@ -54,9 +55,10 @@ const manifest: DecoManifest = {
   "islands": {
     "./islands/ButtonHamburger.tsx": $$$$$0,
     "./islands/CityPlate.tsx": $$$$$1,
-    "./islands/Header.tsx": $$$$$2,
-    "./islands/Navlink.tsx": $$$$$3,
-    "./islands/ScrollClassRemover.tsx": $$$$$4,
+    "./islands/Entrepreneurs.tsx": $$$$$2,
+    "./islands/Header.tsx": $$$$$3,
+    "./islands/Navlink.tsx": $$$$$4,
+    "./islands/ScrollClassRemover.tsx": $$$$$5,
   },
   "sections": {
     "deco-sites/kaszek/sections/GetStarted.tsx": $$$$$$$$0,
