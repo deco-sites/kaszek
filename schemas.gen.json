@@ -458,6 +458,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g=": {
+      "title": "./islands/CityPlate.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CityPlate.tsx"
+          ],
+          "default": "./islands/CityPlate.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
@@ -876,6 +892,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0J1dHRvbkhhbWJ1cmdlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
