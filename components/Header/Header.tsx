@@ -33,10 +33,13 @@ export default function Header() {
     }
   }, [showMenu]);
   
-
   const headerClass = hasScrolled
     ? "bg-white transition duration-300 ease-in"
     : "bg-transparent transition duration-300 ease-in";
+
+  const menuItemStyles = showMenu 
+  ? "mr-0 pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font tracking-[-.5px] leading-[3rem]" 
+  : "mr-[30px] pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font tracking-[-.5px] leading-[3rem]";
 
   return (
     <header class={`l-header w-full flex items-center z-10 relative fixed top-0 ${headerClass}`}>
@@ -51,27 +54,15 @@ export default function Header() {
             height={17.95}
           />
           <div class="flex-center-end w-full absolute md:(relative)">                    
-          <ButtonHamburger
-            showMenu={showMenu}
-            toggleMenu={() => {
-              setShowMenu((prev) => {
-                if (!prev) {
-                  window.scrollTo(0, 0);
-                }
-                return !prev;
-              });
-            }}
-          />
-            <ul
-              class={`flex flex-col md:(flex-row)  ${
-                showMenu ? "bg-[#005046] w-full fixed h-screen bottom-0 flex-center-center" : "hidden uppercase"
-              } md:flex`}
-            >
-              <NavLink href="/" content="Ethos" className={showMenu ? "mr-0 pt-0 pb-0 border-b-0 text-[36px]" : "mr-[30px] pt-[4px] pb-[2px] border-b-2"} />
-              <NavLink href="/" content="Companies" className={showMenu ? "mr-0 pt-0 pb-0 border-b-0 text-[36px]" : "mr-[30px] pt-[4px] pb-[2px] border-b-2"} />
-              <NavLink href="/" content="People" className={showMenu ? "mr-0 pt-0 pb-0 border-b-0 text-[36px]" : "mr-[30px] pt-[4px] pb-[2px] border-b-2"} />
-              <NavLink href="/" content="Get in Touch" className={showMenu ? "mr-0 pt-0 pb-0 border-b-0 text-[36px]" : "mr-0 pt-[4px] pb-[2px] border-b-2"} />
-            </ul>
+          <ButtonHamburger showMenu={showMenu} toggleMenu={() => {setShowMenu((prev) => {if (!prev) { window.scrollTo(0, 0);} return !prev;});}}/>        
+          <ul class={`flex flex-col md:(flex-row)  ${
+            showMenu ? "bg-[#005046] w-full fixed h-screen bottom-0 flex-center-center" : "hidden uppercase"
+          } md:flex`}>
+            <NavLink href="/" content="Ethos" className={menuItemStyles} />
+            <NavLink href="/" content="Companies" className={menuItemStyles} />
+            <NavLink href="/" content="People" className={menuItemStyles} />
+            <NavLink href="/" content="Get in touch" className={`${menuItemStyles} mr-0`} />
+          </ul>
           </div>
         </nav>
       </div>

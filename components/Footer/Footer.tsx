@@ -11,7 +11,7 @@ export default function Footer() {
                 We would love to hear from you. For new business or general
                 enquiries please e-mail us at:
               </p>
-              <a href="mailto:info@kaszek.com" class="color-green font-bold uppercase text-[14px] tracking-[1px]">info@kaszek.com</a>
+              <a href="mailto:info@kaszek.com" class="color-green font-bold uppercase text-[14px] tracking-[1px]" style="font-family: 'Maax Bold', sans-serif;">info@kaszek.com</a>
             </div>
             <div>
               <p class="text-[16px]">
@@ -21,8 +21,8 @@ export default function Footer() {
             </div>
             <div>
               <ul class="lg:flex-center-end flex items-center justify-start">
-                <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/2892335" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px] mr-[30px]">Linkedin</a></li>
-                <li><a target="_blank" rel="noopener" href="https://www.instagram.com/kaszekventures" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px]">Instagram</a></li>
+                <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/2892335" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px] mr-[30px]" style="font-family: 'Maax Bold', sans-serif;">Linkedin</a></li>
+                <li><a target="_blank" rel="noopener" href="https://www.instagram.com/kaszekventures" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px]" style="font-family: 'Maax Bold', sans-serif;">Instagram</a></li>
               </ul>
             </div>
           </div>

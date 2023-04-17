@@ -15,6 +15,8 @@ export default {
       filter:
         "invert(84%) sepia(20%) saturate(530%) hue-rotate(112deg) brightness(200%) contrast(95%)",
     },
+    "Noe-Display-Font": { fontFamily: "Noe Display Bold" },
+    "Maax-Bold-Font": { fontFamily: "Maax Bold" },
   },
   theme: {
     extend: {
@@ -33,7 +35,12 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["Albert Sans", "sans-serif"],
+        fontFamily: {
+          sans: ['Maax Bold', 'Maax Regular', 'Noe Display Bold', 'sans-serif'],
+        },
+        fontWeight: {
+          bold: '700',
+        },
         serif: ["serif"],
       },
     },

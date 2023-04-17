@@ -16,11 +16,11 @@ export default function EntrepreneurialCapital () {
           <div class="w-full h-screen flex-center-between flex-col relative">
             <h1
               class="text-white text-center text-[40px] z-5 inherit leading-none py-[80px] my-auto  xl:(text-[120px] l-container) md:(text-[90px])"
-              style="white-space: pre-line;"
+              style="white-space: pre-line; font-family: 'Noe Display Bold', sans-serif;"
             >
               Entrepreneurial capital
             </h1>
-            <div class="w-full flex-center-between xl:px-[0px] px-[12px] bottom-[40px] absolute w-full mx-auto xl:(l-container)">
+            <div class="w-full flex-center-between xl:px-[0px] px-[12px] bottom-[40px] absolute w-full mx-auto xl:(l-container)" style="font-family: 'Maax Bold', sans-serif;">
               <p class="text-[#83ff97] font-bold uppercase tracking-wider text-[12px] md:text-[14px]">
                 Amazon Rainforest, Brazil
               </p>

@@ -29,7 +29,7 @@ export default function AboutKaszek() {
           <CityPlate name="Lima" bottom="43%" left="50%" />
         </div>
         <div class="w-full md:max-w-[384px] flex-center-center flex-col mx-auto">
-          <h2 class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] font-bold">
+          <h2 class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] font-bold" style="font-family: 'Maax Bold', sans-serif;">
             We are tech entrepreneurs partnering with the most extraordinary
             founders in Latin America.
           </h2>
