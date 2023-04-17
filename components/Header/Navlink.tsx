@@ -15,7 +15,7 @@ const NavLink = forwardRef<HTMLAnchorElement, Props>(
           as="a"
           href={href}
           content={content}
-          className="color-green font-bold leading-4 letter-spacing"
+          className="color-green font-bold leading-4"
         />
       </li>
     );
