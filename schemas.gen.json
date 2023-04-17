@@ -474,6 +474,38 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
+      "title": "./islands/Entrepreneurs.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Entrepreneurs.tsx"
+          ],
+          "default": "./islands/Entrepreneurs.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4": {
+      "title": "./islands/FaqSection.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/FaqSection.tsx"
+          ],
+          "default": "./islands/FaqSection.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
@@ -895,6 +927,12 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
