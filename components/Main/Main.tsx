@@ -5,7 +5,7 @@ import FaqSection from "deco-sites/start/components/Main/FaqSection.tsx";
 
 export default function Main() {
   return (
-    <main class="top-0 left-0 absolute z-0 flex-center-between flex-col w-full">
+    <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
       <EntrepreneurialCapital />
       <AboutKaszek />
       <Entrepreneurs />
