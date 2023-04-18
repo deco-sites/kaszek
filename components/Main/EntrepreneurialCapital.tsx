@@ -3,7 +3,7 @@ import { asset } from "$fresh/runtime.ts";
 export default function EntrepreneurialCapital () {
     return (
         <section style={{
-            backgroundImage: `url(/imgs/background.webp)`,
+            backgroundImage: `url(/imgs/david-geere-2-touched.jpeg)`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
