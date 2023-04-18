@@ -1,7 +1,16 @@
 import { asset } from "$fresh/runtime.ts";
 import CityPlate from "deco-sites/start/components/Main/CityPlate.tsx";
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import Image from "deco-sites/std/components/Image.tsx";
 
-export default function AboutKaszek() {
+export type Props = {
+  hero: string;
+  descr: string;
+  team: string;
+  background: LiveImage;
+};
+
+export default function AboutKaszek(props: Props) {
   return (
     <section class="w-full flex items-center flex-col bg-[#ebf0ef] px-[12px] md:px-0">
       <div class="w-full l-container grid grid-rows-1 md:grid-cols-2 gap-4">
@@ -29,23 +38,26 @@ export default function AboutKaszek() {
           <CityPlate name="Quito" bottom="56%" left="46%" />
           <CityPlate name="Lima" bottom="43%" left="50%" />
         </div>
+        <Image
+          class="rounded-[40px]"
+          src={props.background}
+          alt={"background"}
+          width={190}
+          height={265}
+        />
+
         <div class="w-full md:max-w-[384px] flex-center-center flex-col mx-auto">
           <h2
             class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] font-bold"
             style="font-family: 'Maax Bold', sans-serif;"
           >
-            We are tech entrepreneurs partnering with the most extraordinary
-            founders in Latin America.
+            {props.hero}
           </h2>
           <p class="text-[16px] leading-[1.5] mb-[16px]">
-            In addition to capital, we provide first-hand expertise and insights
-            in strategy, operational execution, team-building, growth,
-            technology, product development, networking, fundraising and more.
+            {props.descr}
           </p>
           <p class="text-[16px] leading-[1.5]">
-            As a team, we love rolling up our sleeves, and working alongside
-            with the entrepreneurs to help them build the next generation of
-            Latin American iconic companies.
+            {props.team}
           </p>
         </div>
       </div>

@@ -16,7 +16,19 @@ interface Props {
 }
 
 const ScrollClassRemover = forwardRef<HTMLElement, Props>(
-  ({ as = "div", children, content, src, className = "", width = "", height = "", ...props }, ref) => {
+  (
+    {
+      as = "div",
+      children,
+      content,
+      src,
+      className = "",
+      width = "",
+      height = "",
+      ...props
+    },
+    ref,
+  ) => {
     const [hasScrolled, setHasScrolled] = useState(false);
 
     useLayoutEffect(() => {
@@ -27,19 +39,28 @@ const ScrollClassRemover = forwardRef<HTMLElement, Props>(
     }, []);
 
     const elementClass = hasScrolled ? "" : "is-sticky" as const;
-    const altText = src ? src.split("/").pop()?.split(".")[0] || "Imagem" : undefined;
+    const altText = src
+      ? src.split("/").pop()?.split(".")[0] || "Imagem"
+      : undefined;
     const Element: keyof JSX.IntrinsicElements = as;
 
     return (
       <Element {...props} className={`${className} ${elementClass} `}>
         {content && <>{content}</>}
-        {src &&  <object data={asset(src)} type="image/svg+xml" width={width} height={height} aria-label={altText} class="pointer-events-none"/>}
+        {src && (
+          <object
+            data={asset(src)}
+            type="image/svg+xml"
+            width={width}
+            height={height}
+            aria-label={altText}
+            class="pointer-events-none"
+          />
+        )}
         {children}
       </Element>
     );
-  }
+  },
 );
 
 export default ScrollClassRemover;
-
-

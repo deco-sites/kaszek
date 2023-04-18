@@ -14,7 +14,6 @@ export default function Entrepreneurs() {
     };
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-
         const increaseNumber = (
           finalValue: number,
           setStateFunction: (value: number) => void,
@@ -42,21 +41,54 @@ export default function Entrepreneurs() {
   }, []);
 
   return (
-    <section ref={ref} class={`w-full px-4 py-8 bg-[#ebf0ef] flex justify-center`}>
-        <div class="w-full max-w-[1200px] sm:grid md:grid-cols-3 gap-4 items-center grid-cols-1">
-            <div class="text-center color-green">
-                <h2 class="text-2xl font-bold mb-8" style="font-family: 'Maax Bold', sans-serif;">Entrepreneurs</h2>
-                <p class="text-[76px] font-bold mb-5" style="font-family: 'Noe Display Bold', sans-serif;">{entrepreneurs}</p>
-            </div>
-            <div class="text-center color-green">
-                <h2 class="text-2xl font-bold mb-8" style="font-family: 'Maax Bold', sans-serif;">Ventures</h2>
-                <p class="text-[76px] font-bold mb-5" style="font-family: 'Noe Display Bold', sans-serif;">{ventures}</p>
-            </div>
-            <div class="text-center color-green">
-                <h2 class="text-2xl font-bold mb-8" style="font-family: 'Maax Bold', sans-serif;">Funds</h2>
-                <p class="text-[76px] font-bold mb-5" style="font-family: 'Noe Display Bold', sans-serif;">{funds}</p>
-            </div>
+    <section
+      ref={ref}
+      class={`w-full px-4 py-8 bg-[#ebf0ef] flex justify-center`}
+    >
+      <div class="w-full max-w-[1200px] sm:grid md:grid-cols-3 gap-4 items-center grid-cols-1">
+        <div class="text-center color-green">
+          <h2
+            class="text-2xl font-bold mb-8"
+            style="font-family: 'Maax Bold', sans-serif;"
+          >
+            Entrepreneurs
+          </h2>
+          <p
+            class="text-[76px] font-bold mb-5"
+            style="font-family: 'Noe Display Bold', sans-serif;"
+          >
+            {entrepreneurs}
+          </p>
         </div>
+        <div class="text-center color-green">
+          <h2
+            class="text-2xl font-bold mb-8"
+            style="font-family: 'Maax Bold', sans-serif;"
+          >
+            Ventures
+          </h2>
+          <p
+            class="text-[76px] font-bold mb-5"
+            style="font-family: 'Noe Display Bold', sans-serif;"
+          >
+            {ventures}
+          </p>
+        </div>
+        <div class="text-center color-green">
+          <h2
+            class="text-2xl font-bold mb-8"
+            style="font-family: 'Maax Bold', sans-serif;"
+          >
+            Funds
+          </h2>
+          <p
+            class="text-[76px] font-bold mb-5"
+            style="font-family: 'Noe Display Bold', sans-serif;"
+          >
+            {funds}
+          </p>
+        </div>
+      </div>
     </section>
   );
-} 
+}

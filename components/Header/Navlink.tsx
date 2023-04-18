@@ -19,7 +19,7 @@ const NavLink = forwardRef<HTMLAnchorElement, Props>(
         />
       </li>
     );
-  }
+  },
 );
 
 export default NavLink;

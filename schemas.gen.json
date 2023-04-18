@@ -13,7 +13,7 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcZnVuY3Rpb25zXExvYWRHaXRIdWJSYXcudHM=@Props": {
+    "ZGVjby1zaXRlcy9rYXN6ZWsvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM=@Props": {
       "type": "object",
       "properties": {
         "repo": {
@@ -37,31 +37,85 @@
         "branch",
         "path"
       ],
-      "title": "deco-sites/kaszek\\functions\\LoadGitHubRaw.ts@Props"
+      "title": "deco-sites/kaszek/functions/LoadGitHubRaw.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
-      "$ref": "#/root/flags",
-      "title": "Flag"
-    },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
-      },
-      "title": "Flag[]"
-    },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Faq": {
       "type": "object",
       "properties": {
-        "flags": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]",
-          "title": "Flags"
+        "question": {
+          "type": "string",
+          "title": "Question"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Answer"
+        },
+        "answertwo": {
+          "type": "string",
+          "title": "Answertwo"
+        },
+        "isOpen": {
+          "type": "boolean",
+          "title": "Is Open"
         }
       },
       "required": [
-        "flags"
+        "question",
+        "answer",
+        "answertwo",
+        "isOpen"
       ],
-      "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
+      "title": "Faq"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Faq[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Faq"
+      },
+      "title": "Faq[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "faqs": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Faq[]",
+          "title": "Faqs"
+        }
+      },
+      "required": [
+        "faqs"
+      ],
+      "title": "deco-sites/kaszek/components/Main/FaqSection.tsx@Props"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
+      "$ref": "#/root/pages",
+      "title": "Page"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2ZyZXNoLnRz@FreshConfig": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
+          "title": "Page"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
+          "title": "Page"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-cx/live/handlers/devPage.ts@DevConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
       "$ref": "#/root/handlers",
@@ -94,61 +148,40 @@
       ],
       "title": "deco-cx/live/handlers/router.ts@RouterConfig"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
-      "$ref": "#/root/pages",
-      "title": "Page"
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
+      "$ref": "#/root/flags",
+      "title": "Flag"
     },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
+      },
+      "title": "Flag[]"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
       "type": "object",
       "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Page"
+        "flags": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]",
+          "title": "Flags"
         }
       },
       "required": [
-        "page"
+        "flags"
       ],
-      "title": "deco-cx/live/handlers/devPage.ts@DevConfig"
-    },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2ZyZXNoLnRz@FreshConfig": {
-      "type": "object",
-      "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Page"
-        }
-      },
-      "required": [
-        "page"
-      ],
-      "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
+      "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
       "$ref": "#/root/sections",
       "title": "Section"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9pc2xhbmQudHM=@Island": {
-      "$ref": "#/root/islands",
-      "title": "Island"
-    },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section"
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9pc2xhbmQudHM=@Island"
-        }
-      ],
-      "title": "Island|Section"
-    },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section[]": {
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section"
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section"
       },
-      "title": "Island|Section[]"
+      "title": "Section[]"
     },
     "ZGVjby1jeC9saXZlL3BhZ2VzL0xpdmVQYWdlLnRzeA==@Props": {
       "type": "object",
@@ -158,7 +191,7 @@
           "title": "Name"
         },
         "sections": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section[]",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
           "title": "Sections"
         }
       },
@@ -168,21 +201,7 @@
       ],
       "title": "deco-cx/live/pages/LivePage.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcR2V0U3RhcnRlZC50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/kaszek\\sections\\GetStarted.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSGVhZC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -226,7 +245,54 @@
         "styleUrls",
         "themeColor"
       ],
-      "title": "deco-sites/kaszek\\sections\\Head.tsx@Props"
+      "title": "deco-sites/kaszek/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "enableInspectVSCode": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Enable Inspect V S Code"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/kaszek/sections/GetStarted.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "hero": {
+          "type": "string",
+          "title": "Hero"
+        },
+        "descr": {
+          "type": "string",
+          "title": "Descr"
+        },
+        "team": {
+          "type": "string",
+          "title": "Team"
+        },
+        "background": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Background"
+        }
+      },
+      "required": [
+        "hero",
+        "descr",
+        "team",
+        "background"
+      ],
+      "title": "deco-sites/kaszek/sections/AboutKaszek.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
       "type": "object",
@@ -240,29 +306,6 @@
         "page"
       ],
       "title": "deco-cx/live/sections/PageInclude.tsx@Props"
-    },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
-      "type": "object",
-      "properties": {
-        "start": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time",
-          "title": "Start"
-        },
-        "end": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time",
-          "title": "End"
-        }
-      },
-      "required": [],
-      "title": "deco-cx/live/matchers/MatchDate.ts@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoVXNlckFnZW50LnRz@Props": {
       "type": "object",
@@ -285,18 +328,18 @@
       "required": [],
       "title": "deco-cx/live/matchers/MatchUserAgent.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props": {
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props": {
       "type": "object",
       "properties": {
-        "siteId": {
+        "traffic": {
           "type": "number",
-          "title": "Site Id"
+          "title": "Traffic"
         }
       },
       "required": [
-        "siteId"
+        "traffic"
       ],
-      "title": "deco-cx/live/matchers/MatchSite.ts@Props"
+      "title": "deco-cx/live/matchers/MatchRandom.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher": {
       "$ref": "#/root/matchers",
@@ -337,18 +380,18 @@
       ],
       "title": "deco-cx/live/matchers/MatchMulti.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props": {
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props": {
       "type": "object",
       "properties": {
-        "traffic": {
+        "siteId": {
           "type": "number",
-          "title": "Traffic"
+          "title": "Site Id"
         }
       },
       "required": [
-        "traffic"
+        "siteId"
       ],
-      "title": "deco-cx/live/matchers/MatchRandom.ts@Props"
+      "title": "deco-cx/live/matchers/MatchSite.ts@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
       "type": "object",
@@ -372,6 +415,29 @@
         "environment"
       ],
       "title": "deco-cx/live/matchers/MatchEnvironment.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "title": "Start"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "title": "End"
+        }
+      },
+      "required": [],
+      "title": "deco-cx/live/matchers/MatchDate.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Audience": {
       "type": "object",
@@ -426,7 +492,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcZnVuY3Rpb25zXExvYWRHaXRIdWJSYXcudHM=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM=@Props"
         }
       ],
       "required": [
@@ -439,6 +505,22 @@
             "deco-sites/kaszek/functions/LoadGitHubRaw.ts"
           ],
           "default": "deco-sites/kaszek/functions/LoadGitHubRaw.ts"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
+      "title": "./islands/Header.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Header.tsx"
+          ],
+          "default": "./islands/Header.tsx"
         }
       }
     },
@@ -474,25 +556,14 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
-      "title": "./islands/Entrepreneurs.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/Entrepreneurs.tsx"
-          ],
-          "default": "./islands/Entrepreneurs.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4": {
       "title": "./islands/FaqSection.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -506,8 +577,8 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
-      "title": "./islands/Header.tsx",
+    "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
+      "title": "./islands/Entrepreneurs.tsx",
       "type": "object",
       "required": [
         "__resolveType"
@@ -516,72 +587,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "./islands/Header.tsx"
+            "./islands/Entrepreneurs.tsx"
           ],
-          "default": "./islands/Header.tsx"
-        }
-      }
-    },
-    "JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz": {
-      "title": "$live/handlers/routesSelection.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/handlers/routesSelection.ts"
-          ],
-          "default": "$live/handlers/routesSelection.ts"
-        }
-      }
-    },
-    "JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz": {
-      "title": "$live/handlers/router.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/handlers/router.ts"
-          ],
-          "default": "$live/handlers/router.ts"
-        }
-      }
-    },
-    "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
-      "title": "$live/handlers/devPage.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/handlers/devPage.ts"
-          ],
-          "default": "$live/handlers/devPage.ts"
+          "default": "./islands/Entrepreneurs.tsx"
         }
       }
     },
@@ -606,6 +614,69 @@
         }
       }
     },
+    "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
+      "title": "$live/handlers/devPage.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/devPage.ts"
+          ],
+          "default": "$live/handlers/devPage.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz": {
+      "title": "$live/handlers/router.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/router.ts"
+          ],
+          "default": "$live/handlers/router.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz": {
+      "title": "$live/handlers/routesSelection.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/routesSelection.ts"
+          ],
+          "default": "$live/handlers/routesSelection.ts"
+        }
+      }
+    },
     "JGxpdmUvcGFnZXMvTGl2ZVBhZ2UudHN4": {
       "title": "$live/pages/LivePage.tsx",
       "type": "object",
@@ -627,12 +698,33 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=": {
+      "title": "deco-sites/kaszek/sections/Head.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Head.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Head.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g=": {
       "title": "deco-sites/kaszek/sections/GetStarted.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcR2V0U3RhcnRlZC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g=@Props"
         }
       ],
       "required": [
@@ -648,12 +740,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=": {
-      "title": "deco-sites/kaszek/sections/Head.tsx",
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g=": {
+      "title": "deco-sites/kaszek/sections/FaqSection.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSGVhZC50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy9NYWluL0ZhcVNlY3Rpb24udHN4@Props"
         }
       ],
       "required": [
@@ -663,9 +755,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/kaszek/sections/Head.tsx"
+            "deco-sites/kaszek/sections/FaqSection.tsx"
           ],
-          "default": "deco-sites/kaszek/sections/Head.tsx"
+          "default": "deco-sites/kaszek/sections/FaqSection.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4": {
+      "title": "deco-sites/kaszek/sections/AboutKaszek.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/AboutKaszek.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/AboutKaszek.tsx"
         }
       }
     },
@@ -690,27 +803,6 @@
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz": {
-      "title": "$live/matchers/MatchDate.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/matchers/MatchDate.ts"
-          ],
-          "default": "$live/matchers/MatchDate.ts"
-        }
-      }
-    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM=": {
       "title": "$live/matchers/MatchUserAgent.ts",
       "type": "object",
@@ -732,12 +824,12 @@
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz": {
-      "title": "$live/matchers/MatchSite.ts",
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM=": {
+      "title": "$live/matchers/MatchRandom.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props"
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props"
         }
       ],
       "required": [
@@ -747,9 +839,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "$live/matchers/MatchSite.ts"
+            "$live/matchers/MatchRandom.ts"
           ],
-          "default": "$live/matchers/MatchSite.ts"
+          "default": "$live/matchers/MatchRandom.ts"
         }
       }
     },
@@ -774,12 +866,12 @@
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM=": {
-      "title": "$live/matchers/MatchRandom.ts",
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz": {
+      "title": "$live/matchers/MatchSite.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props"
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props"
         }
       ],
       "required": [
@@ -789,9 +881,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "$live/matchers/MatchRandom.ts"
+            "$live/matchers/MatchSite.ts"
           ],
-          "default": "$live/matchers/MatchRandom.ts"
+          "default": "$live/matchers/MatchSite.ts"
         }
       }
     },
@@ -829,6 +921,27 @@
             "$live/matchers/MatchAlways.ts"
           ],
           "default": "$live/matchers/MatchAlways.ts"
+        }
+      }
+    },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz": {
+      "title": "$live/matchers/MatchDate.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchDate.ts"
+          ],
+          "default": "$live/matchers/MatchDate.ts"
         }
       }
     },
@@ -923,19 +1036,19 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0J1dHRvbkhhbWJ1cmdlci50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4"
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4"
         }
       ]
     },
@@ -946,16 +1059,16 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz"
-        },
-        {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz"
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw=="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM="
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz"
         }
       ]
     },
@@ -977,10 +1090,16 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
@@ -994,25 +1113,25 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
-        },
-        {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz"
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw=="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM="
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz"
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM="
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
         }
       ]
     },

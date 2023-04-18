@@ -4,7 +4,7 @@ export default {
     "l-container": "max-w-[1200px] sm:w-[calc(100% - 24px)]",
     "flex-center-between": "flex items-center justify-between",
     "flex-center-end": "flex items-center justify-end",
-    "flex-center-center" : "flex items-center justify-center",
+    "flex-center-center": "flex items-center justify-center",
     "is-sticky": {
       filter:
         "invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
@@ -36,10 +36,10 @@ export default {
       },
       fontFamily: {
         fontFamily: {
-          sans: ['Maax Bold', 'Maax Regular', 'Noe Display Bold', 'sans-serif'],
+          sans: ["Maax Bold", "Maax Regular", "Noe Display Bold", "sans-serif"],
         },
         fontWeight: {
-          bold: '700',
+          bold: "700",
         },
         serif: ["serif"],
       },
