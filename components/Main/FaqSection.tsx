@@ -33,7 +33,7 @@ export default function FaqSection(props: Props)  {
   
 
   return (
-    <section class="w-full pt-[50px] md:pt-[75px] lg:pt-[120px] pb-[75px] max-w-[1200px] xl:px-0 px-[15px]">
+    <section class="w-full mx-auto pt-[50px] md:pt-[75px] lg:pt-[120px] pb-[75px] max-w-[1200px] xl:px-0 px-[15px]">
         <div style={{ WebkitTapHighlightColor: 'transparent' }}>
             <h3 class="md:text-[76px] text-[36px] font-bold color-green leading-[1] tracking-[-.5px] sm:h-[79.19px] md:h-[152px] inline-flex items-end" style="font-family: 'Noe Display Bold', sans-serif;">FAQ</h3>
             <div class="grid grid-cols-1 mt-[50px] md:mt-[120px]">
