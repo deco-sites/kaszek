@@ -39,6 +39,65 @@
       ],
       "title": "deco-sites/kaszek\\functions\\LoadGitHubRaw.ts@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "title": "Question"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Answer"
+        },
+        "answertwo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Answertwo"
+        },
+        "answerthree": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Answerthree"
+        },
+        "isOpen": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Is Open"
+        }
+      },
+      "required": [
+        "question",
+        "answer"
+      ],
+      "title": "Faq"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq"
+      },
+      "title": "Faq[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "faqs": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq[]",
+          "title": "Faqs"
+        }
+      },
+      "required": [
+        "faqs"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\FaqSection.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -518,6 +577,11 @@
     "Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4": {
       "title": "./islands/FaqSection.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -670,6 +734,27 @@
             "$live/pages/LivePage.tsx"
           ],
           "default": "$live/pages/LivePage.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g=": {
+      "title": "deco-sites/kaszek/sections/FaqSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/FaqSection.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/FaqSection.tsx"
         }
       }
     },
@@ -1024,6 +1109,9 @@
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g="

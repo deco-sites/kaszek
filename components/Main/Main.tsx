@@ -1,7 +1,8 @@
 import EntrepreneurialCapital from "deco-sites/start/components/Main/EntrepreneurialCapital.tsx";
 import AboutKaszek from "deco-sites/start/components/Main/AboutKaszek.tsx";
 import Entrepreneurs from "deco-sites/start/components/Main/Entrepreneurs.tsx";
-import FaqSection from "deco-sites/start/components/Main/FaqSection.tsx";
+import FaqSection from "deco-sites/start/sections/FaqSection.tsx";
+export type { Faq, Props } from "../../components/Main/FaqSection.tsx";
 
 export default function Main() {
   return (
@@ -9,7 +10,7 @@ export default function Main() {
       <EntrepreneurialCapital />
       <AboutKaszek />
       <Entrepreneurs />
-      <FaqSection />
+      <FaqSection faqs={[]} />
     </main>
   );
 }
