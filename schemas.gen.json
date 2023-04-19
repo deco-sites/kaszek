@@ -39,6 +39,44 @@
       ],
       "title": "deco-sites/kaszek\\functions\\LoadGitHubRaw.ts@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "value": {
+          "type": "number",
+          "title": "Value"
+        }
+      },
+      "required": [
+        "title",
+        "value"
+      ],
+      "title": "Results"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results"
+      },
+      "title": "Results[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results[]",
+          "title": "Result"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\Entrepreneurs.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq": {
       "type": "object",
       "properties": {
@@ -621,6 +659,11 @@
     "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
       "title": "./islands/Entrepreneurs.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -815,6 +858,27 @@
             "deco-sites/kaszek/sections/AboutKaszek.tsx"
           ],
           "default": "deco-sites/kaszek/sections/AboutKaszek.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g=": {
+      "title": "deco-sites/kaszek/sections/Entrepreneurs.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Entrepreneurs.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Entrepreneurs.tsx"
         }
       }
     },
@@ -1193,6 +1257,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="

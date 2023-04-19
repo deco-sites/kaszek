@@ -9,7 +9,7 @@ export default function Main() {
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
       <EntrepreneurialCapital />
       <AboutKaszek title="" first_description="" city={[]}/>
-      <Entrepreneurs />
+      <Entrepreneurs result={[]}/>
       <FaqSection faqs={[]} />
     </main>
   );
