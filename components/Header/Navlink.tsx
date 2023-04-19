@@ -1,25 +1,29 @@
-import ScrollClassRemover from "deco-sites/start/islands/ScrollClassRemover.tsx";
-import { forwardRef } from "preact/compat";
+import { VNode } from 'preact';
+import { useState, useEffect } from 'preact/hooks';
 
-interface Props {
-  href: string;
-  content: string;
+export interface Props {
+  link: string;
+  title: string;
   className?: string;
 }
 
-const NavLink = forwardRef<HTMLAnchorElement, Props>(
-  ({ href, content, className = "" }) => {
-    return (
-      <li className={`border-transparent ${className}`}>
-        <ScrollClassRemover
-          as="a"
-          href={href}
-          content={content}
-          className="color-green font-bold leading-4"
-        />
-      </li>
-    );
-  }
-);
+export default function Navlink({ link, title, className = '' }: Props): VNode {
+  const [hasScrolled, setHasScrolled] = useState(false);
 
-export default NavLink;
+  useEffect(() => {
+    const handleScroll = () => setHasScrolled(globalThis.scrollY > 0);
+
+    globalThis.addEventListener("scroll", handleScroll);
+    return () => globalThis.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const elementClass = hasScrolled ? "" : "is-sticky" as const;
+
+  return (
+    <li className={`border-transparent ${className} ${elementClass}`}>
+      <a href={link} className="color-green font-bold leading-4">
+        {title}
+      </a>
+    </li>
+  );
+}
