@@ -252,6 +252,66 @@
       ],
       "title": "deco-cx/live/pages/LivePage.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "title": "City"
+        },
+        "bottom": {
+          "type": "string",
+          "title": "Bottom"
+        },
+        "left": {
+          "type": "string",
+          "title": "Left"
+        }
+      },
+      "required": [
+        "city",
+        "bottom",
+        "left"
+      ],
+      "title": "Cities"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities"
+      },
+      "title": "Cities[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities[]",
+          "title": "City"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "first_description": {
+          "type": "string",
+          "title": "First_description"
+        },
+        "second_description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second_description"
+        }
+      },
+      "required": [
+        "city",
+        "title",
+        "first_description"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\AboutKaszek.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcR2V0U3RhcnRlZC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -737,6 +797,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4": {
+      "title": "deco-sites/kaszek/sections/AboutKaszek.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/AboutKaszek.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/AboutKaszek.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g=": {
       "title": "deco-sites/kaszek/sections/FaqSection.tsx",
       "type": "object",
@@ -1109,6 +1190,9 @@
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
