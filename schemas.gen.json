@@ -39,24 +39,6 @@
       ],
       "title": "deco-sites/kaszek\\functions\\LoadGitHubRaw.ts@Props"
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "link": {
-          "type": "string",
-          "title": "Link"
-        },
-        "title": {
-          "type": "string",
-          "title": "Title"
-        }
-      },
-      "required": [
-        "link",
-        "title"
-      ],
-      "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -552,11 +534,6 @@
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props"
-        }
-      ],
       "required": [
         "__resolveType"
       ],

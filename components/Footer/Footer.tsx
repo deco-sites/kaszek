@@ -20,10 +20,10 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <ul class="lg:flex-center-end flex items-center justify-start">
-                <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/2892335" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px] mr-[30px]" style="font-family: 'Maax Bold', sans-serif;">Linkedin</a></li>
-                <li><a target="_blank" rel="noopener" href="https://www.instagram.com/kaszekventures" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px]" style="font-family: 'Maax Bold', sans-serif;">Instagram</a></li>
-              </ul>
+            <ul class="lg:flex-center-end flex-wrap flex items-center justify-start">
+              <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/2892335" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px] mr-[30px]" style="font-family: 'Maax Bold', sans-serif;">Linkedin</a></li>
+              <li><a target="_blank" rel="noopener" href="https://www.instagram.com/kaszekventures" class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px]" style="font-family: 'Maax Bold', sans-serif;">Instagram</a></li>
+            </ul>
             </div>
           </div>
           <div className="text-[16px]">© {currentYear} Kaszek. All Rights Reserved</div>
