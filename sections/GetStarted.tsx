@@ -14,7 +14,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
         <div class="min-h-screen flex-center-between flex-col">
           <Header />
           <Main />
-          <Footer />
+          <Footer contents={[]}/>
         </div>
       )}
     </section>

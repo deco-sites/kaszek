@@ -17,8 +17,9 @@ import * as $$$$$6 from "./islands/Navlink.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
 import * as $$$$$$$$1 from "./sections/Entrepreneurs.tsx";
 import * as $$$$$$$$2 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$3 from "./sections/GetStarted.tsx";
-import * as $$$$$$$$4 from "./sections/Head.tsx";
+import * as $$$$$$$$3 from "./sections/Footer.tsx";
+import * as $$$$$$$$4 from "./sections/GetStarted.tsx";
+import * as $$$$$$$$5 from "./sections/Head.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
@@ -69,8 +70,9 @@ const manifest: DecoManifest = {
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
     "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$1,
     "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/GetStarted.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/GetStarted.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$5,
     "$live/sections/PageInclude.tsx": i1$$$0,
   },
   "handlers": {
