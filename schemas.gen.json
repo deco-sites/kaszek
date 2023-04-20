@@ -126,12 +126,17 @@
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props": {
       "type": "object",
       "properties": {
+        "title_section": {
+          "type": "string",
+          "title": "Title_section"
+        },
         "faqs": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq[]",
           "title": "Faqs"
         }
       },
       "required": [
+        "title_section",
         "faqs"
       ],
       "title": "deco-sites/kaszek\\components\\Main\\FaqSection.tsx@Props"
