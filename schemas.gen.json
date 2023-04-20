@@ -136,6 +136,44 @@
       ],
       "title": "deco-sites/kaszek\\components\\Main\\FaqSection.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links"
+      },
+      "title": "Links[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "link"
+      ],
+      "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -818,6 +856,11 @@
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -1101,6 +1144,27 @@
             "deco-sites/kaszek/sections/Head.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZGVyLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Header.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Header.tsx"
         }
       }
     },
@@ -1434,6 +1498,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZGVyLnRzeA=="
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
