@@ -136,6 +136,11 @@
       ],
       "title": "deco-sites/kaszek\\components\\Main\\FaqSection.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links": {
       "type": "object",
       "properties": {
@@ -164,12 +169,24 @@
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "link_img": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link_img"
+        },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]",
           "title": "Link"
         }
       },
       "required": [
+        "img",
         "link"
       ],
       "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
@@ -387,11 +404,6 @@
         "first_description"
       ],
       "title": "deco-sites/kaszek\\components\\Main\\AboutKaszek.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
-      "type": "string",
-      "format": "image-uri",
-      "title": "Image"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cmlhbENhcGl0YWwudHN4@Props": {
       "type": "object",

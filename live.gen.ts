@@ -12,8 +12,7 @@ import * as $$$$$1 from "./islands/CityPlate.tsx";
 import * as $$$$$2 from "./islands/Entrepreneurs.tsx";
 import * as $$$$$3 from "./islands/FaqSection.tsx";
 import * as $$$$$4 from "./islands/Header.tsx";
-import * as $$$$$5 from "./islands/Logo.tsx";
-import * as $$$$$6 from "./islands/Navlink.tsx";
+import * as $$$$$5 from "./islands/Navlink.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
 import * as $$$$$$$$1 from "./sections/EntrepreneurialCapital.tsx";
 import * as $$$$$$$$2 from "./sections/Entrepreneurs.tsx";
@@ -65,8 +64,7 @@ const manifest: DecoManifest = {
     "./islands/Entrepreneurs.tsx": $$$$$2,
     "./islands/FaqSection.tsx": $$$$$3,
     "./islands/Header.tsx": $$$$$4,
-    "./islands/Logo.tsx": $$$$$5,
-    "./islands/Navlink.tsx": $$$$$6,
+    "./islands/Navlink.tsx": $$$$$5,
   },
   "sections": {
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,

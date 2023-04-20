@@ -1,1 +1,0 @@
-export { default } from "deco-sites/start/components/Header/Logo.tsx";
