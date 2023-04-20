@@ -169,16 +169,16 @@
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "img": {
+        "logo": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Img"
+          "title": "Logo"
         },
-        "link_img": {
+        "link_logo": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Link_img"
+          "title": "Link_logo"
         },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]",
@@ -186,7 +186,7 @@
         }
       },
       "required": [
-        "img",
+        "logo",
         "link"
       ],
       "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
@@ -378,6 +378,10 @@
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Props": {
       "type": "object",
       "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
         "city": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities[]",
           "title": "City"
@@ -399,7 +403,7 @@
         }
       },
       "required": [
-        "city",
+        "img",
         "title",
         "first_description"
       ],
