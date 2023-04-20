@@ -526,20 +526,6 @@
       ],
       "title": "deco-sites/kaszek\\components\\Footer\\Footer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcR2V0U3RhcnRlZC50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/kaszek\\sections\\GetStarted.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSGVhZC50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -585,6 +571,20 @@
         "themeColor"
       ],
       "title": "deco-sites/kaszek\\sections\\Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSG9tZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "enableInspectVSCode": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Enable Inspect V S Code"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/kaszek\\sections\\Home.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
       "type": "object",
@@ -1126,27 +1126,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g=": {
-      "title": "deco-sites/kaszek/sections/GetStarted.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcR2V0U3RhcnRlZC50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/kaszek/sections/GetStarted.tsx"
-          ],
-          "default": "deco-sites/kaszek/sections/GetStarted.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=": {
       "title": "deco-sites/kaszek/sections/Head.tsx",
       "type": "object",
@@ -1186,6 +1165,27 @@
             "deco-sites/kaszek/sections/Header.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g=": {
+      "title": "deco-sites/kaszek/sections/Home.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSG9tZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Home.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Home.tsx"
         }
       }
     },
@@ -1515,13 +1515,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9vdGVyLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2V0U3RhcnRlZC50c3g="
-        },
-        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g="
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
