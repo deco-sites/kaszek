@@ -7,7 +7,7 @@ export type { Faq, Props } from "../../components/Main/FaqSection.tsx";
 export default function Main() {
   return (
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
-      <EntrepreneurialCapital />
+      <EntrepreneurialCapital title="" background =""/>
       <AboutKaszek title="" first_description="" city={[]}/>
       <Entrepreneurs result={[]}/>
       <FaqSection faqs={[]} />
