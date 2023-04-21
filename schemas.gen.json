@@ -221,6 +221,27 @@
       ],
       "title": "deco-sites/kaszek\\components\\Header\\Navlink.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXFdlYXRoZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/kaszek\\components\\Main\\Weather.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
       "$ref": "#/root/flags",
       "title": "Flag"
@@ -424,6 +445,27 @@
         "background": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Background"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
         }
       },
       "required": [
@@ -913,6 +955,27 @@
             "./islands/Navlink.tsx"
           ],
           "default": "./islands/Navlink.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL1dlYXRoZXIudHN4": {
+      "title": "./islands/Weather.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXFdlYXRoZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Weather.tsx"
+          ],
+          "default": "./islands/Weather.tsx"
         }
       }
     },
@@ -1459,6 +1522,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL05hdmxpbmsudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1dlYXRoZXIudHN4"
         }
       ]
     },
