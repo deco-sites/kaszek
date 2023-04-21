@@ -8,9 +8,9 @@ export default function Main() {
   return (
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
       <EntrepreneurialCapital title="" background =""/>
-      <AboutKaszek title="" first_description="" city={[]}/>
+      <AboutKaszek img ="" title="" first_description="" city={[]}/>
       <Entrepreneurs result={[]}/>
-      <FaqSection faqs={[]} />
+      <FaqSection title_section="" faqs={[]} />
     </main>
   );
 }
