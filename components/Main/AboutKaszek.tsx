@@ -21,7 +21,7 @@ export default function AboutKaszek(props: Props) {
   const [locations] = useState(Array.isArray(props.city) ? props.city : []);
 
   return (
-    <section class="w-full flex items-center flex-col bg-[#ebf0ef] px-[12px] md:px-0">
+    <section class="w-full flex items-center flex-col bg-[#ebf0ef] px-[12px] lg:px-0">
       <div class="w-full l-container grid grid-rows-1 md:grid-cols-2 gap-4">
         <div class="h-full relative max-w-[509.99px]">
            <Image class="max-h-[620.99px] object-cover pointer-events-none" src={props.img} alt={"background"} width={509.99} height={620.99}/>
@@ -34,7 +34,7 @@ export default function AboutKaszek(props: Props) {
           />        
           ))}      
         </div>
-        <div class="w-full md:max-w-[384px] flex-center-center flex-col mx-auto">
+        <div class="w-full md:max-w-[360.09px] lg:max-w-[384px] flex-center-center flex-col mx-auto">
           <h2
             class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] Maax-Bold-Font"
           >
