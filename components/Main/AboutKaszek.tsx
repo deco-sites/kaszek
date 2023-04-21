@@ -36,15 +36,14 @@ export default function AboutKaszek(props: Props) {
         </div>
         <div class="w-full md:max-w-[384px] flex-center-center flex-col mx-auto">
           <h2
-            class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] font-bold"
-            style="font-family: 'Maax Bold', sans-serif;"
+            class="mb-[20px] text-[24px] leading-[30px] tracking-[-.5px] Maax-Bold-Font"
           >
             {props.title}
           </h2>
-          <p class="text-[16px] leading-[1.5] mb-[16px]">
+          <p class="text-[16px] leading-[1.5] mb-[16px] Maax-Regular-Font">
             {props.first_description}
           </p>
-          <p class="text-[16px] leading-[1.5]">
+          <p class="text-[16px] leading-[1.5] Maax-Regular-Font">
             {props.second_description}
           </p>
         </div>
