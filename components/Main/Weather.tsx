@@ -38,17 +38,19 @@ export default function Weather({ latitude, longitude }: Props) {
     <div class="flex items-center">
       {!isLoading && icon === "cloud" ? (
         <object
-          data={asset(`/imgs/icon-cloud.svg`)}
+          data={asset(`/imgs/icon cloud.svg`)}
           width="23.99"
           height="23.99"
           class="mr-[8px]"
+          alt="icon cloud"
         ></object>
       ) : !isLoading && icon === "rain" ? (
         <object
-          data={asset(`/imgs/icon-rain.svg`)}
+          data={asset(`/imgs/icon rain.svg`)}
           width="23.99"
           height="23.99"
           class="mr-[8px]"
+          alt="icon rain"
         ></object>
       ) : null}
       {!isLoading && temperature !== null ? (
