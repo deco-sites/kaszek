@@ -17,6 +17,7 @@ export default {
     },
     "Noe-Display-Font": { fontFamily: "Noe Display Bold" },
     "Maax-Bold-Font": { fontFamily: "Maax Bold" },
+    "Maax-Regular-Font": { fontFamily: "Maax Regular" },
   },
   theme: {
     extend: {

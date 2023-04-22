@@ -12,9 +12,9 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
     <section>
       {enableInspectVSCode && !context.deploymentId && (
         <div class="min-h-screen flex-center-between flex-col">
-          <Header />
+          <Header logo="" link={[]} />
           <Main />
-          <Footer />
+          <Footer contents={[]}/>
         </div>
       )}
     </section>
