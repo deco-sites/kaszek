@@ -42,7 +42,7 @@ export default function Weather({ latitude, longitude }: Props) {
           width="23.99"
           height="23.99"
           class="mr-[8px]"
-          alt="icon cloud"
+          aria-label="icon cloud"
         ></object>
       ) : !isLoading && icon === "rain" ? (
         <object
@@ -50,7 +50,7 @@ export default function Weather({ latitude, longitude }: Props) {
           width="23.99"
           height="23.99"
           class="mr-[8px]"
-          alt="icon rain"
+          aria-label="icon rain"
         ></object>
       ) : null}
       {!isLoading && temperature !== null ? (
