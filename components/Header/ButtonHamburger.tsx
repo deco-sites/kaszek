@@ -13,6 +13,7 @@ export default function ButtonHamburger(props: ButtonHamburgerProps) {
       onClick={toggleMenu}
       className={`block md:hidden z-10 relative focus:outline-none focus:border-none ${showMenu ? 'w-[48px] h-[48px]' : 'w-8 h-[13.99px] right-[12px]'}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
+      aria-label="menu button"
     >
       <object
         data={asset(`/imgs/icon-x.svg`)}

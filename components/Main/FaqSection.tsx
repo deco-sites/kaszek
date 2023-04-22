@@ -41,7 +41,7 @@ export default function FaqSection(props: Props)  {
                             onClick={() => toggleAccordion(index)}>
                             <h4 class="text-[24px] font-bold color-green pr-[40px]" style="font-family: 'Maax Bold', sans-serif;">{faq.question}</h4>
                             <span class="transform transition-transform duration-300">
-                            <object data={asset(`/imgs/arrow-accordion.svg`)} width="34" height="34" class={`transform pointer-events-none ${
+                            <object data={asset(`/imgs/arrow-accordion.svg`)} alt="accordion menu toggle" width="34" height="34" class={`transform pointer-events-none ${
                                 faq.isOpen ? 'rotate-180' : ''
                             }`}> </object>
                             </span>
