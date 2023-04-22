@@ -11,8 +11,8 @@ export interface Props {
 }
 
 export default function HeadComponent({
-  title = "deco.cx — starter site",
-  description = "Deliver complete commerce experiences — start here!",
+  title = "Kaszek - Entrepreneurial Capital in Latin America",
+  description = "We are tech entrepreneurs partnering with the most extraordinary founders in Latin America.",
   url = "https://start.deco.site",
   imageUrl = "https://deco.cx/images/deco-logo-light.png",
   faviconUrl = "",
@@ -41,9 +41,9 @@ export default function HeadComponent({
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       </link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/x-icon" sizes="32x32" href="/imgs/favicon-32x32.ico">
       </link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="/imgs/favicon-16x16.ico">
       </link>
       <link rel="manifest" href="/site.webmanifest"></link>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
@@ -91,6 +91,27 @@ export default function HeadComponent({
             font-display: swap;
             src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZbYFeQGQyU.woff2) format('woff2');
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+          }
+          @font-face {
+            font-family: 'Noe Display Bold';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('/fonts/noe-display-bold.woff') format('woff');
+          }
+          @font-face {
+            font-family: 'Maax Bold';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('/fonts/Maax-Bold-205TF.woff') format('woff');
+          }
+          @font-face {
+            font-family: 'Maax Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('/fonts/Maax-Regular-205TF.woff') format('woff');
           }
       `,
         }}

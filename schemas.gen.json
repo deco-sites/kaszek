@@ -13,7 +13,7 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props": {
+    "ZGVjby1zaXRlcy9rYXN6ZWtcZnVuY3Rpb25zXExvYWRHaXRIdWJSYXcudHM=@Props": {
       "type": "object",
       "properties": {
         "repo": {
@@ -37,7 +37,210 @@
         "branch",
         "path"
       ],
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts@Props"
+      "title": "deco-sites/kaszek\\functions\\LoadGitHubRaw.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "value": {
+          "type": "number",
+          "title": "Value"
+        }
+      },
+      "required": [
+        "title",
+        "value"
+      ],
+      "title": "Results"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results"
+      },
+      "title": "Results[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Results[]",
+          "title": "Result"
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\Entrepreneurs.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "title": "Question"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Answer"
+        },
+        "answertwo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Answertwo"
+        },
+        "answerthree": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Answerthree"
+        },
+        "isOpen": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Is Open"
+        }
+      },
+      "required": [
+        "question",
+        "answer"
+      ],
+      "title": "Faq"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq"
+      },
+      "title": "Faq[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title_section": {
+          "type": "string",
+          "title": "Title_section"
+        },
+        "faqs": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Faq[]",
+          "title": "Faqs"
+        }
+      },
+      "required": [
+        "title_section",
+        "faqs"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\FaqSection.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links"
+      },
+      "title": "Links[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Logo"
+        },
+        "link_logo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link_logo"
+        },
+        "link": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Links[]",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "logo",
+        "link"
+      ],
+      "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "className": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Class Name"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "deco-sites/kaszek\\components\\Header\\Navlink.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXFdlYXRoZXIudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/kaszek\\components\\Main\\Weather.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
       "$ref": "#/root/flags",
@@ -168,7 +371,204 @@
       ],
       "title": "deco-cx/live/pages/LivePage.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "title": "City"
+        },
+        "bottom": {
+          "type": "string",
+          "title": "Bottom"
+        },
+        "left": {
+          "type": "string",
+          "title": "Left"
+        }
+      },
+      "required": [
+        "city",
+        "bottom",
+        "left"
+      ],
+      "title": "Cities"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities"
+      },
+      "title": "Cities[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "city": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Cities[]",
+          "title": "City"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "first_description": {
+          "type": "string",
+          "title": "First_description"
+        },
+        "second_description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second_description"
+        }
+      },
+      "required": [
+        "img",
+        "title",
+        "first_description"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\AboutKaszek.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cmlhbENhcGl0YWwudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "background": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Background"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        }
+      },
+      "required": [
+        "title",
+        "background"
+      ],
+      "title": "deco-sites/kaszek\\components\\Main\\EntrepreneurialCapital.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@SocialMedia": {
+      "type": "object",
+      "properties": {
+        "social_media_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Social_media_name"
+        },
+        "social_media_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Social_media_link"
+        }
+      },
+      "required": [],
+      "title": "SocialMedia"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@SocialMedia[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@SocialMedia"
+      },
+      "title": "SocialMedia[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Contents": {
+      "type": "object",
+      "properties": {
+        "first_text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "First_text"
+        },
+        "email_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Email_name"
+        },
+        "email_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Email_link"
+        },
+        "second_text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second_text"
+        },
+        "social_media": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@SocialMedia[]",
+          "title": "Social_media"
+        },
+        "copyright": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Copyright"
+        }
+      },
+      "required": [],
+      "title": "Contents"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Contents[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Contents"
+      },
+      "title": "Contents[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "contents": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Contents[]",
+          "title": "Contents"
+        }
+      },
+      "required": [
+        "contents"
+      ],
+      "title": "deco-sites/kaszek\\components\\Footer\\Footer.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSGVhZC50c3g=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -212,9 +612,9 @@
         "styleUrls",
         "themeColor"
       ],
-      "title": "deco-sites/start/sections/Head.tsx@Props"
+      "title": "deco-sites/kaszek\\sections\\Head.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSG9tZS50c3g=@Props": {
       "type": "object",
       "properties": {
         "enableInspectVSCode": {
@@ -226,7 +626,7 @@
         }
       },
       "required": [],
-      "title": "deco-sites/start/sections/GetStarted.tsx@Props"
+      "title": "deco-sites/kaszek\\sections\\Home.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
       "type": "object",
@@ -421,12 +821,12 @@
       "required": [],
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==": {
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts",
+    "ZGVjby1zaXRlcy9rYXN6ZWsvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM=": {
+      "title": "deco-sites/kaszek/functions/LoadGitHubRaw.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcZnVuY3Rpb25zXExvYWRHaXRIdWJSYXcudHM=@Props"
         }
       ],
       "required": [
@@ -436,9 +836,146 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/functions/LoadGitHubRaw.ts"
+            "deco-sites/kaszek/functions/LoadGitHubRaw.ts"
           ],
-          "default": "deco-sites/start/functions/LoadGitHubRaw.ts"
+          "default": "deco-sites/kaszek/functions/LoadGitHubRaw.ts"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0J1dHRvbkhhbWJ1cmdlci50c3g=": {
+      "title": "./islands/ButtonHamburger.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/ButtonHamburger.tsx"
+          ],
+          "default": "./islands/ButtonHamburger.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g=": {
+      "title": "./islands/CityPlate.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CityPlate.tsx"
+          ],
+          "default": "./islands/CityPlate.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
+      "title": "./islands/Entrepreneurs.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Entrepreneurs.tsx"
+          ],
+          "default": "./islands/Entrepreneurs.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4": {
+      "title": "./islands/FaqSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/FaqSection.tsx"
+          ],
+          "default": "./islands/FaqSection.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
+      "title": "./islands/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Header.tsx"
+          ],
+          "default": "./islands/Header.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL05hdmxpbmsudHN4": {
+      "title": "./islands/Navlink.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Navlink.tsx"
+          ],
+          "default": "./islands/Navlink.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL1dlYXRoZXIudHN4": {
+      "title": "./islands/Weather.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXFdlYXRoZXIudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Weather.tsx"
+          ],
+          "default": "./islands/Weather.tsx"
         }
       }
     },
@@ -547,12 +1084,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==": {
-      "title": "deco-sites/start/sections/Head.tsx",
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4": {
+      "title": "deco-sites/kaszek/sections/AboutKaszek.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEFib3V0S2FzemVrLnRzeA==@Props"
         }
       ],
       "required": [
@@ -562,18 +1099,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/Head.tsx"
+            "deco-sites/kaszek/sections/AboutKaszek.tsx"
           ],
-          "default": "deco-sites/start/sections/Head.tsx"
+          "default": "deco-sites/kaszek/sections/AboutKaszek.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/start/sections/GetStarted.tsx",
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVyaWFsQ2FwaXRhbC50c3g=": {
+      "title": "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cmlhbENhcGl0YWwudHN4@Props"
         }
       ],
       "required": [
@@ -583,9 +1120,135 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/GetStarted.tsx"
+            "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx"
           ],
-          "default": "deco-sites/start/sections/GetStarted.tsx"
+          "default": "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g=": {
+      "title": "deco-sites/kaszek/sections/Entrepreneurs.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEVudHJlcHJlbmV1cnMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Entrepreneurs.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Entrepreneurs.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g=": {
+      "title": "deco-sites/kaszek/sections/FaqSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXEZhcVNlY3Rpb24udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/FaqSection.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/FaqSection.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9vdGVyLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Footer.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Footer.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g=": {
+      "title": "deco-sites/kaszek/sections/Head.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSGVhZC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Head.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZGVyLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcSGVhZGVyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Header.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g=": {
+      "title": "deco-sites/kaszek/sections/Home.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcc2VjdGlvbnNcSG9tZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Home.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Home.tsx"
         }
       }
     },
@@ -832,7 +1495,36 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM="
+        }
+      ]
+    },
+    "islands": {
+      "title": "islands",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0J1dHRvbkhhbWJ1cmdlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL05hdmxpbmsudHN4"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1dlYXRoZXIudHN4"
         }
       ]
     },
@@ -874,10 +1566,28 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVyaWFsQ2FwaXRhbC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9vdGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSGVhZGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g="
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
@@ -953,6 +1663,9 @@
         "anyOf": [
           {
             "$ref": "#/root/functions"
+          },
+          {
+            "$ref": "#/root/islands"
           },
           {
             "$ref": "#/root/handlers"
