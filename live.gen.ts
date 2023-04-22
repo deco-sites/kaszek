@@ -7,8 +7,21 @@ import { DecoManifest } from "$live/types.ts";
 
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$$$$0 from "./sections/Head.tsx";
-import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
+import * as $$$$$0 from "./islands/ButtonHamburger.tsx";
+import * as $$$$$1 from "./islands/CityPlate.tsx";
+import * as $$$$$2 from "./islands/Entrepreneurs.tsx";
+import * as $$$$$3 from "./islands/FaqSection.tsx";
+import * as $$$$$4 from "./islands/Header.tsx";
+import * as $$$$$5 from "./islands/Navlink.tsx";
+import * as $$$$$6 from "./islands/Weather.tsx";
+import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
+import * as $$$$$$$$1 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$2 from "./sections/Entrepreneurs.tsx";
+import * as $$$$$$$$3 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$4 from "./sections/Footer.tsx";
+import * as $$$$$$$$5 from "./sections/Head.tsx";
+import * as $$$$$$$$6 from "./sections/Header.tsx";
+import * as $$$$$$$$7 from "./sections/Home.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
@@ -46,9 +59,24 @@ const manifest: DecoManifest = {
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/[...catchall].tsx": $live_catchall,
   },
+  "islands": {
+    "./islands/ButtonHamburger.tsx": $$$$$0,
+    "./islands/CityPlate.tsx": $$$$$1,
+    "./islands/Entrepreneurs.tsx": $$$$$2,
+    "./islands/FaqSection.tsx": $$$$$3,
+    "./islands/Header.tsx": $$$$$4,
+    "./islands/Navlink.tsx": $$$$$5,
+    "./islands/Weather.tsx": $$$$$6,
+  },
   "sections": {
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$0,
-    "deco-sites/kaszek/sections/GetStarted.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$2,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$7,
     "$live/sections/PageInclude.tsx": i1$$$0,
   },
   "handlers": {
@@ -73,7 +101,6 @@ const manifest: DecoManifest = {
     "$live/flags/audience.ts": i1$$$$$0,
     "$live/flags/everyone.ts": i1$$$$$1,
   },
-  "islands": {},
   "config": config,
   "baseUrl": import.meta.url,
 };
