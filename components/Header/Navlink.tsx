@@ -20,8 +20,8 @@ export default function Navlink({ link, title, className = '' }: Props): VNode {
   const elementClass = hasScrolled ? "" : "is-sticky" as const;
 
   return (
-    <li className={`border-transparent ${className} ${elementClass}`}>
-      <a href={link} className="color-green font-bold leading-4">
+    <li class={`border-transparent ${className} ${elementClass}`}>
+      <a href={link} class="color-green font-bold leading-4">
         {title}
       </a>
     </li>
