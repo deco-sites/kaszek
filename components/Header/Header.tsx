@@ -69,7 +69,7 @@ export default function Header(props: Props) {
     >
       <div class={`mx-auto w-full xl:pr-[0px] pr-[12px] xl:(l-container)`}>
         <nav class="flex-center-between w-full h-[80px]">
-          <a href={props.link_logo} className={`z-10 xl:pl-[0px] pl-[12px] ${elementClass} ${showMenu ? "color-green-lemon pl-[12px]" : ""}`}>
+          <a href={props.link_logo} class={`z-10 xl:pl-[0px] pl-[12px] ${elementClass} ${showMenu ? "color-green-lemon pl-[12px]" : ""}`}>
             <Image src={props.logo} alt="logo" width={109.94} height={17.95} />
           </a>
           <div class="flex-center-end w-full absolute md:(relative)">
