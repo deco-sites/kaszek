@@ -16,7 +16,7 @@ export default function ButtonHamburger(props: ButtonHamburgerProps) {
       aria-label="menu button"
     >
       <object
-        data={asset(`/imgs/icon-x.svg`)}
+        data={asset(`/icon-x.svg`)}
         className={`block absolute bg-white top-0 rounded-full right-[16px]`}
         style={{
           width: "48px",
@@ -27,7 +27,7 @@ export default function ButtonHamburger(props: ButtonHamburgerProps) {
       />
       <span
         className={`${
-          showMenu ? "" : " block absolute"
+          showMenu ? "" : "block absolute"
         } top-[1px] w-full h-[3px] rounded-md ${window.scrollY > 0 ? 'bg-[#005046]' : 'bg-white'} ${
           showMenu ? "opacity-0" : ""
         }`}

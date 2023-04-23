@@ -41,9 +41,9 @@ export default function HeadComponent({
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       </link>
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="/imgs/favicon-32x32.ico">
+      <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.ico">
       </link>
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="/imgs/favicon-16x16.ico">
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon-16x16.ico">
       </link>
       <link rel="manifest" href="/site.webmanifest"></link>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
