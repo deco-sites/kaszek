@@ -29,7 +29,6 @@ export default function FaqSection(props: Props)  {
     );
   };
   
-
   return (
     <section class="w-full mx-auto pt-[50px] md:pt-[75px] lg:pt-[120px] pb-[75px] max-w-[1200px] xl:px-0 px-[15px]">
         <div style={{ WebkitTapHighlightColor: 'transparent' }}>
@@ -37,8 +36,7 @@ export default function FaqSection(props: Props)  {
             <div class="grid grid-cols-1 mt-[50px] md:mt-[120px]">
             {faqs.map((faq, index) => (
                     <>
-                        <div class={`flex justify-between items-center cursor-pointer py-[36px] ${faq.isOpen ? '' : ' border-b-1 border-solid border-[#83ff97]'}`}
-                            onClick={() => toggleAccordion(index)}>
+                        <div class={`flex justify-between items-center cursor-pointer py-[36px] ${faq.isOpen ? '' : ' border-b-1 border-solid border-[#83ff97]'}`} onClick={() => toggleAccordion(index)}>
                             <h4 class="text-[24px] color-green pr-[40px] Maax-Bold-Font">{faq.question}</h4>
                             <span class="transform transition-transform duration-300">
                             <object data={asset(`/arrow-accordion.svg`)} aria-label="accordion menu toggle" width="34" height="34" class={`transform pointer-events-none ${
@@ -50,11 +48,7 @@ export default function FaqSection(props: Props)  {
                             <div class="border-b-1 border-solid border-[#83ff97] pb-[36px]">
                               <p class="text-[16px] max-w-[486px] Maax-Regular-Font">{faq.answer}</p>
                               {faq.answertwo && (
-                                <p
-                                  class={`text-[16px] max-w-[486px] Maax-Regular-Font ${
-                                    faq.answerthree ? "mb-4 mt-4" : "mt-4"
-                                  }`}
-                                >
+                                <p class={`text-[16px] max-w-[486px] Maax-Regular-Font ${faq.answerthree ? "mb-4 mt-4" : "mt-4"}`}>
                                   {faq.answertwo}
                                 </p>
                               )}
