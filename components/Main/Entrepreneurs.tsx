@@ -55,8 +55,8 @@ export default function Entrepreneurs(props: Props) {
       <div class="w-full max-w-[1200px] sm:grid md:grid-cols-3 gap-4 items-center grid-cols-1">
         {resultsData.map((data, index) => (
           <div class="text-center color-green" key={index}>
-            <h2 class="text-2xl font-bold mb-8" style="font-family: 'Maax Bold', sans-serif;">{data.title}</h2>
-            <p class="text-[76px] font-bold mb-5" style="font-family: 'Noe Display Bold', sans-serif;">{data.value}</p>
+            <h2 class="text-2xl mb-8 Maax-Bold-Font">{data.title}</h2>
+            <p class="text-[76px] mb-5 Noe-Display-Font">{data.value}</p>
           </div>
         ))}
       </div>

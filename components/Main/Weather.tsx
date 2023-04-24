@@ -54,7 +54,7 @@ export default function Weather({ latitude, longitude }: Props) {
         ></object>
       ) : null}
       {!isLoading && temperature !== null ? (
-        <span class="text-[#83ff97] text-[12px] font-bold z-2 md:text-[14px]">
+        <span class="text-[#83ff97] text-[12px] z-2 md:text-[14px]">
           {Math.round(temperature)} °C
         </span>
       ) : (

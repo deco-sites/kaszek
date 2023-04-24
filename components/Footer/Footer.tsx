@@ -35,7 +35,7 @@ export default function Footer(props: Props) {
             <p class="text-[16px] Maax-Regular-Font">{props.contents[0]?.first_text}</p>
             <a
               href={props.contents[0]?.email_link}
-              class="color-green font-bold uppercase text-[14px] tracking-[1px] Maax-Bold-Font"
+              class="color-green uppercase text-[14px] tracking-[1px] Maax-Bold-Font"
             >
               {props.contents[0]?.email_name}
             </a>
@@ -51,7 +51,7 @@ export default function Footer(props: Props) {
                   target="_blank"
                   rel="noopener"
                   href={media.social_media_link}
-                  class="arrow-icon color-green font-bold uppercase text-[14px] tracking-[1px] mr-[30px] Maax-Bold-Font">
+                  class="arrow-icon color-green uppercase text-[14px] tracking-[1px] mr-[30px] Maax-Bold-Font">
                   {media.social_media_name}
                 </a>
               </li>
