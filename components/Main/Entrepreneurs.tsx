@@ -56,7 +56,7 @@ export default function Entrepreneurs(props: Props) {
         {resultsData.map((data, index) => (
           <div class="text-center color-green" key={index}>
             <h2 class="text-2xl mb-8 Maax-Bold-Font">{data.title}</h2>
-            <p class="text-[76px] mb-5 Noe-Display-Font">{data.value}</p>
+            <p class="text-[76px] mb-5 Noe-Display-Font leading-none">{data.value}</p>
           </div>
         ))}
       </div>
