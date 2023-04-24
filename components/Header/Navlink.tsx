@@ -21,7 +21,7 @@ export default function Navlink({ link, title, className = '' }: Props): VNode {
 
   return (
     <li class={`border-transparent ${className} ${elementClass}`}>
-      <a href={link} class="color-green font-bold leading-4">
+      <a href={link} class="color-green leading-4">
         {title}
       </a>
     </li>
