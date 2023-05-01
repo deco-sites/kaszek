@@ -1,5 +1,4 @@
-import { useCallback, useState } from "preact/hooks";
-import NavLink from "deco-sites/start/components/Header/Navlink.tsx";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 import ButtonHamburger from "deco-sites/start/components/Header/ButtonHamburger.tsx";
@@ -53,9 +52,9 @@ export default function Header(props: Props) {
     document.body.style.overflow = showMenu ? "hidden" : "";
   });
 
-  const elementClass = hasScrolled ? "" : "is-sticky";
+  const elementClass = hasScrolled && !window.location.href.includes("ethos") ? "" : "is-sticky" as const;
 
-  const headerClass = hasScrolled
+  const headerClass = hasScrolled && !window.location.href.includes("ethos")
     ? "bg-white transition duration-300 ease-in"
     : "bg-transparent transition duration-300 ease-in";
 
@@ -63,13 +62,90 @@ export default function Header(props: Props) {
     ? navlinkStyles.menuOpen
     : navlinkStyles.menuClosed;
 
+  useEffect(() => {
+    if (!window.location.href.includes("ethos")) {
+      return;
+    }
+
+    const targetNode = document.getElementsByClassName("l-header")[0];
+    const aLink = document.querySelector("a");
+
+    const checkAndRemoveStickyClass = () => {
+      if (
+        aLink && !aLink.classList.contains("first_main") &&
+        aLink.classList.contains("is-sticky")
+      ) {
+        aLink.classList.remove("is-sticky");
+      }
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          checkAndRemoveStickyClass();
+        }
+      });
+    };
+
+    const intersectionObserver = new IntersectionObserver(observerCallback);
+    intersectionObserver.observe(targetNode);
+
+    const mutationObserverCallback = () => {
+      checkAndRemoveStickyClass();
+    };
+
+    const mutationObserver = new MutationObserver(mutationObserverCallback);
+    mutationObserver.observe(targetNode, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+    });
+
+    if (targetNode.classList.contains("bg-transparent")) {
+      targetNode.classList.remove(
+        "bg-transparent",
+        "transition",
+        "duration-300",
+        "ease-in",
+      );
+      targetNode.classList.add("bg-white");
+    }
+
+    const liElements: NodeListOf<HTMLLIElement> = document.querySelectorAll(
+      "header li",
+    );
+
+    const addStickyClass = () => {
+      if (window.location.href.includes("ethos")) {
+        liElements.forEach((li) => {
+          if (li.classList.contains("is-sticky")) {
+            li.classList.remove("is-sticky");
+          }
+        });
+      }
+    };
+
+    addEventListener("load", addStickyClass);
+    addEventListener("resize", addStickyClass);
+
+    return () => {
+      intersectionObserver.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, []);
+
   return (
     <header
       class={`l-header w-full flex items-center z-20 relative fixed top-0 ${headerClass}`}
     >
       <div class={`mx-auto w-full xl:pr-[0px] pr-[12px] xl:(l-container)`}>
         <nav class="flex-center-between w-full h-[80px]">
-          <a href={props.link_logo} class={`z-10 xl:pl-[0px] pl-[12px] ${elementClass} ${showMenu ? "color-green-lemon pl-[12px]" : ""}`}>
+          <a
+            href={props.link_logo}
+            class={`z-10 xl:pl-[0px] pl-[12px] ${elementClass} ${
+              showMenu ? "color-green-lemon pl-[12px]" : ""
+            }`}
+          >
             <Image src={props.logo} alt="logo" width={109.94} height={17.95} />
           </a>
           <div class="flex-center-end w-full absolute md:(relative)">
@@ -82,11 +158,13 @@ export default function Header(props: Props) {
               } md:flex`}
             >
               {linksList.map((props) => (
-                <NavLink
-                  link={props.link}
-                  title={props.title}
-                  className={menuItemStyles}
-                />
+                <li
+                  class={`border-transparent ${menuItemStyles} ${elementClass}`}
+                >
+                  <a href={props.link} class="color-green leading-4">
+                    {props.title}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
