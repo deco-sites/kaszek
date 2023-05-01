@@ -196,31 +196,6 @@
       ],
       "title": "deco-sites/kaszek\\components\\Header\\Header.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "link": {
-          "type": "string",
-          "title": "Link"
-        },
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "className": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Class Name"
-        }
-      },
-      "required": [
-        "link",
-        "title"
-      ],
-      "title": "deco-sites/kaszek\\components\\Header\\Navlink.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xNYWluXFdlYXRoZXIudHN4@Props": {
       "type": "object",
       "properties": {
@@ -473,6 +448,31 @@
         "background"
       ],
       "title": "deco-sites/kaszek\\components\\Main\\EntrepreneurialCapital.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xFdGhvc1xFdGhvc01haW4udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "first_text": {
+          "type": "string",
+          "title": "First_text"
+        },
+        "second_text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second_text"
+        },
+        "background": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Background"
+        }
+      },
+      "required": [
+        "first_text",
+        "background"
+      ],
+      "title": "deco-sites/kaszek\\components\\Ethos\\EthosMain.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xGb290ZXJcRm9vdGVyLnRzeA==@SocialMedia": {
       "type": "object",
@@ -937,27 +937,6 @@
         }
       }
     },
-    "Li9pc2xhbmRzL05hdmxpbmsudHN4": {
-      "title": "./islands/Navlink.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xIZWFkZXJcTmF2bGluay50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/Navlink.tsx"
-          ],
-          "default": "./islands/Navlink.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL1dlYXRoZXIudHN4": {
       "title": "./islands/Weather.tsx",
       "type": "object",
@@ -1144,6 +1123,27 @@
             "deco-sites/kaszek/sections/Entrepreneurs.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Entrepreneurs.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/EthosMain.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWtcY29tcG9uZW50c1xFdGhvc1xFdGhvc01haW4udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/EthosMain.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/EthosMain.tsx"
         }
       }
     },
@@ -1521,9 +1521,6 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL05hdmxpbmsudHN4"
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL1dlYXRoZXIudHN4"
         }
       ]
@@ -1573,6 +1570,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
