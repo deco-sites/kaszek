@@ -52,7 +52,12 @@ export default function Header(props: Props) {
     document.body.style.overflow = showMenu ? "hidden" : "";
   });
 
-  const elementClass = hasScrolled && !window.location.href.includes("ethos") ? "" : "is-sticky" as const;
+  const elementClass = hasScrolled && !window.location.href.includes("ethos") &&
+      !window.location.href.includes("companies") &&
+      !window.location.href.includes("people") &&
+      !window.location.href.includes("get-in-touch")
+    ? ""
+    : "is-sticky" as const;
 
   const headerClass = hasScrolled && !window.location.href.includes("ethos")
     ? "bg-white transition duration-300 ease-in"

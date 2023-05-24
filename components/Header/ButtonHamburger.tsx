@@ -7,7 +7,13 @@ type ButtonHamburgerProps = {
 
 export default function ButtonHamburger(props: ButtonHamburgerProps) {
   const { showMenu, toggleMenu } = props;
-  const spanClass = window.scrollY === 0 && !window.location.href.includes("ethos") && !showMenu ? "bg-white" : "bg-[#005046]";
+  const spanClass =
+    window.scrollY === 0 && !window.location.href.includes("ethos") &&
+    !window.location.href.includes("companies") &&
+    !window.location.href.includes("people") &&
+    !window.location.href.includes("get-in-touch") && !showMenu
+      ? "bg-white"
+      : "bg-[#005046]";
 
   return (
     <button
