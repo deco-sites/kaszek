@@ -13,7 +13,7 @@ export type Props = {
 
 export default function EntrepreneurialCapital(props: Props) {
   return (
-    <section class="h-screen relative">
+    <section class="h-screen relative first_main">
       <Image
         class="w-full h-full object-cover z-0 absolute"
         src={props.background}
