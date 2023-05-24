@@ -21,7 +21,6 @@ export default {
   },
   theme: {
     extend: {
-      backgroundImage: {},
       screens: {
         sm: "640px",
         md: "768px",
@@ -35,13 +34,7 @@ export default {
         "primary-light": "#C5FFE9",
         transparent: "transparent",
       },
-      fontFamily: {
-        fontFamily: {
-          sans: ['Maax Bold', 'Maax Regular', 'Noe Display Bold', 'sans-serif'],
-        },
-        fontWeight: {
-          bold: '700',
-        },
+      fontFamily: {      
         serif: ["serif"],
       },
     },
