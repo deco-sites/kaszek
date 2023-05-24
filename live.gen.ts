@@ -4,7 +4,6 @@
 
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
-
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/ButtonHamburger.tsx";
@@ -12,52 +11,69 @@ import * as $$$$$1 from "./islands/CityPlate.tsx";
 import * as $$$$$2 from "./islands/Entrepreneurs.tsx";
 import * as $$$$$3 from "./islands/FaqSection.tsx";
 import * as $$$$$4 from "./islands/Header.tsx";
-import * as $$$$$5 from "./islands/Navlink.tsx";
-import * as $$$$$6 from "./islands/Weather.tsx";
+import * as $$$$$5 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
 import * as $$$$$$$$1 from "./sections/EntrepreneurialCapital.tsx";
 import * as $$$$$$$$2 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$3 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$4 from "./sections/Footer.tsx";
-import * as $$$$$$$$5 from "./sections/Head.tsx";
-import * as $$$$$$$$6 from "./sections/Header.tsx";
-import * as $$$$$$$$7 from "./sections/Home.tsx";
+import * as $$$$$$$$3 from "./sections/EthosMain.tsx";
+import * as $$$$$$$$4 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$5 from "./sections/Footer.tsx";
+import * as $$$$$$$$6 from "./sections/Head.tsx";
+import * as $$$$$$$$7 from "./sections/Header.tsx";
+import * as $$$$$$$$8 from "./sections/Home.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
+import * as $live_invoke from "$live/routes/live/invoke/index.ts";
+import * as $live_invoke_key from "$live/routes/live/invoke/[...key].ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
-import * as $live_inspect from "$live/routes/live/inspect.ts";
+import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
-import * as i1$0 from "$live/handlers/routesSelection.ts";
-import * as i1$1 from "$live/handlers/router.ts";
-import * as i1$2 from "$live/handlers/devPage.ts";
-import * as i1$3 from "$live/handlers/fresh.ts";
-import * as i1$$0 from "$live/pages/LivePage.tsx";
-import * as i1$$$0 from "$live/sections/PageInclude.tsx";
-import * as i1$$$$0 from "$live/matchers/MatchDate.ts";
-import * as i1$$$$1 from "$live/matchers/MatchUserAgent.ts";
-import * as i1$$$$2 from "$live/matchers/MatchSite.ts";
-import * as i1$$$$3 from "$live/matchers/MatchMulti.ts";
-import * as i1$$$$4 from "$live/matchers/MatchRandom.ts";
-import * as i1$$$$5 from "$live/matchers/MatchEnvironment.ts";
-import * as i1$$$$6 from "$live/matchers/MatchAlways.ts";
-import * as i1$$$$$0 from "$live/flags/audience.ts";
-import * as i1$$$$$1 from "$live/flags/everyone.ts";
+import * as i1$0 from "$live/loaders/workflows/events.ts";
+import * as i1$1 from "$live/loaders/workflows/get.ts";
+import * as i1$$0 from "$live/handlers/devPage.ts";
+import * as i1$$1 from "$live/handlers/fresh.ts";
+import * as i1$$2 from "$live/handlers/proxy.ts";
+import * as i1$$3 from "$live/handlers/redirect.ts";
+import * as i1$$4 from "$live/handlers/router.ts";
+import * as i1$$5 from "$live/handlers/routesSelection.ts";
+import * as i1$$6 from "$live/handlers/workflowRunner.ts";
+import * as i1$$$0 from "$live/pages/LivePage.tsx";
+import * as i1$$$$0 from "$live/sections/PageInclude.tsx";
+import * as i1$$$$1 from "$live/sections/Slot.tsx";
+import * as i1$$$$2 from "$live/sections/UseSlot.tsx";
+import * as i1$$$$$0 from "$live/matchers/MatchAlways.ts";
+import * as i1$$$$$1 from "$live/matchers/MatchDate.ts";
+import * as i1$$$$$2 from "$live/matchers/MatchEnvironment.ts";
+import * as i1$$$$$3 from "$live/matchers/MatchHost.ts";
+import * as i1$$$$$4 from "$live/matchers/MatchMulti.ts";
+import * as i1$$$$$5 from "$live/matchers/MatchRandom.ts";
+import * as i1$$$$$6 from "$live/matchers/MatchSite.ts";
+import * as i1$$$$$7 from "$live/matchers/MatchUserAgent.ts";
+import * as i1$$$$$$0 from "$live/flags/audience.ts";
+import * as i1$$$$$$1 from "$live/flags/everyone.ts";
+import * as i1$$$$$$$0 from "$live/actions/workflows/cancel.ts";
+import * as i1$$$$$$$1 from "$live/actions/workflows/run.ts";
+import * as i1$$$$$$$2 from "$live/actions/workflows/signal.ts";
+import * as i1$$$$$$$3 from "$live/actions/workflows/start.ts";
 
-const manifest: DecoManifest = {
+const manifest = {
   "functions": {
     "deco-sites/kaszek/functions/LoadGitHubRaw.ts": $0,
   },
   "routes": {
     "./routes/_app.tsx": $$$$0,
     "./routes/_middleware.ts": $live_middleware,
-    "./routes/live/workbench.ts": $live_workbench,
-    "./routes/live/editorData.ts": $live_editorData,
-    "./routes/live/inspect.ts": $live_inspect,
-    "./routes/live/_meta.ts": $live_meta,
-    "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/[...catchall].tsx": $live_catchall,
+    "./routes/index.tsx": $live_catchall,
+    "./routes/live/_meta.ts": $live_meta,
+    "./routes/live/editorData.ts": $live_editorData,
+    "./routes/live/inspect/[...block].ts": $live_inspect,
+    "./routes/live/invoke/[...key].ts": $live_invoke_key,
+    "./routes/live/invoke/index.ts": $live_invoke,
+    "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/workbench.ts": $live_workbench,
   },
   "islands": {
     "./islands/ButtonHamburger.tsx": $$$$$0,
@@ -65,44 +81,62 @@ const manifest: DecoManifest = {
     "./islands/Entrepreneurs.tsx": $$$$$2,
     "./islands/FaqSection.tsx": $$$$$3,
     "./islands/Header.tsx": $$$$$4,
-    "./islands/Navlink.tsx": $$$$$5,
-    "./islands/Weather.tsx": $$$$$6,
+    "./islands/Weather.tsx": $$$$$5,
   },
   "sections": {
+    "$live/sections/PageInclude.tsx": i1$$$$0,
+    "$live/sections/Slot.tsx": i1$$$$1,
+    "$live/sections/UseSlot.tsx": i1$$$$2,
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
     "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$1,
     "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$5,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$6,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$7,
-    "$live/sections/PageInclude.tsx": i1$$$0,
+    "deco-sites/kaszek/sections/EthosMain.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$7,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$8,
+  },
+  "loaders": {
+    "$live/loaders/workflows/events.ts": i1$0,
+    "$live/loaders/workflows/get.ts": i1$1,
   },
   "handlers": {
-    "$live/handlers/routesSelection.ts": i1$0,
-    "$live/handlers/router.ts": i1$1,
-    "$live/handlers/devPage.ts": i1$2,
-    "$live/handlers/fresh.ts": i1$3,
+    "$live/handlers/devPage.ts": i1$$0,
+    "$live/handlers/fresh.ts": i1$$1,
+    "$live/handlers/proxy.ts": i1$$2,
+    "$live/handlers/redirect.ts": i1$$3,
+    "$live/handlers/router.ts": i1$$4,
+    "$live/handlers/routesSelection.ts": i1$$5,
+    "$live/handlers/workflowRunner.ts": i1$$6,
   },
   "pages": {
-    "$live/pages/LivePage.tsx": i1$$0,
+    "$live/pages/LivePage.tsx": i1$$$0,
   },
   "matchers": {
-    "$live/matchers/MatchDate.ts": i1$$$$0,
-    "$live/matchers/MatchUserAgent.ts": i1$$$$1,
-    "$live/matchers/MatchSite.ts": i1$$$$2,
-    "$live/matchers/MatchMulti.ts": i1$$$$3,
-    "$live/matchers/MatchRandom.ts": i1$$$$4,
-    "$live/matchers/MatchEnvironment.ts": i1$$$$5,
-    "$live/matchers/MatchAlways.ts": i1$$$$6,
+    "$live/matchers/MatchAlways.ts": i1$$$$$0,
+    "$live/matchers/MatchDate.ts": i1$$$$$1,
+    "$live/matchers/MatchEnvironment.ts": i1$$$$$2,
+    "$live/matchers/MatchHost.ts": i1$$$$$3,
+    "$live/matchers/MatchMulti.ts": i1$$$$$4,
+    "$live/matchers/MatchRandom.ts": i1$$$$$5,
+    "$live/matchers/MatchSite.ts": i1$$$$$6,
+    "$live/matchers/MatchUserAgent.ts": i1$$$$$7,
   },
   "flags": {
-    "$live/flags/audience.ts": i1$$$$$0,
-    "$live/flags/everyone.ts": i1$$$$$1,
+    "$live/flags/audience.ts": i1$$$$$$0,
+    "$live/flags/everyone.ts": i1$$$$$$1,
+  },
+  "actions": {
+    "$live/actions/workflows/cancel.ts": i1$$$$$$$0,
+    "$live/actions/workflows/run.ts": i1$$$$$$$1,
+    "$live/actions/workflows/signal.ts": i1$$$$$$$2,
+    "$live/actions/workflows/start.ts": i1$$$$$$$3,
   },
   "config": config,
   "baseUrl": import.meta.url,
 };
 
-export default manifest;
+export type Manifest = typeof manifest;
+
+export default manifest satisfies DecoManifest;
