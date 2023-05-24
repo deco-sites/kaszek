@@ -890,6 +890,27 @@
         "background": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Background"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
         }
       },
       "required": [
