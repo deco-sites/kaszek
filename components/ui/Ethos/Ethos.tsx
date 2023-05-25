@@ -1,5 +1,5 @@
 import { context } from "$live/live.ts";
-import EthosMain from "deco-sites/start/components/Ethos/EthosMain.tsx";
+import EthosMain from "deco-sites/start/components/ui/Ethos/EthosMain.tsx";
 
 export interface Props {
   enableInspectVSCode?: boolean;

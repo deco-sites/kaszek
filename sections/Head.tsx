@@ -12,7 +12,8 @@ export interface Props {
 
 export default function HeadComponent({
   title = "Kaszek - Entrepreneurial Capital in Latin America",
-  description = "We are tech entrepreneurs partnering with the most extraordinary founders in Latin America.",
+  description =
+    "We are tech entrepreneurs partnering with the most extraordinary founders in Latin America.",
   url = "https://start.deco.site",
   imageUrl = "https://deco.cx/images/deco-logo-light.png",
   faviconUrl = "",
@@ -41,9 +42,19 @@ export default function HeadComponent({
 
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       </link>
-      <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.ico">
+      <link
+        rel="icon"
+        type="image/x-icon"
+        sizes="32x32"
+        href="/favicon-32x32.ico"
+      >
       </link>
-      <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon-16x16.ico">
+      <link
+        rel="icon"
+        type="image/x-icon"
+        sizes="16x16"
+        href="/favicon-16x16.ico"
+      >
       </link>
       <link rel="manifest" href="/site.webmanifest"></link>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
@@ -56,62 +67,44 @@ export default function HeadComponent({
       <style
         dangerouslySetInnerHTML={{
           __html: `
-          /* latin-ext */
           @font-face {
-            font-family: 'Albert Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZVYFeQGQyUV3U.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-          }
-          /* latin */
-          @font-face {
-            font-family: 'Albert Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZbYFeQGQyU.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-          }
-          /* latin-ext */
-          @font-face {
-            font-family: 'Albert Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZVYFeQGQyUV3U.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-          }
-          /* latin */
-          @font-face {
-            font-family: 'Albert Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZbYFeQGQyU.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-          }
-          @font-face {
-            font-family: 'Noe Display Bold';
+            font-family: 'Noe-Display-Font';
             font-style: normal;
             font-weight: 700;
             font-display: swap;
             src: url('/fonts/noe-display-bold.woff') format('woff');
           }
           @font-face {
-            font-family: 'Maax Bold';
+            font-family: 'Maax-Bold-Font';
             font-style: normal;
             font-weight: 700;
             font-display: swap;
             src: url('/fonts/Maax-Bold-205TF.woff') format('woff');
           }
           @font-face {
-            font-family: 'Maax Regular';
+            font-family: 'Maax-Regular-Font';
             font-style: normal;
             font-weight: 400;
             font-display: swap;
             src: url('/fonts/Maax-Regular-205TF.woff') format('woff');
+          }
+          .is-sticky {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+          }
+          .color-green-lemon {
+            filter: invert(84%) sepia(20%) saturate(530%) hue-rotate(112deg) brightness(200%) contrast(95%);
+          }
+          .border-green-lemon {
+            border-bottom: 1px solid #83ff97;
+          }
+          .Noe-Display-Font{
+            font-family: 'Noe-Display-Font';
+          }
+          .Maax-Bold-Font{
+              font-family: 'Maax-Bold-Font';
+          }
+          .Maax-Regular-Font{
+              font-family: 'Maax-Regular-Font';
           }
       `,
         }}
