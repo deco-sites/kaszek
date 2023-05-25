@@ -11,7 +11,9 @@ export type Results = {
 
 export default function Entrepreneurs(props: Props) {
   const ref = useRef(null);
-  const [resultsData, setResultsData] = useState<Array<Results>>(Array.isArray(props.result) ? props.result : []);
+  const [resultsData, setResultsData] = useState<Array<Results>>(
+    Array.isArray(props.result) ? props.result : [],
+  );
 
   useEffect(() => {
     const options = {
@@ -51,12 +53,17 @@ export default function Entrepreneurs(props: Props) {
   }, []);
 
   return (
-    <section ref={ref} class={`w-full px-4 py-8 bg-[#ebf0ef] flex justify-center`}>
+    <section
+      ref={ref}
+      class={`w-full px-4 py-8 bg-[#ebf0ef] flex justify-center`}
+    >
       <div class="w-full max-w-[1200px] sm:grid md:grid-cols-3 gap-4 items-center grid-cols-1">
         {resultsData.map((data, index) => (
-          <div class="text-center color-green" key={index}>
-            <h2 class="text-2xl mb-8 Maax-Bold-Font">{data.title}</h2>
-            <p class="text-[76px] mb-5 Noe-Display-Font leading-none">{data.value}</p>
+          <div class="text-center text-[#005046]" key={index}>
+            <h2 class="text-2xl mb-8 Maax-Bold-Font font-bold">{data.title}</h2>
+            <p class="text-[76px] mb-5 Noe-Display-Font font-bold leading-none">
+              {data.value}
+            </p>
           </div>
         ))}
       </div>

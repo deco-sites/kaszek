@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
-import ButtonHamburger from "deco-sites/start/components/Header/ButtonHamburger.tsx";
-import useEventListener from "deco-sites/start/components/Header/useEventListener.ts";
+import ButtonHamburger from "deco-sites/start/components/ui/Header/ButtonHamburger.tsx";
+import useEventListener from "deco-sites/start/components/ui/Header/useEventListener.ts";
 
 export interface Props {
   logo: LiveImage;
@@ -17,9 +17,9 @@ export type Links = {
 
 const navlinkStyles = {
   menuOpen:
-    "pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font tracking-[-.5px] leading-[3rem]",
+    "pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font font-bold tracking-[-.5px] leading-[3rem]",
   menuClosed:
-    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font tracking-[-.5px] leading-[3rem]",
+    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font font-bold tracking-[-.5px] leading-[3rem]",
 };
 
 export default function Header(props: Props) {
@@ -141,10 +141,12 @@ export default function Header(props: Props) {
 
   return (
     <header
-      class={`l-header w-full flex items-center z-20 relative fixed top-0 ${headerClass}`}
+      class={`l-header w-full flex items-center z-20 fixed top-0 ${headerClass}`}
     >
-      <div class={`mx-auto w-full xl:pr-[0px] pr-[12px] xl:(l-container)`}>
-        <nav class="flex-center-between w-full h-[80px]">
+      <div
+        class={`mx-auto w-full xl:pr-[0px] pr-[12px] xl:max-w-[1200px] sm:w-[calc(100% - 24px)]`}
+      >
+        <nav class="flex items-center justify-between w-full h-[80px]">
           <a
             href={props.link_logo}
             class={`z-10 xl:pl-[0px] pl-[12px] ${elementClass} ${
@@ -153,12 +155,12 @@ export default function Header(props: Props) {
           >
             <Image src={props.logo} alt="logo" width={109.94} height={17.95} />
           </a>
-          <div class="flex-center-end w-full absolute md:(relative)">
+          <div class="flex items-center justify-end w-full absolute md:relative">
             <ButtonHamburger showMenu={showMenu} toggleMenu={toggleMenu} />
             <ul
-              class={`flex flex-col md:(flex-row) ${
+              class={`flex flex-col md:flex-row ${
                 showMenu
-                  ? "bg-[#005046] w-full fixed h-screen bottom-0 flex-center-center"
+                  ? "bg-[#005046] w-full fixed h-screen bottom-0 flex items-center justify-center"
                   : "hidden uppercase gap-[30px]"
               } md:flex`}
             >
@@ -166,7 +168,7 @@ export default function Header(props: Props) {
                 <li
                   class={`border-transparent ${menuItemStyles} ${elementClass}`}
                 >
-                  <a href={props.link} class="color-green leading-4">
+                  <a href={props.link} class="text-[#005046] leading-4">
                     {props.title}
                   </a>
                 </li>
