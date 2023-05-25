@@ -1,1 +1,1 @@
-export { default } from "deco-sites/start/components/Header/ButtonHamburger.tsx";
+export { default } from "deco-sites/start/components/ui/Header/ButtonHamburger.tsx";

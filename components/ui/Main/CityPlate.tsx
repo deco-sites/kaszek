@@ -74,7 +74,7 @@ export default function CityPlate({ name, bottom, left }: CityPlateProps) {
       >
         <span class="block bg-[#005046] top-[40px] absolute w-[20px] h-[20px] border-transparent border-solid border-b-10 border-l-10 border-r-10 border-t-0 border-green-600 transform rotate-45">
         </span>
-        <span class="block bg-[#005046] top-[40px]  text-[#83ff97] text-[14px] Maax-Bold-Font px-[15px] py-2 uppercase leading-none absolute sm:left-1/2 transform sm:-translate-x-1/2 -translate-x-[25%] mt-1 whitespace-nowrap">
+        <span class="block bg-[#005046] top-[40px]  text-[#83ff97] text-[14px] Maax-Bold-Font font-bold px-[15px] py-2 uppercase leading-none absolute sm:left-1/2 transform sm:-translate-x-1/2 -translate-x-[25%] mt-1 whitespace-nowrap">
           {name}
         </span>
       </div>
