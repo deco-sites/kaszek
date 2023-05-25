@@ -36,31 +36,38 @@ export default function Weather({ latitude, longitude }: Props) {
 
   return (
     <div class="flex items-center">
-      {!isLoading && icon === "cloud" ? (
-        <object
-          data={asset(`/icon-cloud.svg`)}
-          width="23.99"
-          height="23.99"
-          class="mr-[8px]"
-          aria-label="icon cloud"
-        ></object>
-      ) : !isLoading && icon === "rain" ? (
-        <object
-          data={asset(`/icon-rain.svg`)}
-          width="23.99"
-          height="23.99"
-          class="mr-[8px]"
-          aria-label="icon rain"
-        ></object>
-      ) : null}
-      {!isLoading && temperature !== null ? (
-        <span class="text-[#83ff97] text-[12px] z-2 md:text-[14px]">
-          {Math.round(temperature)} °C
-        </span>
-      ) : (
-        null
-      )}
+      {!isLoading && icon === "cloud"
+        ? (
+          <object
+            data={asset(`/icon-cloud.svg`)}
+            width="23.99"
+            height="23.99"
+            class="mr-[8px]"
+            aria-label="icon cloud"
+          >
+          </object>
+        )
+        : !isLoading && icon === "rain"
+        ? (
+          <object
+            data={asset(`/icon-rain.svg`)}
+            width="23.99"
+            height="23.99"
+            class="mr-[8px]"
+            aria-label="icon rain"
+          >
+          </object>
+        )
+        : null}
+      {!isLoading && temperature !== null
+        ? (
+          <span class="text-[#83ff97] text-[12px] z-2 md:text-[14px]">
+            {Math.round(temperature)} °C
+          </span>
+        )
+        : (
+          null
+        )}
     </div>
   );
 }
-

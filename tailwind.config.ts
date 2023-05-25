@@ -23,4 +23,3 @@ export const theme = {
 export default {
   content: ["./**/*.tsx"],
 };
-

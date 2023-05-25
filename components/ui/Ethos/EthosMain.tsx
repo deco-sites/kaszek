@@ -16,7 +16,7 @@ export default function EthosMain(props: Props) {
     <main class="flex items-center justify-between flex-col relative top-20">
       <div class="bg-white z-10 w-full flex justify-center">
         <div class="max-w-[1200px] sm:w-[calc(100% - 24px)] w-full md:pt-20 md:pb-20 pt-[30px] pb-[40px]">
-          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-.5px] md:mb-0 md:w-calc md:mr-0 md:ml-0 w-calc mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] leading-none">
+          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-.5px] md:mb-0 md:w-calc md:mr-0 md:ml-0 w-calc mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] leading-none xl:pl-[0px] pl-[12px]">
             {props.first_text}
             <br />
             {props.second_text}
