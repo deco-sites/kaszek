@@ -59,7 +59,10 @@ export default function Header(props: Props) {
     ? ""
     : "is-sticky" as const;
 
-  const headerClass = hasScrolled && !window.location.href.includes("ethos")
+  const headerClass = hasScrolled && !window.location.href.includes("ethos") &&
+      !window.location.href.includes("companies") &&
+      !window.location.href.includes("people") &&
+      !window.location.href.includes("get-in-touch")
     ? "bg-white transition duration-300 ease-in"
     : "bg-transparent transition duration-300 ease-in";
 
@@ -68,7 +71,12 @@ export default function Header(props: Props) {
     : navlinkStyles.menuClosed;
 
   useEffect(() => {
-    if (!window.location.href.includes("ethos")) {
+    if (
+      !window.location.href.includes("ethos") &&
+      !window.location.href.includes("companies") &&
+      !window.location.href.includes("people") &&
+      !window.location.href.includes("get-in-touch")
+    ) {
       return;
     }
 
