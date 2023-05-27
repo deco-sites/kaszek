@@ -86,6 +86,7 @@
               "deco-sites/kaszek/sections/Head.tsx",
               "deco-sites/kaszek/sections/Header.tsx",
               "deco-sites/kaszek/sections/Home.tsx",
+              "deco-sites/kaszek/sections/OurPhilosophy.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -7769,6 +7770,61 @@
       "required": [],
       "title": "deco-sites/kaszek/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Text": {
+      "type": "object",
+      "properties": {
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Paragraphs"
+        }
+      },
+      "required": [
+        "subtitle"
+      ],
+      "title": "Text"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "srcMobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src Mobile"
+        },
+        "srcDesktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src Desktop"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Text"
+          },
+          "title": "Text"
+        }
+      },
+      "required": [
+        "label",
+        "srcMobile",
+        "textAlternative",
+        "text"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/OurPhilosophy.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
       "properties": {
@@ -10306,6 +10362,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VyUGhpbG9zb3BoeS50c3g=": {
+      "title": "deco-sites/kaszek/sections/OurPhilosophy.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/OurPhilosophy.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/OurPhilosophy.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA==": {
       "title": "deco-sites/std/sections/Analytics.tsx",
       "type": "object",
@@ -11490,6 +11567,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VyUGhpbG9zb3BoeS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
