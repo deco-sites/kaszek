@@ -87,25 +87,7 @@ export default function HeadComponent({
             font-weight: 400;
             font-display: swap;
             src: url('/fonts/Maax-Regular-205TF.woff') format('woff');
-          }
-          .is-sticky {
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-          }
-          .color-green-lemon {
-            filter: invert(84%) sepia(20%) saturate(530%) hue-rotate(112deg) brightness(200%) contrast(95%);
-          }
-          .border-green-lemon {
-            border-bottom: 1px solid #83ff97;
-          }
-          .Noe-Display-Font{
-            font-family: 'Noe-Display-Font';
-          }
-          .Maax-Bold-Font{
-              font-family: 'Maax-Bold-Font';
-          }
-          .Maax-Regular-Font{
-              font-family: 'Maax-Regular-Font';
-          }
+          }         
       `,
         }}
       >
