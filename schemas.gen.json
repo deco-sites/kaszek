@@ -86,6 +86,7 @@
               "deco-sites/kaszek/sections/Head.tsx",
               "deco-sites/kaszek/sections/Header.tsx",
               "deco-sites/kaszek/sections/Home.tsx",
+              "deco-sites/kaszek/sections/InvestmentStages.tsx",
               "deco-sites/kaszek/sections/OurHistory.tsx",
               "deco-sites/kaszek/sections/OurPhilosophy.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -7771,6 +7772,43 @@
       "required": [],
       "title": "deco-sites/kaszek/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Text": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        }
+      },
+      "required": [],
+      "title": "Text"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Text"
+          },
+          "title": "Text"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/InvestmentStages.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJIaXN0b3J5LnRzeA==@Text": {
       "type": "object",
       "properties": {
@@ -10408,6 +10446,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSW52ZXN0bWVudFN0YWdlcy50c3g=": {
+      "title": "deco-sites/kaszek/sections/InvestmentStages.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/InvestmentStages.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/InvestmentStages.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VySGlzdG9yeS50c3g=": {
       "title": "deco-sites/kaszek/sections/OurHistory.tsx",
       "type": "object",
@@ -11634,6 +11693,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSW52ZXN0bWVudFN0YWdlcy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VySGlzdG9yeS50c3g="
