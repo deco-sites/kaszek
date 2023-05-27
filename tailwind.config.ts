@@ -20,7 +20,7 @@ export const theme = {
   "--tab-radius": "0.5rem", // border radius of tabs
   extend: {
     screens: {
-      'mobile': '576px',
+      "mobile": "576px",
     },
   },
 };
