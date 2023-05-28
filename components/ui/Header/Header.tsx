@@ -19,7 +19,7 @@ const navlinkStyles = {
   menuOpen:
     "pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font font-bold tracking-[-.5px] leading-[3rem]",
   menuClosed:
-    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font font-bold tracking-[-.5px] leading-[3rem]",
+    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font font-bold tracking-normal leading-[3rem]",
 };
 
 export default function Header(props: Props) {
@@ -52,14 +52,16 @@ export default function Header(props: Props) {
     document.body.style.overflow = showMenu ? "hidden" : "";
   });
 
-  const elementClass = hasScrolled && !window.location.href.includes("ethos") &&
+  const elementClass = hasScrolled &&
+      !window.location.href.includes("ethos") &&
       !window.location.href.includes("companies") &&
       !window.location.href.includes("people") &&
       !window.location.href.includes("get-in-touch")
     ? ""
     : "is-sticky" as const;
 
-  const headerClass = hasScrolled && !window.location.href.includes("ethos") &&
+  const headerClass = hasScrolled &&
+      !window.location.href.includes("ethos") &&
       !window.location.href.includes("companies") &&
       !window.location.href.includes("people") &&
       !window.location.href.includes("get-in-touch")
@@ -69,6 +71,44 @@ export default function Header(props: Props) {
   const menuItemStyles = showMenu
     ? navlinkStyles.menuOpen
     : navlinkStyles.menuClosed;
+
+  const addStickyClass = () => {
+    const currentUrl = window.location.href;
+    const liElements: NodeListOf<HTMLLIElement> = document.querySelectorAll(
+      "header li",
+    );
+    const aLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll(
+      "header li a",
+    );
+
+    aLinks.forEach((link) => {
+      link.classList.remove("border-green-lemon-2px");
+    });
+
+    liElements.forEach((li) => {
+      if (
+        !showMenu && window.innerWidth > 768 &&
+        li.classList.contains("is-sticky")
+      ) {
+        li.classList.remove("is-sticky");
+      }
+    });
+
+    liElements.forEach((li) => {
+      const link = li.querySelector("a");
+      if (link) {
+        const url = link.getAttribute("href");
+        if (
+          url && currentUrl.includes(url) && !showMenu &&
+          window.innerWidth > 768
+        ) {
+          link.classList.add("border-green-lemon-2px");
+        } else {
+          link.classList.remove("border-green-lemon-2px");
+        }
+      }
+    });
+  };
 
   useEffect(() => {
     if (
@@ -85,7 +125,8 @@ export default function Header(props: Props) {
 
     const checkAndRemoveStickyClass = () => {
       if (
-        aLink && !aLink.classList.contains("first_main") &&
+        aLink &&
+        !aLink.classList.contains("first_main") &&
         aLink.classList.contains("is-sticky")
       ) {
         aLink.classList.remove("is-sticky");
@@ -124,20 +165,6 @@ export default function Header(props: Props) {
       targetNode.classList.add("bg-white");
     }
 
-    const liElements: NodeListOf<HTMLLIElement> = document.querySelectorAll(
-      "header li",
-    );
-
-    const addStickyClass = () => {
-      if (window.location.href.includes("ethos")) {
-        liElements.forEach((li) => {
-          if (li.classList.contains("is-sticky")) {
-            li.classList.remove("is-sticky");
-          }
-        });
-      }
-    };
-
     addEventListener("load", addStickyClass);
     addEventListener("resize", addStickyClass);
 
@@ -161,7 +188,12 @@ export default function Header(props: Props) {
               showMenu ? "color-green-lemon pl-[12px]" : ""
             }`}
           >
-            <Image src={props.logo} alt="logo" width={109.94} height={17.95} />
+            <Image
+              src={props.logo}
+              alt="logo"
+              width={109.94}
+              height={17.95}
+            />
           </a>
           <div class="flex items-center justify-end w-full absolute md:relative">
             <ButtonHamburger showMenu={showMenu} toggleMenu={toggleMenu} />
@@ -174,7 +206,11 @@ export default function Header(props: Props) {
             >
               {linksList.map((props) => (
                 <li
-                  class={`border-transparent ${menuItemStyles} ${elementClass}`}
+                  class={`border-transparent ${menuItemStyles} ${elementClass} ${
+                    showMenu
+                      ? "hover:color-green-lemon active:color-green-lemon"
+                      : ""
+                  } `}
                 >
                   <a href={props.link} class="text-[#005046] leading-4">
                     {props.title}
