@@ -11,9 +11,9 @@ export type Props = {
 
 export default function Blockquote(props: Props) {
   return (
-    <div class="w-full bg-[#005046] px-[15px] lg:py-[50px] py-[35px] lg:mt-[120px] md:mt-[75px] mt-[50px]">
+    <div class="w-full bg-[#005046] px-[15px] md:py-[50px] py-[35px] lg:mt-[120px] md:mt-[75px] mt-[50px]">
       <blockquote class="xl:max-w-[1200px] mx-auto grid grid-cols-2">
-        <div class="relative lg:mb-[70px] mb-[34px] col-span-2">
+        <div class="relative lg:mb-[70px] mb-[44px] col-span-2">
           <Image
             class="block lg:w-[80px] w-[44px] lg:h-[80px] h-[44px] pointer-events-none"
             src={props.quoteIconTop}
@@ -27,7 +27,7 @@ export default function Blockquote(props: Props) {
         >
           {props.label}
         </p>
-        <div class="relative lg:mt-[70px] mt-[34px] col-span-2">
+        <div class="relative lg:mt-[70px] mt-[44px] col-span-2">
           <Image
             class="block float-right lg:w-[80px] w-[44px] lg:h-[80px] h-[44px] pointer-events-none"
             src={props.quoteIconBottom}
