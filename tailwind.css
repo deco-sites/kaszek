@@ -53,6 +53,13 @@
   .Maax-Regular-Font {
     font-family: 'Maax-Regular-Font';
   }
+
+  .arrow-icon::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: baseline;
+  }
 }
 
 @layer utilities {
