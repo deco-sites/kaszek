@@ -77,6 +77,7 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/kaszek/sections/AboutKaszek.tsx",
+              "deco-sites/kaszek/sections/Blockquote.tsx",
               "deco-sites/kaszek/sections/DesignSystem.tsx",
               "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx",
               "deco-sites/kaszek/sections/Entrepreneurs.tsx",
@@ -7209,6 +7210,41 @@
       ],
       "title": "deco-sites/kaszek/components/ui/Main/AboutKaszek.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        },
+        "quoteIconTop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Quote Icon Top"
+        },
+        "quoteIconBottom": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Quote Icon Bottom"
+        },
+        "textAlternativeTop": {
+          "type": "string",
+          "title": "Text Alternative Top"
+        },
+        "textAlternativeBottom": {
+          "type": "string",
+          "title": "Text Alternative Bottom"
+        }
+      },
+      "required": [
+        "quoteIconTop",
+        "quoteIconBottom",
+        "textAlternativeTop",
+        "textAlternativeBottom"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/Blockquote.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
       "properties": {
@@ -10257,6 +10293,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g=": {
+      "title": "deco-sites/kaszek/sections/Blockquote.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Blockquote.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Blockquote.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==": {
       "title": "deco-sites/kaszek/sections/DesignSystem.tsx",
       "type": "object",
@@ -11666,6 +11723,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
