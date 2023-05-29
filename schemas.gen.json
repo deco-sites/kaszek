@@ -77,15 +77,19 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/kaszek/sections/AboutKaszek.tsx",
+              "deco-sites/kaszek/sections/BlockHero.tsx",
+              "deco-sites/kaszek/sections/Blockquote.tsx",
               "deco-sites/kaszek/sections/DesignSystem.tsx",
               "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx",
               "deco-sites/kaszek/sections/Entrepreneurs.tsx",
-              "deco-sites/kaszek/sections/EthosMain.tsx",
               "deco-sites/kaszek/sections/FaqSection.tsx",
               "deco-sites/kaszek/sections/Footer.tsx",
               "deco-sites/kaszek/sections/Head.tsx",
               "deco-sites/kaszek/sections/Header.tsx",
               "deco-sites/kaszek/sections/Home.tsx",
+              "deco-sites/kaszek/sections/InvestmentStages.tsx",
+              "deco-sites/kaszek/sections/OurHistory.tsx",
+              "deco-sites/kaszek/sections/OurPhilosophy.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -99,6 +103,7 @@
               "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchDevice.ts",
               "$live/matchers/MatchEnvironment.ts",
               "$live/matchers/MatchHost.ts",
               "$live/matchers/MatchMulti.ts",
@@ -6902,7 +6907,16 @@
           "title": "Path Template"
         },
         "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
+          "type": "object",
+          "properties": {
+            "value": {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
+              "title": "Value"
+            }
+          },
+          "required": [
+            "value"
+          ],
           "title": "Handler"
         }
       },
@@ -7195,6 +7209,92 @@
         "first_description"
       ],
       "title": "deco-sites/kaszek/components/ui/Main/AboutKaszek.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja0hlcm8udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "firstText": {
+          "type": "string",
+          "title": "First Text"
+        },
+        "secondText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second Text"
+        },
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        }
+      },
+      "required": [
+        "firstText",
+        "image",
+        "textAlternative"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/BlockHero.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        },
+        "quoteIconTop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Quote Icon Top"
+        },
+        "quoteIconBottom": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Quote Icon Bottom"
+        },
+        "textAlternativeTop": {
+          "type": "string",
+          "title": "Text Alternative Top"
+        },
+        "textAlternativeBottom": {
+          "type": "string",
+          "title": "Text Alternative Bottom"
+        }
+      },
+      "required": [
+        "quoteIconTop",
+        "quoteIconBottom",
+        "textAlternativeTop",
+        "textAlternativeBottom"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/Blockquote.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
@@ -7559,52 +7659,6 @@
       ],
       "title": "deco-sites/kaszek/components/ui/Main/EntrepreneurialCapital.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9FdGhvc01haW4udHN4@Props": {
-      "type": "object",
-      "properties": {
-        "first_text": {
-          "type": "string",
-          "title": "First_text"
-        },
-        "second_text": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Second_text"
-        },
-        "background": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Background"
-        },
-        "location": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Location"
-        },
-        "latitude": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "title": "Latitude"
-        },
-        "longitude": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "title": "Longitude"
-        }
-      },
-      "required": [
-        "first_text",
-        "background"
-      ],
-      "title": "deco-sites/kaszek/components/ui/Ethos/EthosMain.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9Gb290ZXIvRm9vdGVyLnRzeA==@SocialMedia": {
       "type": "object",
       "properties": {
@@ -7758,6 +7812,143 @@
       },
       "required": [],
       "title": "deco-sites/kaszek/sections/Home.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Text": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        }
+      },
+      "required": [],
+      "title": "Text"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Text"
+          },
+          "title": "Text"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/InvestmentStages.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJIaXN0b3J5LnRzeA==@Text": {
+      "type": "object",
+      "properties": {
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Paragraphs"
+        }
+      },
+      "required": [],
+      "title": "Text"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJIaXN0b3J5LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJIaXN0b3J5LnRzeA==@Text"
+          },
+          "title": "Text"
+        }
+      },
+      "required": [
+        "image",
+        "textAlternative",
+        "label",
+        "text"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/OurHistory.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Text": {
+      "type": "object",
+      "properties": {
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Paragraphs"
+        }
+      },
+      "required": [
+        "subtitle"
+      ],
+      "title": "Text"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "srcMobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src Mobile"
+        },
+        "srcDesktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src Desktop"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Text"
+          },
+          "title": "Text"
+        }
+      },
+      "required": [
+        "label",
+        "srcMobile",
+        "textAlternative",
+        "text"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/OurPhilosophy.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -7983,6 +8174,36 @@
       },
       "required": [],
       "title": "deco-cx/live/matchers/MatchDate.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "mobile"
+              },
+              {
+                "type": "string",
+                "const": "tablet"
+              },
+              {
+                "type": "string",
+                "const": "desktop"
+              }
+            ],
+            "type": "string"
+          },
+          "title": "Devices"
+        }
+      },
+      "required": [
+        "devices"
+      ],
+      "title": "deco-cx/live/matchers/MatchDevice.ts@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
       "type": "object",
@@ -8268,7 +8489,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@142fbddade88bf9fad57aa7ece64475d|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8286,13 +8507,13 @@
           ]
         }
       ],
-      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
+      "title": "142fbddade88bf9fad57aa7ece64475d|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@142fbddade88bf9fad57aa7ece64475d|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10077,6 +10298,48 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/BlockHero.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja0hlcm8udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/BlockHero.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/BlockHero.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g=": {
+      "title": "deco-sites/kaszek/sections/Blockquote.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Blockquote.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Blockquote.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==": {
       "title": "deco-sites/kaszek/sections/DesignSystem.tsx",
       "type": "object",
@@ -10137,27 +10400,6 @@
             "deco-sites/kaszek/sections/Entrepreneurs.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Entrepreneurs.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA==": {
-      "title": "deco-sites/kaszek/sections/EthosMain.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9FdGhvc01haW4udHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/kaszek/sections/EthosMain.tsx"
-          ],
-          "default": "deco-sites/kaszek/sections/EthosMain.tsx"
         }
       }
     },
@@ -10263,6 +10505,69 @@
             "deco-sites/kaszek/sections/Home.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Home.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSW52ZXN0bWVudFN0YWdlcy50c3g=": {
+      "title": "deco-sites/kaszek/sections/InvestmentStages.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9JbnZlc3RtZW50U3RhZ2VzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/InvestmentStages.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/InvestmentStages.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VySGlzdG9yeS50c3g=": {
+      "title": "deco-sites/kaszek/sections/OurHistory.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJIaXN0b3J5LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/OurHistory.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/OurHistory.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VyUGhpbG9zb3BoeS50c3g=": {
+      "title": "deco-sites/kaszek/sections/OurPhilosophy.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9PdXJQaGlsb3NvcGh5LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/OurPhilosophy.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/OurPhilosophy.tsx"
         }
       }
     },
@@ -10531,6 +10836,28 @@
             "$live/matchers/MatchDate.ts"
           ],
           "default": "$live/matchers/MatchDate.ts"
+        }
+      }
+    },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM=": {
+      "title": "Device Matcher",
+      "description": "Matches the user based on the used device, options are: mobile, desktop or tablet.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchDevice.ts"
+          ],
+          "default": "$live/matchers/MatchDevice.ts"
         }
       }
     },
@@ -11403,6 +11730,12 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
         },
         {
@@ -11410,9 +11743,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="
@@ -11428,6 +11758,15 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSG9tZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvSW52ZXN0bWVudFN0YWdlcy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VySGlzdG9yeS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvT3VyUGhpbG9zb3BoeS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
@@ -11475,6 +11814,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="

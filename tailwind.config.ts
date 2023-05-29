@@ -18,8 +18,19 @@ export const theme = {
   "--border-btn": "1px", // border width of buttons
   "--tab-border": "1px", // border width of tabs
   "--tab-radius": "0.5rem", // border radius of tabs
+  extend: {
+    gridTemplateColumns: {
+      "five": "repeat(5, 1fr)",
+    },
+    screens: {
+      "mobile": "576px",
+    },
+  },
 };
 
 export default {
   content: ["./**/*.tsx"],
+  theme,
+  variants: {},
+  plugins: [],
 };
