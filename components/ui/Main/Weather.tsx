@@ -7,8 +7,7 @@ export type Props = {
 };
 
 async function fetchTemperature({ latitude, longitude }: Props) {
-  const url =
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
   const response = await fetch(url);
   const json = await response.json();
   const { current_weather } = json;
@@ -28,7 +27,11 @@ export default function Weather({ latitude, longitude }: Props) {
         longitude,
       });
       setTemperature(temperature);
-      setIcon(weathercode > 45 ? "rain" : "cloud");
+      if (temperature <= 13 && temperature >= 0) {
+        setIcon("sun");
+      } else {
+        setIcon(weathercode > 45 ? "rain" : "cloud");
+      }
       setIsLoading(false);
     }
     getTemperature();
@@ -36,38 +39,36 @@ export default function Weather({ latitude, longitude }: Props) {
 
   return (
     <div class="flex items-center">
-      {!isLoading && icon === "cloud"
-        ? (
-          <object
-            data={asset(`/icon-cloud.svg`)}
-            width="23.99"
-            height="23.99"
-            class="mr-[8px]"
-            aria-label="icon cloud"
-          >
-          </object>
-        )
-        : !isLoading && icon === "rain"
-        ? (
-          <object
-            data={asset(`/icon-rain.svg`)}
-            width="23.99"
-            height="23.99"
-            class="mr-[8px]"
-            aria-label="icon rain"
-          >
-          </object>
-        )
-        : null}
-      {!isLoading && temperature !== null
-        ? (
-          <span class="text-[#83ff97] text-[12px] z-2 md:text-[14px]">
-            {Math.round(temperature)} °C
-          </span>
-        )
-        : (
-          null
-        )}
+      {!isLoading && icon === "cloud" ? (
+        <object
+          data={asset(`/icon-cloud.svg`)}
+          width="23.99"
+          height="23.99"
+          class="mr-[8px]"
+          aria-label="icon cloud"
+        ></object>
+      ) : !isLoading && icon === "rain" ? (
+        <object
+          data={asset(`/icon-rain.svg`)}
+          width="23.99"
+          height="23.99"
+          class="mr-[8px]"
+          aria-label="icon rain"
+        ></object>
+      ) : !isLoading && icon === "sun" ? (
+        <object
+          data={asset(`/icon-sun.svg`)}
+          width="23.99"
+          height="23.99"
+          class="mr-[8px]"
+          aria-label="icon sun"
+        ></object>
+      ) : null}
+      {!isLoading && temperature !== null ? (
+        <span class="text-[#83ff97] text-[12px] z-2 md:text-[14px]">
+          {Math.round(temperature)} °C
+        </span>
+      ) : null}
     </div>
   );
 }

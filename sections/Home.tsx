@@ -11,7 +11,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
   return (
     <section>
       {enableInspectVSCode && !context.deploymentId && (
-        <div class="min-h-screen flex items-center justify-between flex-col">
+        <div class="flex items-center justify-between flex-col">
           <Header logo="" link={[]} />
           <Main />
           <Footer contents={[]} />

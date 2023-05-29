@@ -1,5 +1,9 @@
 import { context } from "$live/live.ts";
-import EthosMain from "deco-sites/start/components/ui/Ethos/EthosMain.tsx";
+import BlockHero from "deco-sites/start/components/ui/Ethos/BlockHero.tsx";
+import OurPhilosophy from "deco-sites/start/components/ui/Ethos/OurPhilosophy.tsx";
+import OurHistory from "deco-sites/start/components/ui/Ethos/OurHistory.tsx";
+import InvestmentStages from "deco-sites/start/components/ui/Ethos/InvestmentStages.tsx";
+import Blockquote from "deco-sites/start/components/ui/Ethos/Blockquote.tsx";
 
 export interface Props {
   enableInspectVSCode?: boolean;
@@ -7,12 +11,21 @@ export interface Props {
 
 export default function Ethos({ enableInspectVSCode }: Props) {
   return (
-    <section>
+    <main>
       {enableInspectVSCode && !context.deploymentId && (
-        <div>
-          <EthosMain first_text="" background="" />
-        </div>
+        <>
+          <BlockHero firstText="" image="" textAlternative="" />
+          <OurPhilosophy label="" srcMobile="" textAlternative="" text={[]} />
+          <OurHistory image="" textAlternative="" label="" text={[]} />
+          <InvestmentStages text={[]} />
+          <Blockquote
+            quoteIconTop=""
+            quoteIconBottom=""
+            textAlternativeTop=""
+            textAlternativeBottom=""
+          />
+        </>
       )}
-    </section>
+    </main>
   );
 }
