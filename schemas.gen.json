@@ -7149,9 +7149,9 @@
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9NYWluL0Fib3V0S2FzemVrLnRzeA==@Cities": {
       "type": "object",
       "properties": {
-        "city": {
+        "label": {
           "type": "string",
-          "title": "City"
+          "title": "Label"
         },
         "bottom": {
           "type": "string",
@@ -7163,7 +7163,7 @@
         }
       },
       "required": [
-        "city",
+        "label",
         "bottom",
         "left"
       ],
@@ -7191,22 +7191,22 @@
           "type": "string",
           "title": "Title"
         },
-        "first_description": {
+        "firstDescription": {
           "type": "string",
-          "title": "First_description"
+          "title": "First Description"
         },
-        "second_description": {
+        "secondDescription": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Second_description"
+          "title": "Second Description"
         }
       },
       "required": [
         "img",
         "title",
-        "first_description"
+        "firstDescription"
       ],
       "title": "deco-sites/kaszek/components/ui/Main/AboutKaszek.tsx@Props"
     },
