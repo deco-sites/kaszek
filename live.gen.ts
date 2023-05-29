@@ -14,21 +14,26 @@ import * as $$$$$3 from "./islands/FaqSection.tsx";
 import * as $$$$$4 from "./islands/Header.tsx";
 import * as $$$$$5 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
-import * as $$$$$$$$1 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$2 from "./sections/EntrepreneurialCapital.tsx";
-import * as $$$$$$$$3 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$4 from "./sections/EthosMain.tsx";
-import * as $$$$$$$$5 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$6 from "./sections/Footer.tsx";
-import * as $$$$$$$$7 from "./sections/Head.tsx";
-import * as $$$$$$$$8 from "./sections/Header.tsx";
-import * as $$$$$$$$9 from "./sections/Home.tsx";
+import * as $$$$$$$$1 from "./sections/BlockHero.tsx";
+import * as $$$$$$$$2 from "./sections/Blockquote.tsx";
+import * as $$$$$$$$3 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$4 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$5 from "./sections/Entrepreneurs.tsx";
+import * as $$$$$$$$6 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$7 from "./sections/Footer.tsx";
+import * as $$$$$$$$8 from "./sections/Head.tsx";
+import * as $$$$$$$$9 from "./sections/Header.tsx";
+import * as $$$$$$$$10 from "./sections/Home.tsx";
+import * as $$$$$$$$11 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$12 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$13 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
 import * as $live_invoke_key from "$live/routes/live/invoke/[...key].ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
 import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
+import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
@@ -47,6 +52,7 @@ import * as i2$$$$1 from "$live/sections/Slot.tsx";
 import * as i2$$$$2 from "$live/sections/UseSlot.tsx";
 import * as i2$$$$$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i2$$$$$$$$1 from "$live/matchers/MatchDate.ts";
+import * as i1$$$$$2 from "$live/matchers/MatchDevice.ts";
 import * as i2$$$$$$$$2 from "$live/matchers/MatchEnvironment.ts";
 import * as i2$$$$$$$$3 from "$live/matchers/MatchHost.ts";
 import * as i2$$$$$$$$4 from "$live/matchers/MatchMulti.ts";
@@ -173,6 +179,7 @@ const manifest = {
     "./routes/live/invoke/[...key].ts": $live_invoke_key,
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
     "./routes/styles.css.ts": $$$$0,
   },
@@ -189,15 +196,19 @@ const manifest = {
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
-    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$1,
-    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/EthosMain.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$5,
-    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$6,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$7,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$8,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$2,
+    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$7,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$8,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$13,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
@@ -243,6 +254,7 @@ const manifest = {
   "matchers": {
     "$live/matchers/MatchAlways.ts": i2$$$$$$$$0,
     "$live/matchers/MatchDate.ts": i2$$$$$$$$1,
+    "$live/matchers/MatchDevice.ts": i1$$$$$2,
     "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$2,
     "$live/matchers/MatchHost.ts": i2$$$$$$$$3,
     "$live/matchers/MatchMulti.ts": i2$$$$$$$$4,
