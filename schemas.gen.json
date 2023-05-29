@@ -77,11 +77,11 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/kaszek/sections/AboutKaszek.tsx",
+              "deco-sites/kaszek/sections/BlockHero.tsx",
               "deco-sites/kaszek/sections/Blockquote.tsx",
               "deco-sites/kaszek/sections/DesignSystem.tsx",
               "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx",
               "deco-sites/kaszek/sections/Entrepreneurs.tsx",
-              "deco-sites/kaszek/sections/EthosMain.tsx",
               "deco-sites/kaszek/sections/FaqSection.tsx",
               "deco-sites/kaszek/sections/Footer.tsx",
               "deco-sites/kaszek/sections/Head.tsx",
@@ -7210,6 +7210,57 @@
       ],
       "title": "deco-sites/kaszek/components/ui/Main/AboutKaszek.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja0hlcm8udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "firstText": {
+          "type": "string",
+          "title": "First Text"
+        },
+        "secondText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Second Text"
+        },
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        }
+      },
+      "required": [
+        "firstText",
+        "image",
+        "textAlternative"
+      ],
+      "title": "deco-sites/kaszek/components/ui/Ethos/BlockHero.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -7607,52 +7658,6 @@
         "background"
       ],
       "title": "deco-sites/kaszek/components/ui/Main/EntrepreneurialCapital.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9FdGhvc01haW4udHN4@Props": {
-      "type": "object",
-      "properties": {
-        "first_text": {
-          "type": "string",
-          "title": "First_text"
-        },
-        "second_text": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Second_text"
-        },
-        "background": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Background"
-        },
-        "location": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Location"
-        },
-        "latitude": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "title": "Latitude"
-        },
-        "longitude": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "title": "Longitude"
-        }
-      },
-      "required": [
-        "first_text",
-        "background"
-      ],
-      "title": "deco-sites/kaszek/components/ui/Ethos/EthosMain.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9Gb290ZXIvRm9vdGVyLnRzeA==@SocialMedia": {
       "type": "object",
@@ -10293,6 +10298,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvLnRzeA==": {
+      "title": "deco-sites/kaszek/sections/BlockHero.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja0hlcm8udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/BlockHero.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/BlockHero.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g=": {
       "title": "deco-sites/kaszek/sections/Blockquote.tsx",
       "type": "object",
@@ -10374,27 +10400,6 @@
             "deco-sites/kaszek/sections/Entrepreneurs.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Entrepreneurs.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA==": {
-      "title": "deco-sites/kaszek/sections/EthosMain.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9FdGhvc01haW4udHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/kaszek/sections/EthosMain.tsx"
-          ],
-          "default": "deco-sites/kaszek/sections/EthosMain.tsx"
         }
       }
     },
@@ -11725,6 +11730,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQWJvdXRLYXN6ZWsudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g="
         },
         {
@@ -11735,9 +11743,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRW50cmVwcmVuZXVycy50c3g="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRXRob3NNYWluLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRmFxU2VjdGlvbi50c3g="

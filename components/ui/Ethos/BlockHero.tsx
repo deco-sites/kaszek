@@ -3,31 +3,32 @@ import Image from "deco-sites/std/components/Image.tsx";
 import Weather from "deco-sites/start/components/ui/Main/Weather.tsx";
 
 export type Props = {
-  first_text: string;
-  second_text?: string;
-  background: LiveImage;
+  firstText: string;
+  secondText?: string;
+  image: LiveImage;
+  textAlternative: string;
   location?: string;
   latitude?: number;
   longitude?: number;
 };
 
-export default function EthosMain(props: Props) {
+export default function BlockHero(props: Props) {
   return (
     <div class="relative flex flex-col items-center">
       <div class="bg-white z-10 w-full flex justify-center mt-[80px]">
         <div class="max-w-[1200px] sm:w-[calc(100% - 24px)] w-full md:pt-20 md:pb-20 pt-[30px] pb-[40px]">
           <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] md:w-calc md:mr-0 md:ml-0 w-calc mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px] xl:pl-[0px] sm:pl-[12px]">
-            {props.first_text}
+            {props.firstText}
             <br />
-            {props.second_text}
+            {props.secondText}
           </h1>
         </div>
       </div>
       <div class="h-full md:max-h-[520px] min-h-[265px] overflow-hidden contents after:bg-gradient-to-b after:from-transparent after:to-black after:block after:w-full after:h-[120px] after:left-0 after:bottom-0 after:content-[''] after:opacity-50 z-20 absolute after:absolute">
         <Image
           class="w-full object-cover md:max-h-[520px] min-h-[265px] z-0 inset-0"
-          src={props.background}
-          alt={"background"}
+          src={props.image}
+          alt={props.textAlternative}
           width={1920}
           height={1080}
         />

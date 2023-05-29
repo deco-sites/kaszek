@@ -1,5 +1,5 @@
 import { context } from "$live/live.ts";
-import EthosMain from "deco-sites/start/components/ui/Ethos/EthosMain.tsx";
+import BlockHero from "deco-sites/start/components/ui/Ethos/BlockHero.tsx";
 import OurPhilosophy from "deco-sites/start/components/ui/Ethos/OurPhilosophy.tsx";
 import OurHistory from "deco-sites/start/components/ui/Ethos/OurHistory.tsx";
 import InvestmentStages from "deco-sites/start/components/ui/Ethos/InvestmentStages.tsx";
@@ -14,7 +14,7 @@ export default function Ethos({ enableInspectVSCode }: Props) {
     <main>
       {enableInspectVSCode && !context.deploymentId && (
         <>
-          <EthosMain first_text="" background="" />
+          <BlockHero firstText="" image="" textAlternative="" />
           <OurPhilosophy label="" srcMobile="" textAlternative="" text={[]} />
           <OurHistory image="" textAlternative="" label="" text={[]} />
           <InvestmentStages text={[]} />

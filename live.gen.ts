@@ -14,11 +14,11 @@ import * as $$$$$3 from "./islands/FaqSection.tsx";
 import * as $$$$$4 from "./islands/Header.tsx";
 import * as $$$$$5 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
-import * as $$$$$$$$1 from "./sections/Blockquote.tsx";
-import * as $$$$$$$$2 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$3 from "./sections/EntrepreneurialCapital.tsx";
-import * as $$$$$$$$4 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$5 from "./sections/EthosMain.tsx";
+import * as $$$$$$$$1 from "./sections/BlockHero.tsx";
+import * as $$$$$$$$2 from "./sections/Blockquote.tsx";
+import * as $$$$$$$$3 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$4 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$5 from "./sections/Entrepreneurs.tsx";
 import * as $$$$$$$$6 from "./sections/FaqSection.tsx";
 import * as $$$$$$$$7 from "./sections/Footer.tsx";
 import * as $$$$$$$$8 from "./sections/Head.tsx";
@@ -196,11 +196,11 @@ const manifest = {
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
-    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$1,
-    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/EthosMain.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$2,
+    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$5,
     "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$6,
     "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$7,
     "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$8,
