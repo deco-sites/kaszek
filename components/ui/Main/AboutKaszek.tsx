@@ -7,12 +7,12 @@ export interface Props {
   img: LiveImage;
   city?: Cities[];
   title: string;
-  first_description: string;
-  second_description?: string;
+  firstDescription: string;
+  secondDescription?: string;
 }
 
 export type Cities = {
-  city: string;
+  label: string;
   bottom: string;
   left: string;
 };
@@ -34,7 +34,7 @@ export default function AboutKaszek(props: Props) {
           {locations.map((city, index) => (
             <CityPlate
               key={index}
-              name={city.city ? city.city : ""}
+              label={city.label ? city.label : ""}
               bottom={city.bottom}
               left={city.left}
             />
@@ -45,10 +45,10 @@ export default function AboutKaszek(props: Props) {
             {props.title}
           </h2>
           <p class="text-[16px] leading-[1.5] mb-[16px] Maax-Regular-Font font-normal">
-            {props.first_description}
+            {props.firstDescription}
           </p>
           <p class="text-[16px] leading-[1.5] Maax-Regular-Font font-normal">
-            {props.second_description}
+            {props.secondDescription}
           </p>
         </div>
       </div>
