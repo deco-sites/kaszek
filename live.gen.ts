@@ -21,12 +21,13 @@ import * as $$$$$$$$4 from "./sections/EntrepreneurialCapital.tsx";
 import * as $$$$$$$$5 from "./sections/Entrepreneurs.tsx";
 import * as $$$$$$$$6 from "./sections/FaqSection.tsx";
 import * as $$$$$$$$7 from "./sections/Footer.tsx";
-import * as $$$$$$$$8 from "./sections/Head.tsx";
-import * as $$$$$$$$9 from "./sections/Header.tsx";
-import * as $$$$$$$$10 from "./sections/Home.tsx";
-import * as $$$$$$$$11 from "./sections/InvestmentStages.tsx";
-import * as $$$$$$$$12 from "./sections/OurHistory.tsx";
-import * as $$$$$$$$13 from "./sections/OurPhilosophy.tsx";
+import * as $$$$$$$$8 from "./sections/Gallery.tsx";
+import * as $$$$$$$$9 from "./sections/Head.tsx";
+import * as $$$$$$$$10 from "./sections/Header.tsx";
+import * as $$$$$$$$11 from "./sections/Home.tsx";
+import * as $$$$$$$$12 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$13 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$14 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -52,13 +53,13 @@ import * as i2$$$$1 from "$live/sections/Slot.tsx";
 import * as i2$$$$2 from "$live/sections/UseSlot.tsx";
 import * as i2$$$$$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i2$$$$$$$$1 from "$live/matchers/MatchDate.ts";
-import * as i1$$$$$2 from "$live/matchers/MatchDevice.ts";
-import * as i2$$$$$$$$2 from "$live/matchers/MatchEnvironment.ts";
-import * as i2$$$$$$$$3 from "$live/matchers/MatchHost.ts";
-import * as i2$$$$$$$$4 from "$live/matchers/MatchMulti.ts";
-import * as i2$$$$$$$$5 from "$live/matchers/MatchRandom.ts";
-import * as i2$$$$$$$$6 from "$live/matchers/MatchSite.ts";
-import * as i2$$$$$$$$7 from "$live/matchers/MatchUserAgent.ts";
+import * as i2$$$$$$$$2 from "$live/matchers/MatchDevice.ts";
+import * as i2$$$$$$$$3 from "$live/matchers/MatchEnvironment.ts";
+import * as i2$$$$$$$$4 from "$live/matchers/MatchHost.ts";
+import * as i2$$$$$$$$5 from "$live/matchers/MatchMulti.ts";
+import * as i2$$$$$$$$6 from "$live/matchers/MatchRandom.ts";
+import * as i2$$$$$$$$7 from "$live/matchers/MatchSite.ts";
+import * as i2$$$$$$$$8 from "$live/matchers/MatchUserAgent.ts";
 import * as i2$$$$$$$$$0 from "$live/flags/audience.ts";
 import * as i2$$$$$$$$$1 from "$live/flags/everyone.ts";
 import * as i2$$$$$0 from "$live/actions/workflows/cancel.ts";
@@ -203,12 +204,13 @@ const manifest = {
     "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$5,
     "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$6,
     "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$7,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$8,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$9,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$10,
-    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$11,
-    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$12,
-    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$8,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$14,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
@@ -254,13 +256,13 @@ const manifest = {
   "matchers": {
     "$live/matchers/MatchAlways.ts": i2$$$$$$$$0,
     "$live/matchers/MatchDate.ts": i2$$$$$$$$1,
-    "$live/matchers/MatchDevice.ts": i1$$$$$2,
-    "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$2,
-    "$live/matchers/MatchHost.ts": i2$$$$$$$$3,
-    "$live/matchers/MatchMulti.ts": i2$$$$$$$$4,
-    "$live/matchers/MatchRandom.ts": i2$$$$$$$$5,
-    "$live/matchers/MatchSite.ts": i2$$$$$$$$6,
-    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$7,
+    "$live/matchers/MatchDevice.ts": i2$$$$$$$$2,
+    "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$3,
+    "$live/matchers/MatchHost.ts": i2$$$$$$$$4,
+    "$live/matchers/MatchMulti.ts": i2$$$$$$$$5,
+    "$live/matchers/MatchRandom.ts": i2$$$$$$$$6,
+    "$live/matchers/MatchSite.ts": i2$$$$$$$$7,
+    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$8,
   },
   "flags": {
     "$live/flags/audience.ts": i2$$$$$$$$$0,
