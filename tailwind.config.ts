@@ -20,6 +20,7 @@ export const theme = {
   "--tab-radius": "0.5rem", // border radius of tabs
   extend: {
     gridTemplateColumns: {
+      "three": "repeat(3, 1fr)",
       "five": "repeat(5, 1fr)",
     },
     screens: {
