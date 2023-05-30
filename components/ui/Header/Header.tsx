@@ -17,9 +17,9 @@ export type Links = {
 
 const navlinkStyles = {
   menuOpen:
-    "pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font font-bold tracking-[-.5px] leading-[3rem]",
+    "pt-0 pb-0 border-b-0 text-[36px] Noe-Display-Font font-bold tracking-[-0.5px] leading-[3rem]",
   menuClosed:
-    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font font-bold tracking-normal leading-[3rem]",
+    "pt-[4px] pb-[2px] border-b-2 text-[14px] Maax-Bold-Font font-bold tracking-[1px] leading-[3rem]",
 };
 
 export default function Header(props: Props) {
