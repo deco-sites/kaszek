@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 import { asset } from "$fresh/runtime.ts";
@@ -86,20 +86,50 @@ export default function Category(props: Props) {
     setIsCompanyStatusDropdownOpen(false);
   };
 
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleSearchChange = (event: Event) => {
+    const inputValue = (event.target as HTMLInputElement).value;
+    setSearchValue(inputValue);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
+      setIsSearchOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const filteredLogos = props.logos.filter((logo) => {
     const logoCategoryOptions = logo.filter.category;
     const logoHQOptions = logo.filter.hq;
     const logoCompanyStatusOptions = logo.filter.companyStatus;
 
-    const isCategoryMatch = category.length === 0 || category.includes("All") ||
+    const isCategoryMatch = category.length === 0 ||
+      category.includes("All") ||
       logoCategoryOptions.some((option) => category.includes(option));
-    const isHQMatch = hq.length === 0 || hq.includes("All") ||
+    const isHQMatch = hq.length === 0 ||
+      hq.includes("All") ||
       logoHQOptions.some((option) => hq.includes(option));
     const isCompanyStatusMatch = companyStatus.length === 0 ||
       companyStatus.includes("Active") ||
       logoCompanyStatusOptions.some((option) => companyStatus.includes(option));
 
-    return isCategoryMatch && isHQMatch && isCompanyStatusMatch;
+    const isSearchMatch = logo.label.toLowerCase().includes(
+      searchValue.toLowerCase(),
+    );
+
+    return isCategoryMatch && isHQMatch && isCompanyStatusMatch &&
+      isSearchMatch;
   });
 
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
@@ -144,6 +174,42 @@ export default function Category(props: Props) {
     );
   };
 
+  const startRef = useRef<HTMLDivElement>(null);
+  const endRef = useRef<HTMLDivElement>(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (startRef.current !== null && endRef.current !== null) {
+        const endTop = endRef.current.offsetTop;
+        const isTopReached = window.scrollY <= 460;
+        const isPositionReached = window.scrollY >= endTop;
+        setIsSticky(!isTopReached && !isPositionReached);
+      }
+    };
+
+    addEventListener("scroll", handleScroll);
+    return () => {
+      removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isSearchOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  const searchIcon = (
+    <object
+      data={asset(`/search.svg`)}
+      aria-label="search input toggle"
+      width="24"
+      height="24"
+      className="bg-[#ebf0ef]"
+    />
+  );
+
   return (
     <div class="relative flex flex-col items-center mb-[75px]">
       <div class="w-full flex flex-col justify-center mt-[80px]">
@@ -158,8 +224,15 @@ export default function Category(props: Props) {
           </p>
         </div>
         <div class="w-full">
-          <div class="relative flex gap-x-[24px]">
-            <div class="max-w-[1200px] w-full mx-auto relative flex gap-x-[24px] grid grid-template z-10">
+          <div
+            ref={startRef}
+            class={` flex gap-x-[24px] w-full ${
+              isSticky ? "fixed top-[80px] bg-white w-full" : "relative"
+            }`}
+          >
+            <div
+              class={`max-w-[1200px] w-full mx-auto relative flex gap-x-[24px] grid md:grid-template grid-cols-2 z-10 py-[12px]`}
+            >
               {dropdowns.map((dropdown) => (
                 <div
                   id={dropdown.id}
@@ -189,13 +262,40 @@ export default function Category(props: Props) {
                   </span>
                 </div>
               ))}
+              <div class="relative z-10 flex justify-end">
+                {isSearchOpen
+                  ? (
+                    <div class="relative">
+                      <input
+                        type="search"
+                        class="bg-[#ebf0ef] pl-[56px] py-[16px] focus:outline-none"
+                        value={searchValue}
+                        onChange={handleSearchChange}
+                        ref={inputRef}
+                      />
+                      <span class="absolute left-[16px] top-1/2 transform -translate-y-1/2">
+                        {searchIcon}
+                      </span>
+                    </div>
+                  )
+                  : (
+                    <div
+                      class="bg-[#ebf0ef] w-[56px] h-[56px] rounded-[28px] flex justify-center items-center cursor-text"
+                      onClick={() => setIsSearchOpen(true)}
+                    >
+                      <span class="pointer-events-none">
+                        {searchIcon}
+                      </span>
+                    </div>
+                  )}
+              </div>
             </div>
 
             {(isCategoryDropdownOpen || isHQDropdownOpen ||
               isCompanyStatusDropdownOpen) && (
               <div class="absolute w-full pt-[4rem] pb-[12px] top-[-12px] bg-[#ebf0ef] origin-top-left">
                 <div class="max-w-[1200px] mx-auto">
-                  <div class="w-full grid grid-template flex gap-x-[24px]">
+                  <div class="w-full grid md:grid-template grid-cols-2 flex gap-x-[24px]">
                     {dropdowns.map((dropdown) => (
                       <div class="mt-[20px] pl-[20px]">
                         {dropdown.items
@@ -249,6 +349,7 @@ export default function Category(props: Props) {
         <div class="w-full max-w-[1200px] mx-auto grid grid-cols-two lg:grid-cols-six md:grid-cols-four xl:px-[0px] px-[12px] gap-[24px]">
           {filteredLogos.map((logo, index) => (
             <div
+              ref={endRef}
               key={index}
               class={`flex justify-center border-b-[1px] border-[#83ff97]`}
             >

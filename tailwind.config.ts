@@ -27,8 +27,8 @@ export const theme = {
       "six": "repeat(6, 1fr)",
     },
     maxWidth: {
-      'category-desktop': 'calc(33% - 12px)',
-      'category-tablet': 'calc(50% - 12px)',
+      "category-desktop": "calc(33% - 12px)",
+      "category-tablet": "calc(50% - 12px)",
     },
     screens: {
       "mobile": "576px",
