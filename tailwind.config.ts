@@ -20,8 +20,15 @@ export const theme = {
   "--tab-radius": "0.5rem", // border radius of tabs
   extend: {
     gridTemplateColumns: {
+      "two": "repeat(2, 1fr)",
       "three": "repeat(3, 1fr)",
+      "four": "repeat(4, 1fr)",
       "five": "repeat(5, 1fr)",
+      "six": "repeat(6, 1fr)",
+    },
+    maxWidth: {
+      'category-desktop': 'calc(33% - 12px)',
+      'category-tablet': 'calc(50% - 12px)',
     },
     screens: {
       "mobile": "576px",

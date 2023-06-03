@@ -64,6 +64,9 @@
     margin-left: 5px;
     vertical-align: baseline;
   }
+  .grid-template {
+    grid-template-columns: 16.66667% 16.66667% 25% 1fr;
+  }
 }
 
 @layer utilities {
