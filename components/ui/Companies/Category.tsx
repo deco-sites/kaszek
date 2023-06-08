@@ -200,75 +200,130 @@ export default function Category(props: Props) {
     }
   }, [isSearchOpen]);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    addEventListener("resize", handleResize);
+
+    return () => {
+      removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const arrowIcon = (
+    <object
+      data={asset(`/arrow-down.svg`)}
+      aria-label="arrow menu toggle"
+      width="23.99"
+      height="23.99"
+      class="transform"
+    />
+  );
+
+  const changeColor = `${
+    isCategoryDropdownOpen || isHQDropdownOpen ||
+      isCompanyStatusDropdownOpen
+      ? "bg-white"
+      : "bg-[#ebf0ef]"
+  }`;
+
   const searchIcon = (
     <object
       data={asset(`/search.svg`)}
       aria-label="search input toggle"
       width="24"
       height="24"
-      className="bg-[#ebf0ef]"
+      class={`${
+        isCategoryDropdownOpen || isHQDropdownOpen ||
+          isCompanyStatusDropdownOpen
+          ? "fill-white"
+          : "fill-[#ebf0ef]"
+      }`}
     />
   );
 
   return (
     <div class="relative flex flex-col items-center mb-[75px]">
       <div class="w-full flex flex-col justify-center mt-[80px]">
-        <div class="w-full max-w-[1200px] mx-auto md:pt-20 md:pb-20 pt-[30px] pb-[40px]">
-          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] md:mr-0 md:ml-0 mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px] xl:pl-[0px] sm:pl-[12px]">
+        <div class="w-full max-w-[1200px] mx-auto md:pt-20 md:mb-[120px] pt-[30px] mb-[40px]">
+          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] md:mr-0 md:ml-0 mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px]">
             {props.firstText}
             <br />
             {props.secondText}
           </h1>
-          <p class="md:mt-[62px] mt-[40px] lg:max-w-category-desktop mobile:max-w-category-tablet md:mr-0 md:ml-0 mr-3 ml-3 Maax-Regular-Font xl:pl-[0px] sm:pl-[12px]">
+          <p class="md:mt-[62px] mt-[40px] lg:max-w-category-desktop mobile:max-w-category-tablet md:mr-0 md:ml-0 mr-3 ml-3 Maax-Regular-Font">
             {props.paragraph}
           </p>
         </div>
         <div class="w-full">
           <div
             ref={startRef}
-            class={` flex gap-x-[24px] w-full ${
-              isSticky ? "fixed top-[80px] bg-white w-full" : "relative"
+            class={` flex gap-x-[24px] w-full md:mb-[60px] ${
+              isSticky ? "fixed top-[80px] bg-white" : "relative"
             }`}
           >
             <div
-              class={`max-w-[1200px] w-full mx-auto relative flex gap-x-[24px] grid md:grid-template grid-cols-2 z-10 py-[12px]`}
+              class={`max-w-[1200px] w-full xl:mx-auto mx-[12px] relative flex gap-x-[24px] grid md:grid-template grid-cols-2 z-10 py-[12px]`}
             >
-              {dropdowns.map((dropdown) => (
-                <div
-                  id={dropdown.id}
-                  class={`block py-[16px] px-[20px] bg-[#ebf0ef] text-bold flex justify-between cursor-pointer`}
-                  onClick={() => toggleDropdown(dropdown.id)}
-                >
-                  <span class="Maax-Bold-Font text-[16px] leading-[24px]">
-                    {dropdown.items.length === 0
-                      ? dropdown.placeholder
-                      : dropdown.placeholder}
-                  </span>
-                  <span
-                    class={`transform pointer-events-none ${
-                      isCategoryDropdownOpen || isHQDropdownOpen ||
-                        isCompanyStatusDropdownOpen
-                        ? "rotate-180"
-                        : "rotate-0"
-                    }`}
+              {isMobile
+                ? (
+                  <div
+                    id="filterMenu"
+                    class="block py-[16px] px-[20px] bg-[#ebf0ef] text-bold flex justify-between cursor-pointer"
+                    onClick={() =>
+                      setIsCategoryDropdownOpen(!isCategoryDropdownOpen)}
                   >
-                    <object
-                      data={asset(`/arrow-down.svg`)}
-                      aria-label="arrow menu toggle"
-                      width="23.99"
-                      height="23.99"
-                      class="transform"
-                    />
-                  </span>
-                </div>
-              ))}
+                    <span class="Maax-Bold-Font text-[16px] leading-[24px]">
+                      Filter
+                    </span>
+                    <span
+                      class={`transform pointer-events-none ${
+                        isCategoryDropdownOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                    >
+                      {arrowIcon}
+                    </span>
+                  </div>
+                )
+                : (
+                  dropdowns.map((dropdown) => (
+                    <div
+                      id={dropdown.id}
+                      class={`block py-[16px] px-[20px] bg-[#ebf0ef] text-bold flex justify-between cursor-pointer`}
+                      onClick={() => toggleDropdown(dropdown.id)}
+                    >
+                      <span class="Maax-Bold-Font text-[16px] leading-[24px]">
+                        {dropdown.items.length === 0
+                          ? dropdown.placeholder
+                          : dropdown.placeholder}
+                      </span>
+                      <span
+                        class={`transform pointer-events-none ${
+                          isCategoryDropdownOpen || isHQDropdownOpen ||
+                            isCompanyStatusDropdownOpen
+                            ? "rotate-180"
+                            : "rotate-0"
+                        }`}
+                      >
+                        {arrowIcon}
+                      </span>
+                    </div>
+                  ))
+                )}
               <div class="relative z-10 flex justify-end">
                 {isSearchOpen
                   ? (
-                    <div class="relative">
+                    <div class="relative md:max-w-[300px] w-[100%] transition-all duration-300 ease-in-out">
                       <input
                         type="search"
-                        class="bg-[#ebf0ef] pl-[56px] py-[16px] focus:outline-none"
+                        id="searchInput"
+                        class={`
+                        ${changeColor}             
+                        pl-[56px] pr-[16px] py-[16px] focus:outline-none outline-none transition-all duration-300 ease-in-out w-full absolute right-0`}
                         value={searchValue}
                         onChange={handleSearchChange}
                         ref={inputRef}
@@ -280,8 +335,8 @@ export default function Category(props: Props) {
                   )
                   : (
                     <div
-                      class="bg-[#ebf0ef] w-[56px] h-[56px] rounded-[28px] flex justify-center items-center cursor-text"
-                      onClick={() => setIsSearchOpen(true)}
+                      class={`${changeColor} w-[56px] h-[56px] rounded-[28px] flex justify-center items-center cursor-text transition-all duration-300 ease-in-out`}
+                      onClick={() => setIsSearchOpen(!isSearchOpen)}
                     >
                       <span class="pointer-events-none">
                         {searchIcon}
@@ -294,10 +349,17 @@ export default function Category(props: Props) {
             {(isCategoryDropdownOpen || isHQDropdownOpen ||
               isCompanyStatusDropdownOpen) && (
               <div class="absolute w-full pt-[4rem] pb-[12px] top-[-12px] bg-[#ebf0ef] origin-top-left">
-                <div class="max-w-[1200px] mx-auto">
+                <div class="max-w-[1200px] md:mx-auto mx-[12px]">
                   <div class="w-full grid md:grid-template grid-cols-2 flex gap-x-[24px]">
                     {dropdowns.map((dropdown) => (
                       <div class="mt-[20px] pl-[20px]">
+                        {isMobile && (
+                          <p class="Maax-Bold-Font text-[16px] leading-[24px] mb-[32px]">
+                            {dropdown.items.length === 0
+                              ? dropdown.placeholder
+                              : dropdown.placeholder}
+                          </p>
+                        )}
                         {dropdown.items
                           .sort((a, b) => {
                             if (a === "All") return -1;
