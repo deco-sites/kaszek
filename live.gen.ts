@@ -7,29 +7,32 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/ButtonHamburger.tsx";
-import * as $$$$$1 from "./islands/Category.tsx";
-import * as $$$$$2 from "./islands/CityPlate.tsx";
-import * as $$$$$3 from "./islands/Entrepreneurs.tsx";
-import * as $$$$$4 from "./islands/FaqSection.tsx";
-import * as $$$$$5 from "./islands/Header.tsx";
-import * as $$$$$6 from "./islands/Weather.tsx";
+import * as $$$$$0 from "./islands/BannerCarousel.tsx";
+import * as $$$$$1 from "./islands/ButtonHamburger.tsx";
+import * as $$$$$2 from "./islands/Category.tsx";
+import * as $$$$$3 from "./islands/CityPlate.tsx";
+import * as $$$$$4 from "./islands/Entrepreneurs.tsx";
+import * as $$$$$5 from "./islands/FaqSection.tsx";
+import * as $$$$$6 from "./islands/Header.tsx";
+import * as $$$$$7 from "./islands/SliderJS.tsx";
+import * as $$$$$8 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
-import * as $$$$$$$$1 from "./sections/BlockHero.tsx";
-import * as $$$$$$$$2 from "./sections/Blockquote.tsx";
-import * as $$$$$$$$3 from "./sections/Category.tsx";
-import * as $$$$$$$$4 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$5 from "./sections/EntrepreneurialCapital.tsx";
-import * as $$$$$$$$6 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$7 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$8 from "./sections/Footer.tsx";
-import * as $$$$$$$$9 from "./sections/Gallery.tsx";
-import * as $$$$$$$$10 from "./sections/Head.tsx";
-import * as $$$$$$$$11 from "./sections/Header.tsx";
-import * as $$$$$$$$12 from "./sections/Home.tsx";
-import * as $$$$$$$$13 from "./sections/InvestmentStages.tsx";
-import * as $$$$$$$$14 from "./sections/OurHistory.tsx";
-import * as $$$$$$$$15 from "./sections/OurPhilosophy.tsx";
+import * as $$$$$$$$1 from "./sections/BannerCarousel.tsx";
+import * as $$$$$$$$2 from "./sections/BlockHero.tsx";
+import * as $$$$$$$$3 from "./sections/Blockquote.tsx";
+import * as $$$$$$$$4 from "./sections/Category.tsx";
+import * as $$$$$$$$5 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$6 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$7 from "./sections/Entrepreneurs.tsx";
+import * as $$$$$$$$8 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$9 from "./sections/Footer.tsx";
+import * as $$$$$$$$10 from "./sections/Gallery.tsx";
+import * as $$$$$$$$11 from "./sections/Head.tsx";
+import * as $$$$$$$$12 from "./sections/Header.tsx";
+import * as $$$$$$$$13 from "./sections/Home.tsx";
+import * as $$$$$$$$14 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$15 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$16 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -189,34 +192,37 @@ const manifest = {
     "./routes/styles.css.ts": $$$$0,
   },
   "islands": {
-    "./islands/ButtonHamburger.tsx": $$$$$0,
-    "./islands/Category.tsx": $$$$$1,
-    "./islands/CityPlate.tsx": $$$$$2,
-    "./islands/Entrepreneurs.tsx": $$$$$3,
-    "./islands/FaqSection.tsx": $$$$$4,
-    "./islands/Header.tsx": $$$$$5,
-    "./islands/Weather.tsx": $$$$$6,
+    "./islands/BannerCarousel.tsx": $$$$$0,
+    "./islands/ButtonHamburger.tsx": $$$$$1,
+    "./islands/Category.tsx": $$$$$2,
+    "./islands/CityPlate.tsx": $$$$$3,
+    "./islands/Entrepreneurs.tsx": $$$$$4,
+    "./islands/FaqSection.tsx": $$$$$5,
+    "./islands/Header.tsx": $$$$$6,
+    "./islands/SliderJS.tsx": $$$$$7,
+    "./islands/Weather.tsx": $$$$$8,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
-    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$1,
-    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/Category.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$5,
-    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$6,
-    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$7,
-    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$8,
-    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$9,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$10,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$11,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$12,
-    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$13,
-    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$14,
-    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$15,
+    "deco-sites/kaszek/sections/BannerCarousel.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$2,
+    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/Category.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$7,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$8,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$14,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$15,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$16,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
