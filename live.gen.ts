@@ -7,27 +7,32 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/ButtonHamburger.tsx";
-import * as $$$$$1 from "./islands/CityPlate.tsx";
-import * as $$$$$2 from "./islands/Entrepreneurs.tsx";
-import * as $$$$$3 from "./islands/FaqSection.tsx";
-import * as $$$$$4 from "./islands/Header.tsx";
-import * as $$$$$5 from "./islands/Weather.tsx";
+import * as $$$$$0 from "./islands/BannerCarousel.tsx";
+import * as $$$$$1 from "./islands/ButtonHamburger.tsx";
+import * as $$$$$2 from "./islands/Category.tsx";
+import * as $$$$$3 from "./islands/CityPlate.tsx";
+import * as $$$$$4 from "./islands/Entrepreneurs.tsx";
+import * as $$$$$5 from "./islands/FaqSection.tsx";
+import * as $$$$$6 from "./islands/Header.tsx";
+import * as $$$$$7 from "./islands/SliderJS.tsx";
+import * as $$$$$8 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
-import * as $$$$$$$$1 from "./sections/BlockHero.tsx";
-import * as $$$$$$$$2 from "./sections/Blockquote.tsx";
-import * as $$$$$$$$3 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$4 from "./sections/EntrepreneurialCapital.tsx";
-import * as $$$$$$$$5 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$6 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$7 from "./sections/Footer.tsx";
-import * as $$$$$$$$8 from "./sections/Gallery.tsx";
-import * as $$$$$$$$9 from "./sections/Head.tsx";
-import * as $$$$$$$$10 from "./sections/Header.tsx";
-import * as $$$$$$$$11 from "./sections/Home.tsx";
-import * as $$$$$$$$12 from "./sections/InvestmentStages.tsx";
-import * as $$$$$$$$13 from "./sections/OurHistory.tsx";
-import * as $$$$$$$$14 from "./sections/OurPhilosophy.tsx";
+import * as $$$$$$$$1 from "./sections/BannerCarousel.tsx";
+import * as $$$$$$$$2 from "./sections/BlockHero.tsx";
+import * as $$$$$$$$3 from "./sections/Blockquote.tsx";
+import * as $$$$$$$$4 from "./sections/Category.tsx";
+import * as $$$$$$$$5 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$6 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$7 from "./sections/Entrepreneurs.tsx";
+import * as $$$$$$$$8 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$9 from "./sections/Footer.tsx";
+import * as $$$$$$$$10 from "./sections/Gallery.tsx";
+import * as $$$$$$$$11 from "./sections/Head.tsx";
+import * as $$$$$$$$12 from "./sections/Header.tsx";
+import * as $$$$$$$$13 from "./sections/Home.tsx";
+import * as $$$$$$$$14 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$15 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$16 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -38,8 +43,9 @@ import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
-import * as i2$$$0 from "$live/loaders/workflows/events.ts";
-import * as i2$$$1 from "$live/loaders/workflows/get.ts";
+import * as i2$$$0 from "$live/loaders/state.ts";
+import * as i2$$$1 from "$live/loaders/workflows/events.ts";
+import * as i2$$$2 from "$live/loaders/workflows/get.ts";
 import * as i2$$$$$$0 from "$live/handlers/devPage.ts";
 import * as i2$$$$$$1 from "$live/handlers/fresh.ts";
 import * as i2$$$$$$2 from "$live/handlers/proxy.ts";
@@ -98,18 +104,19 @@ import * as i2$$1 from "deco-sites/std/accounts/shopify.ts";
 import * as i2$$2 from "deco-sites/std/accounts/vnda.ts";
 import * as i2$$3 from "deco-sites/std/accounts/vtex.ts";
 import * as i2$$4 from "deco-sites/std/accounts/yourViews.ts";
-import * as i2$$$2 from "deco-sites/std/loaders/vtex/cart.ts";
-import * as i2$$$3 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
-import * as i2$$$4 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
-import * as i2$$$5 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
-import * as i2$$$6 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
-import * as i2$$$7 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
-import * as i2$$$8 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
-import * as i2$$$9 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
-import * as i2$$$10 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
-import * as i2$$$11 from "deco-sites/std/loaders/vtex/navbar.ts";
-import * as i2$$$12 from "deco-sites/std/loaders/vtex/user.ts";
-import * as i2$$$13 from "deco-sites/std/loaders/vtex/wishlist.ts";
+import * as i2$$$3 from "deco-sites/std/loaders/vtex/cart.ts";
+import * as i2$$$4 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
+import * as i2$$$5 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
+import * as i2$$$6 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
+import * as i2$$$7 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
+import * as i2$$$8 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
+import * as i2$$$9 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
+import * as i2$$$10 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
+import * as i2$$$11 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
+import * as i2$$$12 from "deco-sites/std/loaders/vtex/navbar.ts";
+import * as i2$$$13 from "deco-sites/std/loaders/vtex/proxy.ts";
+import * as i2$$$14 from "deco-sites/std/loaders/vtex/user.ts";
+import * as i2$$$15 from "deco-sites/std/loaders/vtex/wishlist.ts";
 import * as i2$$$$3 from "deco-sites/std/sections/Analytics.tsx";
 import * as i2$$$$4 from "deco-sites/std/sections/configButterCMS.global.tsx";
 import * as i2$$$$5 from "deco-sites/std/sections/configOCC.global.tsx";
@@ -185,32 +192,37 @@ const manifest = {
     "./routes/styles.css.ts": $$$$0,
   },
   "islands": {
-    "./islands/ButtonHamburger.tsx": $$$$$0,
-    "./islands/CityPlate.tsx": $$$$$1,
-    "./islands/Entrepreneurs.tsx": $$$$$2,
-    "./islands/FaqSection.tsx": $$$$$3,
-    "./islands/Header.tsx": $$$$$4,
-    "./islands/Weather.tsx": $$$$$5,
+    "./islands/BannerCarousel.tsx": $$$$$0,
+    "./islands/ButtonHamburger.tsx": $$$$$1,
+    "./islands/Category.tsx": $$$$$2,
+    "./islands/CityPlate.tsx": $$$$$3,
+    "./islands/Entrepreneurs.tsx": $$$$$4,
+    "./islands/FaqSection.tsx": $$$$$5,
+    "./islands/Header.tsx": $$$$$6,
+    "./islands/SliderJS.tsx": $$$$$7,
+    "./islands/Weather.tsx": $$$$$8,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
-    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$1,
-    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$5,
-    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$6,
-    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$7,
-    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$8,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$9,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$10,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$11,
-    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$12,
-    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$13,
-    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$14,
+    "deco-sites/kaszek/sections/BannerCarousel.tsx": $$$$$$$$1,
+    "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$2,
+    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/Category.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$7,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$8,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$14,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$15,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$16,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
@@ -224,22 +236,24 @@ const manifest = {
     "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$13,
   },
   "loaders": {
-    "$live/loaders/workflows/events.ts": i2$$$0,
-    "$live/loaders/workflows/get.ts": i2$$$1,
-    "deco-sites/std/loaders/vtex/cart.ts": i2$$$2,
+    "$live/loaders/state.ts": i2$$$0,
+    "$live/loaders/workflows/events.ts": i2$$$1,
+    "$live/loaders/workflows/get.ts": i2$$$2,
+    "deco-sites/std/loaders/vtex/cart.ts": i2$$$3,
     "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
-      i2$$$3,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$4,
+      i2$$$4,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$5,
     "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts":
-      i2$$$5,
-    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$6,
-    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$7,
-    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$8,
-    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$9,
-    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$10,
-    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$11,
-    "deco-sites/std/loaders/vtex/user.ts": i2$$$12,
-    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$13,
+      i2$$$6,
+    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$7,
+    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$8,
+    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$9,
+    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$10,
+    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$11,
+    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$12,
+    "deco-sites/std/loaders/vtex/proxy.ts": i2$$$13,
+    "deco-sites/std/loaders/vtex/user.ts": i2$$$14,
+    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$15,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i2$$$$$$0,
