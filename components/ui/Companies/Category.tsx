@@ -121,8 +121,9 @@ export default function Category(props: Props) {
       hq.includes("All") ||
       logoHQOptions.some((option) => hq.includes(option));
     const isCompanyStatusMatch = companyStatus.length === 0 ||
-      companyStatus.includes("Active") ||
-      logoCompanyStatusOptions.some((option) => companyStatus.includes(option));
+      companyStatus.every((option) =>
+        logoCompanyStatusOptions.includes(option)
+      );
 
     const isSearchMatch = logo.label.toLowerCase().includes(
       searchValue.toLowerCase(),
@@ -247,7 +248,7 @@ export default function Category(props: Props) {
   );
 
   return (
-    <div class="relative flex flex-col items-center mb-[75px]">
+    <div class="relative flex flex-col items-center">
       <div class="w-full flex flex-col justify-center mt-[80px]">
         <div class="w-full max-w-[1200px] mx-auto md:pt-20 md:mb-[120px] pt-[30px] mb-[40px]">
           <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] md:mr-0 md:ml-0 mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px]">
@@ -262,7 +263,7 @@ export default function Category(props: Props) {
         <div class="w-full">
           <div
             ref={startRef}
-            class={` flex gap-x-[24px] w-full md:mb-[60px] ${
+            class={` flex gap-x-[24px] w-full md:mb-[60px] z-10 ${
               isSticky ? "fixed top-[80px] bg-white" : "relative"
             }`}
           >
@@ -322,7 +323,7 @@ export default function Category(props: Props) {
                         type="search"
                         id="searchInput"
                         class={`
-                        ${changeColor}             
+                        ${changeColor}
                         pl-[56px] pr-[16px] py-[16px] focus:outline-none outline-none transition-all duration-300 ease-in-out w-full absolute right-0`}
                         value={searchValue}
                         onChange={handleSearchChange}
