@@ -131,7 +131,7 @@ function BannerCarousel({ images, preload, interval }: Props) {
   return (
     <div
       id={id}
-      class="w-full max-w-[1200px] xl:mx-auto xl:px-0 px-[15px] md:mb-[120px] mb-[75px]"
+      class="w-full max-w-[1200px] xl:mx-auto xl:px-0 px-[15px] lg:mt-[120px] md:mt-[75px] mt-[50px] mb-[75px]"
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full scrollbar-none gap-6">
         {images?.map((image, index) => (
