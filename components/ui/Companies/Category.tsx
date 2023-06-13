@@ -179,19 +179,41 @@ export default function Category(props: Props) {
   const endRef = useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (startRef.current !== null && endRef.current !== null) {
-        const endTop = endRef.current.offsetTop;
-        const isTopReached = window.scrollY <= 460;
-        const isPositionReached = window.scrollY >= endTop;
-        setIsSticky(!isTopReached && !isPositionReached);
+  const handleScroll = () => {
+    const scrollPosition = window.pageYOffset ||
+      document.documentElement.scrollTop;
+
+    if (startRef.current && endRef.current) {
+      const startOffsetTop = startRef.current.offsetTop;
+      const endOffsetTop = endRef.current.offsetTop;
+
+      if (scrollPosition > startOffsetTop && scrollPosition < endOffsetTop) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
       }
+    }
+  };
+
+  const debounce = (func: () => void, delay: number) => {
+    let timeoutId: ReturnType<typeof setTimeout>;
+
+    return () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(func, delay);
+    };
+  };
+
+  useEffect(() => {
+    const debouncedHandleScroll = debounce(handleScroll, 60);
+
+    const handleScrollListener = () => {
+      debouncedHandleScroll();
     };
 
-    addEventListener("scroll", handleScroll);
+    addEventListener("scroll", handleScrollListener);
     return () => {
-      removeEventListener("scroll", handleScroll);
+      removeEventListener("scroll", handleScrollListener);
     };
   }, []);
 
@@ -260,9 +282,8 @@ export default function Category(props: Props) {
             {props.paragraph}
           </p>
         </div>
-        <div class="w-full">
+        <div class="w-full" ref={startRef}>
           <div
-            ref={startRef}
             class={` flex gap-x-[24px] w-full md:mb-[60px] z-10 ${
               isSticky ? "fixed top-[80px] bg-white" : "relative"
             }`}
