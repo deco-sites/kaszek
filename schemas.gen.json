@@ -67,6 +67,7 @@
               "./islands/CityPlate.tsx",
               "./islands/Entrepreneurs.tsx",
               "./islands/FaqSection.tsx",
+              "./islands/Form.tsx",
               "./islands/Header.tsx",
               "./islands/SliderJS.tsx",
               "./islands/Weather.tsx",
@@ -91,6 +92,7 @@
               "deco-sites/kaszek/sections/Entrepreneurs.tsx",
               "deco-sites/kaszek/sections/FaqSection.tsx",
               "deco-sites/kaszek/sections/Footer.tsx",
+              "deco-sites/kaszek/sections/Form.tsx",
               "deco-sites/kaszek/sections/Gallery.tsx",
               "deco-sites/kaszek/sections/Head.tsx",
               "deco-sites/kaszek/sections/Header.tsx",
@@ -7169,6 +7171,68 @@
       ],
       "title": "deco-sites/kaszek/components/ui/Main/FaqSection.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Option": {
+      "type": "object",
+      "properties": {
+        "marginLeft": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Margin Left"
+        },
+        "marginRight": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Margin Right"
+        },
+        "value": {
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "title": "Option"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Option[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Option"
+      },
+      "title": "Option[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "firstText": {
+          "type": "string",
+          "title": "First Text"
+        },
+        "secondText": {
+          "type": "string",
+          "title": "Second Text"
+        },
+        "paragraph": {
+          "type": "string",
+          "title": "Paragraph"
+        },
+        "radioOption": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Option[]",
+          "title": "Radio Option"
+        }
+      },
+      "required": [
+        "firstText",
+        "secondText",
+        "paragraph",
+        "radioOption"
+      ],
+      "title": "deco-sites/kaszek/components/ui/GetInTouch/Form.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9IZWFkZXIvSGVhZGVyLnRzeA==@Links": {
       "type": "object",
       "properties": {
@@ -7414,10 +7478,6 @@
             "null"
           ],
           "title": "Path"
-        },
-        "layout": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Layout"
         },
         "sections": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
@@ -9002,7 +9062,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2dc3ea494e366f0c07f2bf4cd27907ef|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|e9d3387c9a471955806cec39039d6ebd": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9020,13 +9080,13 @@
           ]
         }
       ],
-      "title": "2dc3ea494e366f0c07f2bf4cd27907ef|WorkflowRef"
+      "title": "WorkflowRef|e9d3387c9a471955806cec39039d6ebd"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2dc3ea494e366f0c07f2bf4cd27907ef|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|e9d3387c9a471955806cec39039d6ebd",
           "title": "Workflow"
         },
         "id": {
@@ -10593,6 +10653,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Zvcm0udHN4": {
+      "title": "./islands/Form.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Form.tsx"
+          ],
+          "default": "./islands/Form.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
@@ -11093,6 +11174,27 @@
             "deco-sites/kaszek/sections/Footer.tsx"
           ],
           "default": "deco-sites/kaszek/sections/Footer.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9ybS50c3g=": {
+      "title": "deco-sites/kaszek/sections/Form.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/Form.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/Form.tsx"
         }
       }
     },
@@ -12330,6 +12432,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZhcVNlY3Rpb24udHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm0udHN4"
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         },
         {
@@ -12424,6 +12529,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9vdGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRm9ybS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvR2FsbGVyeS50c3g="
@@ -12607,7 +12715,8 @@
       "required": [
         "./routes/_middleware.ts",
         "./routes/[...catchall].tsx",
-        "./routes/index.tsx"
+        "./routes/index.tsx",
+        "./routes/live/previews/index.tsx"
       ],
       "properties": {
         "./routes/_middleware.ts": {
@@ -12628,6 +12737,13 @@
           "anyOf": [
             {
               "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
+            }
+          ]
+        },
+        "./routes/live/previews/index.tsx": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page"
             }
           ]
         }
