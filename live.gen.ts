@@ -13,9 +13,10 @@ import * as $$$$$2 from "./islands/Category.tsx";
 import * as $$$$$3 from "./islands/CityPlate.tsx";
 import * as $$$$$4 from "./islands/Entrepreneurs.tsx";
 import * as $$$$$5 from "./islands/FaqSection.tsx";
-import * as $$$$$6 from "./islands/Header.tsx";
-import * as $$$$$7 from "./islands/SliderJS.tsx";
-import * as $$$$$8 from "./islands/Weather.tsx";
+import * as $$$$$6 from "./islands/Form.tsx";
+import * as $$$$$7 from "./islands/Header.tsx";
+import * as $$$$$8 from "./islands/SliderJS.tsx";
+import * as $$$$$9 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
 import * as $$$$$$$$1 from "./sections/BannerCarousel.tsx";
 import * as $$$$$$$$2 from "./sections/BlockHero.tsx";
@@ -26,13 +27,14 @@ import * as $$$$$$$$6 from "./sections/EntrepreneurialCapital.tsx";
 import * as $$$$$$$$7 from "./sections/Entrepreneurs.tsx";
 import * as $$$$$$$$8 from "./sections/FaqSection.tsx";
 import * as $$$$$$$$9 from "./sections/Footer.tsx";
-import * as $$$$$$$$10 from "./sections/Gallery.tsx";
-import * as $$$$$$$$11 from "./sections/Head.tsx";
-import * as $$$$$$$$12 from "./sections/Header.tsx";
-import * as $$$$$$$$13 from "./sections/Home.tsx";
-import * as $$$$$$$$14 from "./sections/InvestmentStages.tsx";
-import * as $$$$$$$$15 from "./sections/OurHistory.tsx";
-import * as $$$$$$$$16 from "./sections/OurPhilosophy.tsx";
+import * as $$$$$$$$10 from "./sections/Form.tsx";
+import * as $$$$$$$$11 from "./sections/Gallery.tsx";
+import * as $$$$$$$$12 from "./sections/Head.tsx";
+import * as $$$$$$$$13 from "./sections/Header.tsx";
+import * as $$$$$$$$14 from "./sections/Home.tsx";
+import * as $$$$$$$$15 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$16 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$17 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -41,7 +43,8 @@ import * as $live_editorData from "$live/routes/live/editorData.ts";
 import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
 import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
-import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
+import * as $live_previews_block from "$live/routes/live/previews/[...block].tsx";
+import * as $live_previews_index from "$live/routes/live/previews/index.tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
 import * as i2$$$0 from "$live/loaders/state.ts";
 import * as i2$$$1 from "$live/loaders/workflows/events.ts";
@@ -186,7 +189,8 @@ const manifest = {
     "./routes/live/inspect/[...block].ts": $live_inspect,
     "./routes/live/invoke/[...key].ts": $live_invoke_key,
     "./routes/live/invoke/index.ts": $live_invoke,
-    "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/previews/[...block].tsx": $live_previews_block,
+    "./routes/live/previews/index.tsx": $live_previews_index,
     "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
     "./routes/styles.css.ts": $$$$0,
@@ -198,9 +202,10 @@ const manifest = {
     "./islands/CityPlate.tsx": $$$$$3,
     "./islands/Entrepreneurs.tsx": $$$$$4,
     "./islands/FaqSection.tsx": $$$$$5,
-    "./islands/Header.tsx": $$$$$6,
-    "./islands/SliderJS.tsx": $$$$$7,
-    "./islands/Weather.tsx": $$$$$8,
+    "./islands/Form.tsx": $$$$$6,
+    "./islands/Header.tsx": $$$$$7,
+    "./islands/SliderJS.tsx": $$$$$8,
+    "./islands/Weather.tsx": $$$$$9,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
@@ -216,13 +221,14 @@ const manifest = {
     "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$7,
     "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$8,
     "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$9,
-    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$10,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$11,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$12,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$13,
-    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$14,
-    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$15,
-    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$16,
+    "deco-sites/kaszek/sections/Form.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$14,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$15,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$16,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$17,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
