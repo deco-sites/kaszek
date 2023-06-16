@@ -34,7 +34,7 @@ export default function Gallery(props: Props) {
                 <p class="text-[#005046] Maax-Bold-Font text-[24px] leading-[30px] tracking-[-0.5px]">
                   {person.label}
                 </p>
-                <p class="text-[#005046] Maax-Bold-Font text-[14px] leading-[21px] tracking-[1px]">
+                <p class="text-[#005046] Maax-Bold-Font md:text-[14px] md:leading-[14px] text-[12px] leading-[12px] tracking-[1px] mt-[7px]">
                   {person.profession}
                 </p>
               </>
