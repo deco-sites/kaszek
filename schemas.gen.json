@@ -7205,6 +7205,36 @@
       },
       "title": "Option[]"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "email": {
+          "type": "string",
+          "title": "Email"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "link"
+      ],
+      "title": "Contact"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Contact[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Contact"
+      },
+      "title": "Contact[]"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Props": {
       "type": "object",
       "properties": {
@@ -7220,16 +7250,21 @@
           "type": "string",
           "title": "Paragraph"
         },
-        "radioOption": {
+        "round": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Option[]",
-          "title": "Radio Option"
+          "title": "Round"
+        },
+        "contact": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Zvcm0udHN4@Contact[]",
+          "title": "Contact"
         }
       },
       "required": [
         "firstText",
         "secondText",
         "paragraph",
-        "radioOption"
+        "round",
+        "contact"
       ],
       "title": "deco-sites/kaszek/components/ui/GetInTouch/Form.tsx@Props"
     },
@@ -9062,7 +9097,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|e9d3387c9a471955806cec39039d6ebd": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9080,13 +9115,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|e9d3387c9a471955806cec39039d6ebd"
+      "title": "WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|e9d3387c9a471955806cec39039d6ebd",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff",
           "title": "Workflow"
         },
         "id": {
