@@ -6,6 +6,8 @@ export type Props = {
   firstText: string;
   secondText?: string;
   image: LiveImage;
+  width: number;
+  height?: number;
   textAlternative: string;
   location?: string;
   latitude?: number;
@@ -29,8 +31,8 @@ export default function BlockHero(props: Props) {
           class="w-full object-cover md:max-h-[520px] min-h-[265px] z-0 inset-0"
           src={props.image}
           alt={props.textAlternative}
-          width={1920}
-          height={1080}
+          width={props.width}
+          height={props.height}
           loading={"eager"}
         />
       </div>
