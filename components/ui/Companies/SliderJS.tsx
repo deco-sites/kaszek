@@ -155,32 +155,34 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
     (elements) => {
       const visibleIndices = elements
         .filter((item) => item.isIntersecting)
-        .map((item) => Number(item.target.getAttribute("data-slider-item")) || 0);
-  
+        .map((item) =>
+          Number(item.target.getAttribute("data-slider-item")) || 0
+        );
+
       const dotsArray = Array.from(dots || []);
-  
+
       dotsArray.forEach((dotElement, dotIndex) => {
         if (visibleIndices.includes(dotIndex)) {
-          dotElement.setAttribute("disabled", "");      
+          dotElement.setAttribute("disabled", "");
           dotElement.classList.add("bg-[#005046]");
           dotElement.classList.remove("bg-[#83ff97]");
         } else {
-          dotElement.removeAttribute("disabled");       
+          dotElement.removeAttribute("disabled");
           dotElement.classList.remove("bg-[#005046]");
           dotElement.classList.add("bg-[#83ff97]");
         }
       });
-  
+
       if (!infinite) {
         const firstVisibleIndex = visibleIndices[0];
         const lastVisibleIndex = visibleIndices[visibleIndices.length - 1];
-  
+
         if (firstVisibleIndex === 0) {
           prev?.setAttribute("disabled", "");
         } else {
           prev?.removeAttribute("disabled");
         }
-  
+
         if (lastVisibleIndex === items.length - 1) {
           next?.setAttribute("disabled", "");
         } else {
@@ -188,11 +190,10 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
         }
       }
     },
-    { threshold: THRESHOLD, root: slider }
+    { threshold: THRESHOLD, root: slider },
   );
-  
+
   items.forEach((item) => observer.observe(item));
-  
 
   items.forEach((item) => observer.observe(item));
 
