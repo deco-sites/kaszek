@@ -31,6 +31,7 @@ export default function BlockHero(props: Props) {
           alt={props.textAlternative}
           width={1920}
           height={1080}
+          loading={"eager"}
         />
       </div>
       <div class="w-full flex items-center justify-between xl:px-[0px] px-[12px] bottom-[40px] mx-auto xl:max-w-[1200px] sm:w-[calc(100% - 24px)] Maax-Bold-Font font-bold absolute z-10">
