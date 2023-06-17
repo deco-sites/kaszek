@@ -118,12 +118,16 @@
     margin: 0 24px;
     position: relative;
   }
-  
+
   @media (prefers-reduced-motion: reduce) {
     .spinner::before {
       animation-name: blink;
       animation-duration: 2000ms;
     }
+  }
+
+  input[type=file] {
+    pointer-events: none;
   }
 
 }
