@@ -20,21 +20,22 @@ import * as $$$$$9 from "./islands/Weather.tsx";
 import * as $$$$$$$$0 from "./sections/AboutKaszek.tsx";
 import * as $$$$$$$$1 from "./sections/BannerCarousel.tsx";
 import * as $$$$$$$$2 from "./sections/BlockHero.tsx";
-import * as $$$$$$$$3 from "./sections/Blockquote.tsx";
-import * as $$$$$$$$4 from "./sections/Category.tsx";
-import * as $$$$$$$$5 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$6 from "./sections/EntrepreneurialCapital.tsx";
-import * as $$$$$$$$7 from "./sections/Entrepreneurs.tsx";
-import * as $$$$$$$$8 from "./sections/FaqSection.tsx";
-import * as $$$$$$$$9 from "./sections/Footer.tsx";
-import * as $$$$$$$$10 from "./sections/Form.tsx";
-import * as $$$$$$$$11 from "./sections/Gallery.tsx";
-import * as $$$$$$$$12 from "./sections/Head.tsx";
-import * as $$$$$$$$13 from "./sections/Header.tsx";
-import * as $$$$$$$$14 from "./sections/Home.tsx";
-import * as $$$$$$$$15 from "./sections/InvestmentStages.tsx";
-import * as $$$$$$$$16 from "./sections/OurHistory.tsx";
-import * as $$$$$$$$17 from "./sections/OurPhilosophy.tsx";
+import * as $$$$$$$$3 from "./sections/BlockHeroVertical.tsx";
+import * as $$$$$$$$4 from "./sections/Blockquote.tsx";
+import * as $$$$$$$$5 from "./sections/Category.tsx";
+import * as $$$$$$$$6 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$7 from "./sections/EntrepreneurialCapital.tsx";
+import * as $$$$$$$$8 from "./sections/Entrepreneurs.tsx";
+import * as $$$$$$$$9 from "./sections/FaqSection.tsx";
+import * as $$$$$$$$10 from "./sections/Footer.tsx";
+import * as $$$$$$$$11 from "./sections/Form.tsx";
+import * as $$$$$$$$12 from "./sections/Gallery.tsx";
+import * as $$$$$$$$13 from "./sections/Head.tsx";
+import * as $$$$$$$$14 from "./sections/Header.tsx";
+import * as $$$$$$$$15 from "./sections/Home.tsx";
+import * as $$$$$$$$16 from "./sections/InvestmentStages.tsx";
+import * as $$$$$$$$17 from "./sections/OurHistory.tsx";
+import * as $$$$$$$$18 from "./sections/OurPhilosophy.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -214,21 +215,22 @@ const manifest = {
     "deco-sites/kaszek/sections/AboutKaszek.tsx": $$$$$$$$0,
     "deco-sites/kaszek/sections/BannerCarousel.tsx": $$$$$$$$1,
     "deco-sites/kaszek/sections/BlockHero.tsx": $$$$$$$$2,
-    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$3,
-    "deco-sites/kaszek/sections/Category.tsx": $$$$$$$$4,
-    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$5,
-    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$6,
-    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$7,
-    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$8,
-    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$9,
-    "deco-sites/kaszek/sections/Form.tsx": $$$$$$$$10,
-    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$11,
-    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$12,
-    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$13,
-    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$14,
-    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$15,
-    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$16,
-    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$17,
+    "deco-sites/kaszek/sections/BlockHeroVertical.tsx": $$$$$$$$3,
+    "deco-sites/kaszek/sections/Blockquote.tsx": $$$$$$$$4,
+    "deco-sites/kaszek/sections/Category.tsx": $$$$$$$$5,
+    "deco-sites/kaszek/sections/DesignSystem.tsx": $$$$$$$$6,
+    "deco-sites/kaszek/sections/EntrepreneurialCapital.tsx": $$$$$$$$7,
+    "deco-sites/kaszek/sections/Entrepreneurs.tsx": $$$$$$$$8,
+    "deco-sites/kaszek/sections/FaqSection.tsx": $$$$$$$$9,
+    "deco-sites/kaszek/sections/Footer.tsx": $$$$$$$$10,
+    "deco-sites/kaszek/sections/Form.tsx": $$$$$$$$11,
+    "deco-sites/kaszek/sections/Gallery.tsx": $$$$$$$$12,
+    "deco-sites/kaszek/sections/Head.tsx": $$$$$$$$13,
+    "deco-sites/kaszek/sections/Header.tsx": $$$$$$$$14,
+    "deco-sites/kaszek/sections/Home.tsx": $$$$$$$$15,
+    "deco-sites/kaszek/sections/InvestmentStages.tsx": $$$$$$$$16,
+    "deco-sites/kaszek/sections/OurHistory.tsx": $$$$$$$$17,
+    "deco-sites/kaszek/sections/OurPhilosophy.tsx": $$$$$$$$18,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
