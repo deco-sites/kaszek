@@ -3537,7 +3537,8 @@
         "key",
         "value"
       ],
-      "title": "StateProp"
+      "title": "StateProp",
+      "titleBy": "key"
     },
     "ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@StateProp[]": {
       "type": "array",
@@ -7530,7 +7531,8 @@
         "name",
         "sections"
       ],
-      "title": "deco-cx/live/pages/LivePage.tsx@Props"
+      "title": "deco-cx/live/pages/LivePage.tsx@Props",
+      "titleBy": "name"
     },
     "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
       "type": "object",
@@ -9015,7 +9017,8 @@
         "matcher",
         "name"
       ],
-      "title": "deco-cx/live/flags/audience.ts@Audience"
+      "title": "deco-cx/live/flags/audience.ts@Audience",
+      "titleBy": "name"
     },
     "ZGVjby1jeC9saXZlL2ZsYWdzL2V2ZXJ5b25lLnRz@EveryoneConfig": {
       "type": "object",
@@ -9116,7 +9119,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@80e63c0102b95f26364190c793fefa86|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9134,13 +9137,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff"
+      "title": "80e63c0102b95f26364190c793fefa86|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|fd0fcd78c4b899b30e00299b516a5aff",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@80e63c0102b95f26364190c793fefa86|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
