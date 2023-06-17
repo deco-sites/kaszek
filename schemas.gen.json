@@ -85,6 +85,7 @@
               "deco-sites/kaszek/sections/AboutKaszek.tsx",
               "deco-sites/kaszek/sections/BannerCarousel.tsx",
               "deco-sites/kaszek/sections/BlockHero.tsx",
+              "deco-sites/kaszek/sections/BlockHeroVertical.tsx",
               "deco-sites/kaszek/sections/Blockquote.tsx",
               "deco-sites/kaszek/sections/Category.tsx",
               "deco-sites/kaszek/sections/DesignSystem.tsx",
@@ -7342,6 +7343,41 @@
             "null"
           ],
           "title": "Longitude"
+        },
+        "iconSize": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Icon Size"
+        },
+        "isMobileFlex": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "flex-row"
+            },
+            {
+              "type": "string",
+              "const": "flex-col"
+            }
+          ],
+          "type": "string",
+          "title": "Is Mobile Flex"
+        },
+        "gapTemperatureAndIcon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "gap-0"
+            },
+            {
+              "type": "string",
+              "const": "gap-[8px]"
+            }
+          ],
+          "type": "string",
+          "title": "Gap Temperature And Icon"
         }
       },
       "required": [],
@@ -7771,6 +7807,20 @@
             "null"
           ],
           "title": "Longitude"
+        },
+        "gapTemperatureAndIcon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "gap-0"
+            },
+            {
+              "type": "string",
+              "const": "gap-[8px]"
+            }
+          ],
+          "type": "string",
+          "title": "Gap Temperature And Icon"
         }
       },
       "required": [
@@ -7780,6 +7830,122 @@
         "textAlternative"
       ],
       "title": "deco-sites/kaszek/components/ui/Ethos/BlockHero.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Jsb2NrSGVyb1ZlcnRpY2FsLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image"
+        },
+        "width": {
+          "type": "number",
+          "title": "Width"
+        },
+        "height": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Height"
+        },
+        "textAlternative": {
+          "type": "string",
+          "title": "Text Alternative"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
+        },
+        "latitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Latitude"
+        },
+        "longitude": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Longitude"
+        },
+        "iconSize": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Icon Size"
+        },
+        "transform": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "scale-[0]"
+            },
+            {
+              "type": "string",
+              "const": "scale-[0.8]"
+            },
+            {
+              "type": "string",
+              "const": "scale-[1]"
+            },
+            {
+              "type": "string",
+              "const": "scale-[2]"
+            },
+            {
+              "type": "string",
+              "const": "scale-[3]"
+            },
+            {
+              "type": "string",
+              "const": "scale-[4]"
+            }
+          ],
+          "type": "string",
+          "title": "Transform"
+        },
+        "gapTemperatureAndIcon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "gap-0"
+            },
+            {
+              "type": "string",
+              "const": "gap-[8px]"
+            }
+          ],
+          "type": "string",
+          "title": "Gap Temperature And Icon"
+        },
+        "isMobileFlex": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "flex-row"
+            },
+            {
+              "type": "string",
+              "const": "flex-col"
+            }
+          ],
+          "type": "string",
+          "title": "Is Mobile Flex"
+        }
+      },
+      "required": [
+        "image",
+        "width",
+        "textAlternative"
+      ],
+      "title": "deco-sites/kaszek/components/ui/GetInTouch/BlockHeroVertical.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9FdGhvcy9CbG9ja3F1b3RlLnRzeA==@Props": {
       "type": "object",
@@ -8171,6 +8337,20 @@
             "null"
           ],
           "title": "Longitude"
+        },
+        "gapTemperatureAndIcon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "gap-0"
+            },
+            {
+              "type": "string",
+              "const": "gap-[8px]"
+            }
+          ],
+          "type": "string",
+          "title": "Gap Temperature And Icon"
         }
       },
       "required": [
@@ -11087,6 +11267,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvVmVydGljYWwudHN4": {
+      "title": "deco-sites/kaszek/sections/BlockHeroVertical.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Jsb2NrSGVyb1ZlcnRpY2FsLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/kaszek/sections/BlockHeroVertical.tsx"
+          ],
+          "default": "deco-sites/kaszek/sections/BlockHeroVertical.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g=": {
       "title": "deco-sites/kaszek/sections/Blockquote.tsx",
       "type": "object",
@@ -12565,6 +12766,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2tIZXJvVmVydGljYWwudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvQmxvY2txdW90ZS50c3g="
