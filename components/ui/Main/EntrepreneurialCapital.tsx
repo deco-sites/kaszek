@@ -8,6 +8,7 @@ export type Props = {
   location?: string;
   latitude?: number;
   longitude?: number;
+  gapTemperatureAndIcon?: "gap-0" | "gap-[8px]";
 };
 
 export default function EntrepreneurialCapital(props: Props) {
@@ -34,7 +35,11 @@ export default function EntrepreneurialCapital(props: Props) {
             {props.location}
           </p>
           <div class="flex items-center justify-between">
-            <Weather latitude={props.latitude} longitude={props.longitude} />
+            <Weather
+              latitude={props.latitude}
+              longitude={props.longitude}
+              gapTemperatureAndIcon={props.gapTemperatureAndIcon}
+            />
           </div>
         </div>
       </div>

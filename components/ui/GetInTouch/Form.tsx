@@ -147,24 +147,24 @@ export default function Form(props: Props) {
   return (
     <div class="relative flex flex-col xl:px-[0px] px-[12px]">
       <div class="w-full flex flex-col justify-center mt-[80px]">
-        <div class="w-full max-w-[1200px] mx-auto md:pt-20 md:mb-[120px] pt-[30px] mb-[40px]">
-          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] md:mr-0 md:ml-0 mr-3 ml-3 mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px]">
+        <div class="w-full max-w-[1200px] mx-auto md:pt-20 lg:mb-[120px] md:mb-[75px] mb-[50px] pt-[30px]">
+          <h1 class="Noe-Display-Font font-bold text-[#005046] tracking-[-0.5px] mb-[20px] md:text-[76px] text-[36px] md:leading-[76px] leading-[39.6px]">
             {props.firstText}
             <br />
             {props.secondText}
           </h1>
-          <p class="md:mt-[62px] mt-[40px] lg:max-w-category-desktop mobile:max-w-category-tablet md:mr-0 md:ml-0 mr-3 ml-3 Maax-Regular-Font">
+          <p class="md:mt-[62px] mt-[40px] lg:max-w-category-desktop mobile:max-w-category-tablet Maax-Regular-Font">
             {props.paragraph}
           </p>
         </div>
       </div>
-      <div class="w-full max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2">
+      <div class="w-full max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-[64px]">
         <form
           onSubmit={handleSubmit}
           class="w-full"
         >
           <fieldset class="grid gap-[16px] Maax-Regular-Font font-normal">
-            <div class="grid grid-cols-2 gap-[25px]">
+            <div class="grid grid-cols-2 md:gap-[25px] gap-[16px]">
               <div>
                 <input
                   type="text"
@@ -174,7 +174,7 @@ export default function Form(props: Props) {
                   onInput={handleChange}
                   onBlur={handleBlur}
                   placeholder="Your name"
-                  class="w-full py-[18px] px-[20px] bg-[#f1f5f5] focus:outline-none"
+                  class="w-full py-[18px] px-[20px] bg-[#f1f5f5] focus:outline-none placeholder-[#cccece] opacity-[0.8] text-[16px]"
                   required
                 />
                 {IncompleteField["your-name"] && (
@@ -190,7 +190,7 @@ export default function Form(props: Props) {
                   onInput={handleChange}
                   onBlur={handleBlur}
                   placeholder="Your email"
-                  class="w-full py-[18px] px-[20px] bg-[#f1f5f5] focus:outline-none"
+                  class="w-full py-[18px] px-[20px] bg-[#f1f5f5] focus:outline-none placeholder-[#cccece] opacity-[0.8] text-[16px]"
                   required
                 />
                 {IncompleteField["email"] && (
@@ -205,8 +205,8 @@ export default function Form(props: Props) {
                 name="firma"
                 value={formData["firma"]}
                 onInput={handleChange}
-                placeholder="Your Company"
-                class="bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none"
+                placeholder="Your company"
+                class="bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none placeholder-[#cccece] opacity-[0.8] text-[16px]"
               />
               <input
                 type="text"
@@ -215,10 +215,10 @@ export default function Form(props: Props) {
                 value={formData["whereIsBased"]}
                 onInput={handleChange}
                 placeholder="Where is it based?"
-                class="bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none"
+                class="bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none placeholder-[#cccece] opacity-[0.8] text-[16px]"
               />
             </div>
-            <fieldset class="flex flex-col mb-[16px]">
+            <fieldset class="flex flex-col">
               <legend class="Maax-Bold-Font font-bold mb-[16px] text-[16px] leading-[24px]">
                 What round of investment are you at?
               </legend>
@@ -232,7 +232,7 @@ export default function Form(props: Props) {
                           marginRight: option.marginRight,
                           marginLeft: option.marginLeft,
                         }}
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap mb-[13px] flex items-center"
                       >
                         <input
                           type="radio"
@@ -253,26 +253,25 @@ export default function Form(props: Props) {
             </fieldset>
             <div class="grid grid-cols-1 col-span-full gap-[16px]">
               <label
-                htmlFor="presentation"
                 class="Maax-Bold-Font font-bold text-[16px] leading-[24px]"
               >
                 Do you have a presentation?
               </label>
-              <input
-                type="file"
-                id="presentation"
-                name="presentation"
-                size={40}
-                onChange={handleFileChange}
-                class="hidden"
-              />
               <div class="flex items-center mb-[8px]">
                 <label
                   htmlFor="presentation"
-                  class="Maax-Bold-Font text-bold text-[#005046] text-[14px] leading-[16px] tracking-[1px]"
+                  class="Maax-Bold-Font text-bold text-[#005046] text-[14px] leading-[16px] tracking-[1px] whitespace-nowrap"
                 >
                   UPLOAD ↗
                 </label>
+                <input
+                  type="file"
+                  id="presentation"
+                  name="presentation"
+                  size={40}
+                  onChange={handleFileChange}
+                  class="hidden"
+                />
                 {selectedFile && (
                   <span class="ml-[12px] leading-[16px]">
                     {selectedFile.name}
@@ -280,7 +279,7 @@ export default function Form(props: Props) {
                 )}
               </div>
               <textarea
-                class="col-span-full bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none"
+                class="col-span-full bg-[#f1f5f5] py-[18px] px-[20px] focus:outline-none placeholder-[#cccece] opacity-[0.8] text-[16px]"
                 id="your-message"
                 cols={1}
                 rows={6}
@@ -292,7 +291,7 @@ export default function Form(props: Props) {
               <div class="flex flex-col">
                 <button
                   type="submit"
-                  class="max-w-[280px] w-full bg-[#005046] text-[#83ff97] py-[20px] px-[2px] Maax-Bold-Font font-bold mt-[6px]"
+                  class="max-w-[280px] w-full bg-[#005046] py-[20px] px-[2px] mt-[6px] Maax-Bold-Font font-bold text-[#83ff97] md:text-[16px] text-[12px] tracking-[1px] md:leading-[16.8px] leading-[14.4px]"
                   disabled={isLoading}
                 >
                   SEND
@@ -327,8 +326,8 @@ export default function Form(props: Props) {
             </div>
           </fieldset>
         </form>
-        <div class="gap-[16px] flex justify-end">
-          <div>
+        <div class="flex md:justify-end">
+          <div class="gap-[16px] flex flex-col">
             {Array.isArray(props.contact)
               ? (
                 props.contact.map((option) => (
