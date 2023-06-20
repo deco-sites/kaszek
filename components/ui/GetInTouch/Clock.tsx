@@ -143,7 +143,6 @@ export default function Clocks(props: Props) {
     return "";
   };
 
-
   const renderSliders = () => {
     let slidesPerView;
     if (screenSize >= 1200) {
@@ -171,18 +170,25 @@ export default function Clocks(props: Props) {
       flex: `0 0 calc((100% - ${slidesPerView - 1} * 15px) / ${slidesPerView})`,
     };
 
-    const sliderItems = props.timeZone?.map((countries: TimeZone, index: number) => (
+    const sliderItems = props.timeZone?.map((
+      countries: TimeZone,
+      index: number,
+    ) => (
       <div key={index} style={sliderItemStyles}>
         <div className="flex justify-center flex-col">
           <div className="w-[280px] h-[280px] relative bg-[#ebf0ef] rounded-full flex flex-col justify-center items-center mx-auto">
             <div
               className="h-[45px] w-[10px] absolute bg-[#005046] z-10"
               style={{ transform: getRotationStyle(countries.offset, "hours") }}
-            ></div>
+            >
+            </div>
             <div
               className="h-[84px] w-[10px] absolute bg-[#83ff97]"
-              style={{ transform: getRotationStyle(countries.offset, "minutes") }}
-            ></div>
+              style={{
+                transform: getRotationStyle(countries.offset, "minutes"),
+              }}
+            >
+            </div>
           </div>
           <div className="flex flex-col">
             <div className="text-[24px] text-center text-[#005046] font-bold mt-[32px] mb-[20px]">
@@ -214,12 +220,11 @@ export default function Clocks(props: Props) {
     );
   };
 
-
   const renderDots = () => {
     const dotComponents = [];
     const activeDotIndex = Math.round(
       (sliderRef.current?.scrollLeft || 0) /
-      (sliderRef.current?.offsetWidth || 1),
+        (sliderRef.current?.offsetWidth || 1),
     );
 
     let dotsCount;
@@ -241,7 +246,7 @@ export default function Clocks(props: Props) {
         <button
           className={`h-3 w-3 rounded-full mx-1 ${
             i === activeDotIndex ? "bg-[#005046]" : "bg-[#83ff97]"
-            }`}
+          }`}
           key={i}
           onClick={() => scrollToSlider(i)}
         >

@@ -65,6 +65,7 @@
               "./islands/ButtonHamburger.tsx",
               "./islands/Category.tsx",
               "./islands/CityPlate.tsx",
+              "./islands/Clock.tsx",
               "./islands/Entrepreneurs.tsx",
               "./islands/FaqSection.tsx",
               "./islands/Form.tsx",
@@ -7080,6 +7081,47 @@
       ],
       "title": "deco-sites/kaszek/components/ui/Companies/Category.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone": {
+      "type": "object",
+      "properties": {
+        "offset": {
+          "type": "number",
+          "title": "Offset"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Countries"
+        }
+      },
+      "required": [
+        "offset",
+        "countries"
+      ],
+      "title": "TimeZone"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone"
+      },
+      "title": "TimeZone[]"
+    },
+    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "timeZone": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone[]",
+          "title": "Time Zone"
+        }
+      },
+      "required": [
+        "timeZone"
+      ],
+      "title": "deco-sites/kaszek/components/ui/GetInTouch/Clock.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9NYWluL0VudHJlcHJlbmV1cnMudHN4@Results": {
       "type": "object",
       "properties": {
@@ -7983,47 +8025,6 @@
         "textAlternativeBottom"
       ],
       "title": "deco-sites/kaszek/components/ui/Ethos/Blockquote.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone": {
-      "type": "object",
-      "properties": {
-        "offset": {
-          "type": "number",
-          "title": "Offset"
-        },
-        "countries": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Countries"
-        }
-      },
-      "required": [
-        "offset",
-        "countries"
-      ],
-      "title": "TimeZone"
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone"
-      },
-      "title": "TimeZone[]"
-    },
-    "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "timeZone": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone[]",
-          "title": "Time Zone"
-        }
-      },
-      "required": [
-        "timeZone"
-      ],
-      "title": "deco-sites/kaszek/components/ui/GetInTouch/Clock.tsx@Props"
     },
     "ZGVjby1zaXRlcy9rYXN6ZWsvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors": {
       "type": "object",
@@ -10893,6 +10894,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Nsb2NrLnRzeA==": {
+      "title": "./islands/Clock.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Clock.tsx"
+          ],
+          "default": "./islands/Clock.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4": {
       "title": "./islands/Entrepreneurs.tsx",
       "type": "object",
@@ -12748,6 +12770,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NpdHlQbGF0ZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Nsb2NrLnRzeA=="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0VudHJlcHJlbmV1cnMudHN4"
