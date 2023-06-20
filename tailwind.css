@@ -130,6 +130,15 @@
     pointer-events: none;
   }
 
+  .clock-scroll::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+  }
+  
+  .clock-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
 }
 
 @layer utilities {
