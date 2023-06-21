@@ -20,7 +20,6 @@ export default function Clocks(props: Props) {
   const dragStartXRef = useRef(0);
   const dragStartScrollLeftRef = useRef(0);
   const [totalSliders, setTotalSliders] = useState(0);
-  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -231,17 +230,16 @@ export default function Clocks(props: Props) {
     const dotComponents = [];
     const activeDotIndex = Math.round(
       (sliderRef.current?.scrollLeft || 0) /
-      (sliderRef.current?.offsetWidth || 1),
+        (sliderRef.current?.offsetWidth || 1),
     );
-  
+
     let dotsCount;
-  
+
     if (totalSliders > 4) {
       dotsCount = totalSliders;
     } else {
       if (screenSize >= 1200) {
         dotsCount = totalSliders >= 4 ? 0 : totalSliders;
-
       } else if (screenSize >= 960) {
         dotsCount = totalSliders >= 2 ? 2 : totalSliders;
       } else if (screenSize >= 640) {
@@ -250,7 +248,7 @@ export default function Clocks(props: Props) {
         dotsCount = totalSliders >= 4 ? 4 : totalSliders;
       }
     }
-  
+
     for (let i = 0; i < dotsCount; i++) {
       dotComponents.push(
         <button
@@ -259,10 +257,11 @@ export default function Clocks(props: Props) {
           }`}
           key={i}
           onClick={() => scrollToSlider(i)}
-        ></button>
+        >
+        </button>,
       );
     }
-  
+
     return dotComponents;
   };
 
