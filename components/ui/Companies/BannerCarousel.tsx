@@ -17,7 +17,7 @@ export interface Banner {
     quote: string;
     /** @description Image text authorOfTheQuote */
     authorOfTheQuote: string;
-    /** @description Button label */
+    /** @description Title authorOfTheQuote */
     label: string;
   };
 }
@@ -64,6 +64,7 @@ function BannerItem(
           class="block w-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
+          width={588}
           alt={alt}
         />
       </Picture>
