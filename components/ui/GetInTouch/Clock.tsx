@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-import { JSX } from "preact";
 
 export interface TimeZone {
+  /** @description A number representing the time offset from Coordinated Universal Time (UTC) */
   offset: number;
+  /** @description Names of countries located in this time zone */
   countries: string[];
 }
 
 export interface Props {
+  /** @description Time zones and the associated countries */
   timeZone: TimeZone[];
 }
 
@@ -17,7 +19,8 @@ export default function Clocks(props: Props) {
   const isDraggingRef = useRef(false);
   const dragStartXRef = useRef(0);
   const dragStartScrollLeftRef = useRef(0);
-  // const [sliderItems, setSliderItems] = useState<JSX.Element[]>([]);
+  const [totalSliders, setTotalSliders] = useState(0);
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -135,7 +138,7 @@ export default function Clocks(props: Props) {
         rotationHours += 3;
       }
 
-      return `rotate(${rotationHours}deg) translate(50%, 100%) translateX(-5px) translateY(-150%)`;
+      return `rotate(${rotationHours}deg) translate(50%, 100%) translateX(-5px) translateY(-140%)`;
     } else if (type === "minutes") {
       return `rotate(${rotationMinutes}deg) translate(50%, 100%) translateX(-5px) translateY(-150%)`;
     }
@@ -175,43 +178,43 @@ export default function Clocks(props: Props) {
       index: number,
     ) => (
       <div key={index} style={sliderItemStyles}>
-        <div className="flex justify-center flex-col">
-          <div className="w-[280px] h-[280px] relative bg-[#ebf0ef] rounded-full flex flex-col justify-center items-center mx-auto">
+        <div class="flex justify-center flex-col">
+          <div class="w-[280px] h-[280px] relative bg-[#ebf0ef] rounded-full flex flex-col justify-center items-center mx-auto">
             <div
-              className="h-[45px] w-[10px] absolute bg-[#005046] z-10"
+              class="h-[45px] w-[10px] absolute bg-[#005046] z-10"
               style={{ transform: getRotationStyle(countries.offset, "hours") }}
             >
             </div>
             <div
-              className="h-[84px] w-[10px] absolute bg-[#83ff97]"
+              class="h-[84px] w-[10px] absolute bg-[#83ff97]"
               style={{
                 transform: getRotationStyle(countries.offset, "minutes"),
               }}
             >
             </div>
           </div>
-          <div className="flex flex-col">
-            <div className="text-[24px] text-center text-[#005046] font-bold mt-[32px] mb-[20px]">
+          <div class="flex flex-col">
+            <p class="text-[24px] text-center text-[#005046] font-bold mt-[32px] mb-[20px]">
               {getTimeForCountry(countries.offset)}
-            </div>
+            </p>
             {countries.countries.map((name: string, index: number) => (
-              <div
-                className="text-[14px] text-[#005046] text-center font-bold leading-[14px]"
+              <p
+                class="md:text-[14px] text-[12px] text-[#005046] text-center font-bold md:leading-[14px] leading-[12px] tracking-[1px]"
                 key={index}
               >
                 {name}
-              </div>
+              </p>
             ))}
           </div>
         </div>
       </div>
     ));
-    // setSliderItems(sliderItems);
+
     return (
       <div
         style={sliderStyles}
         ref={sliderRef}
-        className="clock-scroll lg:gap-[15px]"
+        class="clock-scroll md:gap-[15px]"
         onMouseDown={handleDragStart}
         onTouchStart={handleDragStart}
       >
@@ -220,40 +223,46 @@ export default function Clocks(props: Props) {
     );
   };
 
+  useEffect(() => {
+    setTotalSliders(props.timeZone.length);
+  }, [props.timeZone]);
+
   const renderDots = () => {
     const dotComponents = [];
     const activeDotIndex = Math.round(
       (sliderRef.current?.scrollLeft || 0) /
-        (sliderRef.current?.offsetWidth || 1),
+      (sliderRef.current?.offsetWidth || 1),
     );
-
+  
     let dotsCount;
-
-    if (screenSize >= 1200) {
-      dotsCount = 0;
-    } else if (screenSize >= 960) {
-      dotsCount = 2;
-    } else if (screenSize >= 640) {
-      dotsCount = 3;
+  
+    if (totalSliders > 4) {
+      dotsCount = totalSliders;
     } else {
-      dotsCount = 4;
+      if (screenSize >= 1200) {
+        dotsCount = totalSliders >= 4 ? 0 : totalSliders;
+
+      } else if (screenSize >= 960) {
+        dotsCount = totalSliders >= 2 ? 2 : totalSliders;
+      } else if (screenSize >= 640) {
+        dotsCount = totalSliders >= 3 ? 3 : totalSliders;
+      } else {
+        dotsCount = totalSliders >= 4 ? 4 : totalSliders;
+      }
     }
-    // if (sliderItems?.length < 1) {
-    //   return null;
-    // }
+  
     for (let i = 0; i < dotsCount; i++) {
       dotComponents.push(
         <button
-          className={`h-3 w-3 rounded-full mx-1 ${
+          class={`h-3 w-3 rounded-full mx-1 mt-[44px] ${
             i === activeDotIndex ? "bg-[#005046]" : "bg-[#83ff97]"
           }`}
           key={i}
           onClick={() => scrollToSlider(i)}
-        >
-        </button>,
+        ></button>
       );
     }
-
+  
     return dotComponents;
   };
 
@@ -270,10 +279,10 @@ export default function Clocks(props: Props) {
   };
 
   return (
-    <div className="flex flex-col xl:px-[0px] px-[12px]">
-      <div className="w-full max-w-[1200px] lg:mt-[120px] md:mt-[75px] mt-[50px] mb-[75px] mx-auto Maax-Bold-Font overflow-x-auto overflow-y-hidden">
+    <div class="flex flex-col xl:px-[0px] px-[12px]">
+      <div class="w-full max-w-[1200px] lg:mt-[120px] md:mt-[75px] mt-[50px] mb-[75px] mx-auto Maax-Bold-Font overflow-x-auto overflow-y-hidden">
         {renderSliders()}
-        <div className="flex justify-center mt-4 w-full max-w-[1200px] mx-auto">
+        <div class="flex justify-center  w-full max-w-[1200px] mx-auto">
           {renderDots()}
         </div>
       </div>

@@ -7086,6 +7086,7 @@
       "properties": {
         "offset": {
           "type": "number",
+          "description": "A number representing the time offset from Coordinated Universal Time (UTC)",
           "title": "Offset"
         },
         "countries": {
@@ -7093,6 +7094,7 @@
           "items": {
             "type": "string"
           },
+          "description": "Names of countries located in this time zone",
           "title": "Countries"
         }
       },
@@ -7114,6 +7116,7 @@
       "properties": {
         "timeZone": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9HZXRJblRvdWNoL0Nsb2NrLnRzeA==@TimeZone[]",
+          "description": "Time zones and the associated countries",
           "title": "Time Zone"
         }
       },
