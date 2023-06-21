@@ -3,7 +3,7 @@
     "deco-sites/kaszek/": "./",
     "deco-sites/start/": "./",
     "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.9.35/",
-    "$live/": "https://denopkg.com/deco-cx/live@1.14.0/",
+    "$live/": "https://denopkg.com/deco-cx/live@1.14.2/",
     "partytown/": "https://deno.land/x/partytown@0.2.1/",
     "$fresh/": "https://deno.land/x/fresh@1.1.5/",
     "preact": "https://esm.sh/preact@10.13.2",

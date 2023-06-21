@@ -17,7 +17,7 @@ export interface Banner {
     quote: string;
     /** @description Image text authorOfTheQuote */
     authorOfTheQuote: string;
-    /** @description Button label */
+    /** @description Title authorOfTheQuote */
     label: string;
   };
 }
