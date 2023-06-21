@@ -65,6 +65,7 @@ function BannerItem(
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           width={588}
+          height={735}
           alt={alt}
         />
       </Picture>
