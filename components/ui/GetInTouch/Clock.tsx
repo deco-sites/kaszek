@@ -255,15 +255,17 @@ export default function Clocks(props: Props) {
     for (let i = 0; i < dotsCount; i++) {
       dotComponents.push(
         <button
-          class={`h-3 w-3 rounded-full mx-1 mt-[44px] ${
+          className={`h-3 w-3 rounded-full mx-1 mt-[44px] ${
             i === activeDotIndex ? "bg-[#005046]" : "bg-[#83ff97]"
           }`}
           key={i}
           onClick={() => scrollToSlider(i)}
+          aria-label={`carousel navigation button ${i}`}
         >
-        </button>,
+        </button>
       );
     }
+    
 
     return dotComponents;
   };
