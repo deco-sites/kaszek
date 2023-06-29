@@ -5,20 +5,21 @@ import { useState } from "preact/hooks";
 
 export interface Props {
   img: LiveImage;
-  city?: Cities[];
+  cities?: City[];
   title: string;
   firstDescription: string;
   secondDescription?: string;
 }
 
-export type Cities = {
+/** @title {{label}} */
+export interface City {
   label: string;
   bottom: string;
   left: string;
-};
+}
 
 export default function AboutKaszek(props: Props) {
-  const [locations] = useState(Array.isArray(props.city) ? props.city : []);
+  const [locations] = useState(Array.isArray(props.cities) ? props.cities : []);
 
   return (
     <section class="w-full flex items-center flex-col bg-[#ebf0ef] px-[12px] lg:px-0">
