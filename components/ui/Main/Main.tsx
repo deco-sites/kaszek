@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <main class="top-0 left-0 z-0 flex items-center justify-between flex-col w-full">
       <EntrepreneurialCapital title="" background="" />
-      <AboutKaszek img="" title="" firstDescription="" city={[]} />
+      <AboutKaszek img="" title="" firstDescription="" />
       <Entrepreneurs result={[]} />
       <FaqSection title_section="" faqs={[]} />
     </main>
