@@ -10,7 +10,7 @@ export default function Main() {
       <EntrepreneurialCapital title="" background="" />
       <AboutKaszek img="" title="" firstDescription="" />
       <Entrepreneurs result={[]} />
-      <FaqSection title_section="" faqs={[]} />
+      <FaqSection titleSection="" faqs={[]} />
     </main>
   );
 }

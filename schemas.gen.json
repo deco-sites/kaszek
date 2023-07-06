@@ -7655,21 +7655,24 @@
         },
         "answer": {
           "type": "string",
+          "format": "textarea",
           "title": "Answer"
         },
-        "answertwo": {
+        "answerTwo": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Answertwo"
+          "format": "textarea",
+          "title": "Answer Two"
         },
-        "answerthree": {
+        "answerThree": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Answerthree"
+          "format": "textarea",
+          "title": "Answer Three"
         },
         "isOpen": {
           "type": [
@@ -7695,9 +7698,9 @@
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9NYWluL0ZhcVNlY3Rpb24udHN4@Props": {
       "type": "object",
       "properties": {
-        "title_section": {
+        "titleSection": {
           "type": "string",
-          "title": "Title_section"
+          "title": "Title Section"
         },
         "faqs": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9NYWluL0ZhcVNlY3Rpb24udHN4@Faq[]",
@@ -7705,7 +7708,7 @@
         }
       },
       "required": [
-        "title_section",
+        "titleSection",
         "faqs"
       ],
       "title": "deco-sites/kaszek/components/ui/Main/FaqSection.tsx@Props"

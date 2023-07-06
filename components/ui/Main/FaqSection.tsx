@@ -2,17 +2,20 @@ import { asset } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 
 export interface Props {
-  title_section: string;
+  titleSection: string;
   faqs: Faq[];
 }
 
-export type Faq = {
+export interface Faq {
   question: string;
+  /** @format textarea */
   answer: string;
-  answertwo?: string;
-  answerthree?: string;
+  /** @format textarea */
+  answerTwo?: string;
+  /** @format textarea */
+  answerThree?: string;
   isOpen?: boolean;
-};
+}
 
 export default function FaqSection(props: Props) {
   const [faqs, setFaqs] = useState(props.faqs);
@@ -33,7 +36,7 @@ export default function FaqSection(props: Props) {
     <section class="w-full mx-auto pt-[50px] md:pt-[75px] lg:pt-[120px] pb-[75px] max-w-[1200px] xl:px-0 px-[15px]">
       <div style={{ WebkitTapHighlightColor: "transparent" }}>
         <h3 class="md:text-[76px] text-[36px] text-[#005046] leading-[1] tracking-[-.5px] w-full h-[79.19px] md:h-[152px] inline-flex items-end uppercase Noe-Display-Font font-bold">
-          {props.title_section}
+          {props.titleSection}
         </h3>
         <div class="grid grid-cols-1 mt-[50px] md:mt-[120px]">
           {faqs.map((faq, index) => (
@@ -65,18 +68,18 @@ export default function FaqSection(props: Props) {
                   <p class="text-[16px] max-w-[486px] Maax-Regular-Font font-normal">
                     {faq.answer}
                   </p>
-                  {faq.answertwo && (
+                  {faq.answerTwo && (
                     <p
                       class={`text-[16px] max-w-[486px] Maax-Regular-Font font-normal ${
-                        faq.answerthree ? "mb-4 mt-4" : "mt-4"
+                        faq.answerThree ? "mb-4 mt-4" : "mt-4"
                       }`}
                     >
-                      {faq.answertwo}
+                      {faq.answerTwo}
                     </p>
                   )}
-                  {faq.answerthree && (
+                  {faq.answerThree && (
                     <p class="text-[16px] max-w-[486px] Maax-Regular-Font font-normal">
-                      {faq.answerthree}
+                      {faq.answerThree}
                     </p>
                   )}
                 </div>
