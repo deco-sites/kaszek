@@ -8740,19 +8740,19 @@
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9Gb290ZXIvRm9vdGVyLnRzeA==@SocialMedia": {
       "type": "object",
       "properties": {
-        "social_media_name": {
+        "socialMediaName": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Social_media_name"
+          "title": "Social Media Name"
         },
-        "social_media_link": {
+        "socialMediaLink": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Social_media_link"
+          "title": "Social Media Link"
         }
       },
       "required": [],
@@ -8768,37 +8768,39 @@
     "ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9Gb290ZXIvRm9vdGVyLnRzeA==@Contents": {
       "type": "object",
       "properties": {
-        "first_text": {
+        "firstText": {
           "type": [
             "string",
             "null"
           ],
-          "title": "First_text"
+          "format": "textarea",
+          "title": "First Text"
         },
-        "email_name": {
+        "emailName": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Email_name"
+          "title": "Email Name"
         },
-        "email_link": {
+        "emailLink": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Email_link"
+          "title": "Email Link"
         },
-        "second_text": {
+        "secondText": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Second_text"
+          "format": "textarea",
+          "title": "Second Text"
         },
-        "social_media": {
+        "socialMedia": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9rYXN6ZWsvY29tcG9uZW50cy91aS9Gb290ZXIvRm9vdGVyLnRzeA==@SocialMedia[]",
-          "title": "Social_media"
+          "title": "Social Media"
         },
         "copyright": {
           "type": [
