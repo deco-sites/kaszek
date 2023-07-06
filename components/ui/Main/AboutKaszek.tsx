@@ -6,8 +6,11 @@ import { useState } from "preact/hooks";
 export interface Props {
   img: LiveImage;
   cities?: City[];
+  /** @format textarea */
   title: string;
+  /** @format textarea */
   firstDescription: string;
+  /** @format textarea */
   secondDescription?: string;
 }
 

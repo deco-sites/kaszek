@@ -8097,10 +8097,12 @@
         },
         "title": {
           "type": "string",
+          "format": "textarea",
           "title": "Title"
         },
         "firstDescription": {
           "type": "string",
+          "format": "textarea",
           "title": "First Description"
         },
         "secondDescription": {
@@ -8108,6 +8110,7 @@
             "string",
             "null"
           ],
+          "format": "textarea",
           "title": "Second Description"
         }
       },
